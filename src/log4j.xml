@@ -1,96 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <property name="LoggingDir" value="/home/www/logs/jqueryExercises/" />
-<!--     <appender name="FILE" -->
-<!--         class="ch.qos.logback.core.rolling.RollingFileAppender"> -->
-<!--         <prudent>true</prudent> -->
-<!--         <rollingPolicy -->
-<!--             class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> -->
-<!--             <fileNamePattern>${LoggingDir}mads.%d{yyyy-MM-dd}.log</fileNamePattern> -->
-<!--             <maxHistory>30</maxHistory> -->
-<!--         </rollingPolicy> -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
-<!--         <encoder> -->
-<!--             <pattern><![CDATA[%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - [digitalSignage:%t][%X{userID} %X{madsID}][%logger{0}.%.20method:%L] %msg%n]]></pattern> -->
-<!--         </encoder> -->
-<!--     </appender> -->
+  <appender name="Console" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+    </layout>
+  </appender>
 
-<!--     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> -->
-<!--         <target>System.out</target> -->
-<!--         <encoder> -->
-<!--             <pattern><![CDATA[%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - [digitalSignage:%t][%X{userID} %X{madsID}][%logger{0}.%.20method:%L] %msg%n]]></pattern> -->
-<!--         </encoder> -->
-<!--     </appender> -->
-<!--     <appender name="errormail" class="ch.qos.logback.classic.net.SMTPAppender"> -->
-<!--         <filter class="ch.qos.logback.classic.filter.ThresholdFilter"> -->
-<!--             <level>ERROR</level> -->
-<!--         </filter> -->
+<!--   <appender name="Daily-Web" class="org.apache.log4j.DailyRollingFileAppender"> -->
+<!--     <param name="File" value="/home/www/logs/tomcat/dsp_flex/dsp_flex.log" /> -->
+<!--     <param name="Append" value="true" /> -->
+<!--     <param name="Encoding" value="UTF-8" /> -->
+<!--     <param name="DatePattern" value="'.'dd-MM-yyyy" /> -->
+<!--     <layout class="org.apache.log4j.PatternLayout"> -->
+<!-- 	  <param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" /> -->
+<!-- 	</layout> -->
+<!--   </appender> -->
 
-<!--         <charsetEncoding>UTF-8</charsetEncoding> -->
+  <logger name="com.mcliu.jqueryExercises" additivity="true">
+    <level value="DEBUG" />
+  </logger>
 
-<!--         <smtpHost>SMTP.HOST</smtpHost> -->
-<!--         <STARTTLS>false</STARTTLS> -->
-<!--         <SSL>false</SSL> -->
+  <logger name="java.sql.Connection" additivity="true">
+    <level value="DEBUG" />
+  </logger>
 
-<!--         <to>signage-dev@microad.co.jp</to> -->
+  <logger name="java.sql.PreparedStatement" additivity="true">
+    <level value="DEBUG" />
+  </logger>
 
-<!--         <from>www@microad.jp</from> -->
+  <root>
+    <level value="DEBUG" />
+    <appender-ref ref="Console" />
+<!--     <appender-ref ref="Daily-Web" /> -->
+  </root>
+</log4j:configuration>
 
-<!--         <subject>"[Error]Monoliths"</subject> -->
-
-<!--         <layout class="ch.qos.logback.classic.PatternLayout"> -->
-<!--             <pattern>%d{yyyy/MM/dd HH:mm:ss.SSS} [%-5level] %C#%M[%L] %thread : %msg%n</pattern> -->
-<!--         </layout> -->
-<!--     </appender> -->
-<!--     <appender name="errormail" class="ch.qos.logback.classic.net.SMTPAppender"> -->
-<!--         <filter class="ch.qos.logback.classic.filter.LevelFilter"> -->
-<!--             <level>FATAL</level> -->
-<!--             <onMatch>ACCEPT</onMatch> -->
-<!--             <onMismatch>DENY</onMismatch> -->
-<!--         </filter> -->
-<!--         <smtpHost>localhost</smtpHost> -->
-<!--         <from>sugiyama_koki_gn@microad.co.jp</from> -->
-<!--         <to>sugiyama_koki_gn@microad.co.jp</to> -->
-<!--         <subject>[Monoliths]- %m</subject> -->
-<!--         <layout class="ch.qos.logback.classic.PatternLayout"> -->
-<!--             <pattern>%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - [%logger{0}.%.20method:%L] %msg%n</pattern> -->
-<!--         </layout> -->
-<!--         <asynchronousSending>false</asynchronousSending> -->
-<!--     </appender> -->
-
-
-
-    <!-- Spring -->
-    <logger name="org.springframework" additivity="true">
-        <level value="DEBUG" />
-    </logger>
-
-    <!-- JDBC -->
-
-    <logger name="jdbc.sqlonly" additivity="true">
-        <level value="DEBUG" />
-    </logger>
-    <logger name="jdbc.sqltiming" additivity="false">
-        <level value="DEBUG" />
-    </logger>
-    <logger name="jdbc.audit" additivity="false">
-        <level value="DEBUG" />
-    </logger>
-    <logger name="jdbc.resultset" additivity="false">
-        <level value="DEBUG" />
-    </logger>
-    <logger name="jdbc.resultsettable" additivity="false">
-        <level value="DEBUG" />
-    </logger>
-    <logger name="jdbc.connection" additivity="false">
-        <level value="DEBUG" />
-    </logger>
-
-    <root>
-        <level value="DEBUG" />
-<!--         <appender-ref ref="FILE" /> -->
-<!--         <appender-ref ref="STDOUT" /> -->
-<!--         <appender-ref ref="errormail" /> -->
-    </root>
-
-</configuration>
