@@ -9,7 +9,7 @@
 		<init-param>
 			<!-- 指定配置文件的位置 -->
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring-mvc.xml</param-value>
+			<param-value>/WEB-INF/spring/jqueryExercises/spring-mvc.xml</param-value>
 		</init-param>
 		<!-- 服务器启动即加载 -->
 		<load-on-startup>1</load-on-startup>
@@ -18,6 +18,10 @@
 		<servlet-name>SpringMVC</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/spring/root-context.xml</param-value>
+    </context-param>
 
 	<!-- session timeout -->
     <session-config>
