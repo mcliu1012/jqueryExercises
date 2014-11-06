@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.mcliu.jqueryExercises.entity.User;
 import com.mcliu.jqueryExercises.service.LoginService;
 
+/**
+ * LoginController
+ *
+ */
 @Controller
 public class LoginController {
     private Logger logger = LoggerFactory.getLogger(LoginController.class);
