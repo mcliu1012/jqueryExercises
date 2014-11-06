@@ -24,13 +24,10 @@
 <!--     <task:annotation-driven/> -->
 
     <!-- Transaction -->
-<!--     <tx:annotation-driven transaction-manager="transactionManagerMaster" /> -->
-<!--     <beans:bean id="transactionManagerMaster" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
-<!--         <beans:property name="dataSource" ref="dataSourceMaster" /> -->
-<!--     </beans:bean> -->
-<!--     <beans:bean id="transactionManagerBlade" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
-<!--         <beans:property name="dataSource" ref="dataSourceBlade" /> -->
-<!--     </beans:bean> -->
+    <tx:annotation-driven transaction-manager="transactionManagerMaster" />
+    <beans:bean id="transactionManagerMaster" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <beans:property name="dataSource" ref="dataSourceMcliu" />
+    </beans:bean>
 
     <!-- properties -->
 <!--     <context:annotation-config /> -->
