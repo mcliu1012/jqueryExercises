@@ -1,0 +1,15 @@
+#loginContentDiv {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  left: 40%;
+}
+
+#loginTbl {
+  height: 130px;
+}
+
+#loginTbl .textAlignCenter {
+  text-align: center;
+}
