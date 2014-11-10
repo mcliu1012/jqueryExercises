@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mcliu.jqueryExercises.entity.User;
+import com.mcliu.jqueryExercises.model.LoginUserInfo;
 import com.mcliu.jqueryExercises.service.LoginService;
 
 /**
@@ -33,16 +34,13 @@ public class LoginController {
     }
 
     @RequestMapping(value = {"/index"}, method = RequestMethod.POST)
-    public String index(Model model, HttpServletRequest request) throws Exception {
+    public String index(LoginUserInfo userInfo, Model model, HttpServletRequest request) throws Exception {
 
         logger.info("==== index start ====");
 
-        String userName = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        if (!StringUtils.isEmpty(userName)) {
-            User user = loginService.getUserByLoginName(userName);
-            if (user != null && password.equals(user.getPassword())) {
+        if (!StringUtils.isEmpty(userInfo.getLoginName())) {
+            User user = loginService.getUserByLoginName(userInfo.getLoginName());
+            if (user != null && userInfo.getPassword().equals(user.getPassword())) {
                 logger.info("==== login successfully!!! ====");
                 logger.info("==== index end ====");
                 return "index";
