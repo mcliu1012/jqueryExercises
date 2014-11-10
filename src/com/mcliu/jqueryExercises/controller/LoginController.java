@@ -46,12 +46,6 @@ public class LoginController {
             return "index";
         }
 
-//        if ("871702098@qq.com".equals(userName) && "123456".equals(password)) {
-//            logger.info("==== login successfully!!! ====");
-//            logger.info("==== index end ====");
-//            return "index";
-//        }
-
         logger.info("==== index end ====");
         return "login";
     }
