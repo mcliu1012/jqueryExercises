@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -39,15 +40,17 @@ public class LoginController {
         String userName = request.getParameter("username");
         String password = request.getParameter("password");
 
-        User user = loginService.getUserByLoginName(userName);
-        if (user != null && password.equals(user.getPassword())) {
-            logger.info("==== login successfully!!! ====");
-            logger.info("==== index end ====");
-            return "index";
+        if (!StringUtils.isEmpty(userName)) {
+            User user = loginService.getUserByLoginName(userName);
+            if (user != null && password.equals(user.getPassword())) {
+                logger.info("==== login successfully!!! ====");
+                logger.info("==== index end ====");
+                return "index";
+            }
         }
 
         logger.info("==== index end ====");
-        return "login";
+        return "redirect:/login";
     }
 
 }

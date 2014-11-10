@@ -6,7 +6,7 @@
 <title>Login</title>
 </head>
 <body style="font-size:30px;">
-	<form action="index" method="post">
+	<form action="index" method="POST">
 		用户名：<input type="text" name="username"/><br/>
 		密  码：<input type="password" name="password"/><br/>
 		<input type="submit" value="Login"/>

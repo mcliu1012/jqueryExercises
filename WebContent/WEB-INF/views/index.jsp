@@ -3,6 +3,8 @@
 <head>
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="icon" href="/resources/img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="/resources/img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
 <title>Login successfully!</title>
 </head>
 <body style="font-size:30px;">
