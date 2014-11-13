@@ -24,12 +24,12 @@
         </p>
         <p class="remember_me">
           <label>
-            <input type="checkbox" name="remember_me" id="remember_me">
+            <input type="checkbox" name="keepLoginName" id="keepLoginName">
             Remember me on this computer
           </label>
         </p>
         <p class="submit">
-          <input type="submit" name="commit" value="Login">
+          <input type="submit" class="loginCursorPointer" name="commit" value="Login">
         </p>
       </form>
     </div>

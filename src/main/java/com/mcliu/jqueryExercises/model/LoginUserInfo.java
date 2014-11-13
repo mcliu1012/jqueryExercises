@@ -4,7 +4,7 @@ public class LoginUserInfo {
     private String loginName;
     private String password;
     private String name;
-    private String keepEmail;
+    private String keepLoginName;
 
     public String getLoginName() {
         return loginName;
@@ -30,12 +30,12 @@ public class LoginUserInfo {
         this.name = name;
     }
 
-    public String getKeepEmail() {
-        return keepEmail;
+    public String getKeepLoginName() {
+        return keepLoginName;
     }
 
-    public void setKeepEmail(String keepEmail) {
-        this.keepEmail = keepEmail;
+    public void setKeepLoginName(String keepLoginName) {
+        this.keepLoginName = keepLoginName;
     }
 
 }

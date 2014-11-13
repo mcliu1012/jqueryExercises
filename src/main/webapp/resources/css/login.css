@@ -183,6 +183,10 @@ body {
   text-align: right;
 }
 
+.login p input.loginCursorPointer {
+  cursor: pointer;
+}
+
 .login-help {
   margin: 20px 0;
   font-size: 11px;
