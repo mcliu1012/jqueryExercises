@@ -39,11 +39,11 @@
 <!--     <context:annotation-config /> -->
 <!--     <context:property-placeholder location="classpath:digitalSignage.properties" /> -->
 
-<!--     <beans:bean id="messageSource" -->
-<!--         class="org.springframework.context.support.ReloadableResourceBundleMessageSource"> -->
-<!--         <beans:property name="basename" value="message" /> -->
-<!--         <beans:property name="cacheSeconds" value="0" /> -->
-<!--     </beans:bean> -->
+    <beans:bean id="messageSource"
+        class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <beans:property name="basename" value="message" />
+        <beans:property name="cacheSeconds" value="0" />
+    </beans:bean>
 
     <!-- Handles HTTP GET requests for /resources/** by efficiently serving
         up static resources in the ${webappRoot}/resources directory -->

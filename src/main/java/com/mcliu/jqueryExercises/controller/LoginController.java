@@ -23,7 +23,7 @@ import com.mcliu.jqueryExercises.service.LoginService;
  *
  */
 @Controller
-public class LoginController {
+public class LoginController extends BaseController {
     private Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
@@ -56,7 +56,7 @@ public class LoginController {
     @RequestMapping(value = {"/index"}, method = RequestMethod.POST)
     public String index(LoginUserInfo userInfo, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        logger.info("==== index start ====");
+        logger.info("==== index START ====");
 
         LoginUserInfo loginUserInfo = loginService.getUserByLoginName(userInfo.getLoginName());
 
@@ -71,23 +71,23 @@ public class LoginController {
             // save the user's information to session
             session.setAttribute("userInfo", loginUserInfo);
 
-            logger.info("==== index start ====");
+            logger.info("==== index END ====");
             return "index";
         } else {
+            String errorMsg = messageSource.getMessage("error.login.loginName.password", null, null);
+            model.addAttribute("error", errorMsg);
+            // TODO
+            System.out.println(errorMsg);
 
+            // save value
+            model.addAttribute("loginName", userInfo.getLoginName());
+            model.addAttribute("password", userInfo.getPassword());
+            model.addAttribute("keepLoginName", userInfo.getKeepLoginName());
+
+            logger.info("==== index END ====");
+            return "redirect:/login";
         }
 
-//        if (!StringUtils.isEmpty(userInfo.getLoginName())) {
-//            User user = loginService.getUserByLoginName(userInfo.getLoginName());
-//            if (user != null && userInfo.getPassword().equals(user.getPassword())) {
-//                logger.info("==== login successfully!!! ====");
-//                logger.info("==== index end ====");
-//                return "index";
-//            }
-//        }
-
-        logger.info("==== index end ====");
-        return "redirect:/login";
     }
 
     /**
