@@ -16,10 +16,22 @@ public class Test {
         testSysoUserList(dbUserList);
         System.out.println("------------------------------------------------------------");
 
-        Map<Integer, User> xmlUserMap = createUserMap(xmlUserList);
+//        Map<Integer, User> xmlUserMap = createUserMap(xmlUserList);
         Map<Integer, User> dbUserMap = createUserMap(dbUserList);
 
+        List<User> finalUserList = new ArrayList<User>();
+        for (User user : xmlUserList) {
+            int key = user.getId();
+            if (dbUserMap.keySet().contains(key)) {
+                User dbUser = dbUserMap.get(key);
+                user.setUserName(dbUser.getUserName());
+                finalUserList.add(user);
+            } else {
+                finalUserList.add(user);
+            }
+        }
 
+        testSysoUserList(finalUserList);
     }
 
     private static List<User> initXmlUserData() {
