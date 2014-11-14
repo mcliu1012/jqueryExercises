@@ -43,7 +43,7 @@ public class LoginController extends BaseController {
         HttpSession session = request.getSession();
         if (session.getAttribute("userInfo") != null) {
             // Already logged in
-            retPage = "index";
+            retPage = "redirect:/index";
         } else {
             // Never logged in
             retPage = "login";
@@ -53,7 +53,7 @@ public class LoginController extends BaseController {
         return retPage;
     }
 
-    @RequestMapping(value = {"/index"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
     public String index(LoginUserInfo userInfo, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         logger.info("==== index START ====");
@@ -72,12 +72,10 @@ public class LoginController extends BaseController {
             session.setAttribute("userInfo", loginUserInfo);
 
             logger.info("==== index END ====");
-            return "index";
+            return "redirect:/index";
         } else {
             String errorMsg = messageSource.getMessage("error.login.loginName.password", null, null);
             model.addAttribute("error", errorMsg);
-            // TODO
-            System.out.println(errorMsg);
 
             // save value
             model.addAttribute("loginName", userInfo.getLoginName());
@@ -85,7 +83,7 @@ public class LoginController extends BaseController {
             model.addAttribute("keepLoginName", userInfo.getKeepLoginName());
 
             logger.info("==== index END ====");
-            return "redirect:/login";
+            return "login";
         }
 
     }

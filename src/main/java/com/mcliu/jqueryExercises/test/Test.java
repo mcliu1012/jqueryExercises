@@ -5,9 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.mcliu.jqueryExercises.util.EncryptUtil;
+
 public class Test {
 
     public static void main(String[] args) {
+//        testHashMap();
+        EncryptUtil encryptUtil = new EncryptUtil();
+        String aesStr = encryptUtil.encrypt("123456");
+        System.out.println(aesStr);
+    }
+
+    private static void testHashMap() {
         List<User> xmlUserList = initXmlUserData();
         List<User> dbUserList = initDBUserData();
 

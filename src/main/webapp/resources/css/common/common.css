@@ -445,6 +445,9 @@ a:hover#preview_field img{
 .floatLeft {
   float: left;
 }
+.floatRight {
+  float: right;
+}
 .borderBlack {
   border: 1px solid black;
 }

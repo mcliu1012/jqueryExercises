@@ -15,9 +15,9 @@
   <section class="container">
     <div class="login">
       <h1>Login to MCLIU's App</h1>
-      <form method="post" action="index">
+      <form method="post" action="login">
         <p>
-          <input type="text" name="loginName" value="" placeholder="Username or Email">
+          <input type="text" name="loginName" placeholder="Username or Email" autofocus>
         </p>
         <p>
           <input type="password" name="password" value="" placeholder="Password">
