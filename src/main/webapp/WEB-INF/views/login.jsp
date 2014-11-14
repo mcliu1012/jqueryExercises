@@ -3,28 +3,30 @@
 <head>
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<%@ taglib uri='http://www.springframework.org/tags' prefix='spring'%>
-<%
-    String sysDate = new java.text.SimpleDateFormat("yyyyMMdd").format(new java.util.Date());
-%>
-<spring:url value="/resources/css/login.css" var="logincss"></spring:url>
+<%@include file="commonImport.jsp" %>
+
+<spring:url value="${baseUrl}css/login.css" var="logincss"></spring:url>
+<spring:url value="${baseUrl}js/login.js" var="loginjs"></spring:url>
 <link rel="stylesheet" type="text/css" href='${logincss}?<%=sysDate%>'>
+<script type="text/javascript" src="${loginjs}?<%=sysDate%>"></script>
 <title>Login</title>
 </head>
 <body>
   <section class="container">
     <div class="login">
-      <h1>Login to MCLIU's App</h1>
+      <h1>Login to MCLIU's APP</h1>
+      <div class="errorMsg">${error }</div>
       <form method="post" action="login">
         <p>
-          <input type="text" name="loginName" placeholder="Username or Email" autofocus>
+          <input type="text" id="loginNameInput" name="loginName" value="${loginName}" placeholder="Username or Email" autofocus>
         </p>
         <p>
-          <input type="password" name="password" value="" placeholder="Password">
+          <input type="password" name="password" value="${password}" placeholder="Password">
         </p>
         <p class="remember_me">
           <label>
-            <input type="checkbox" name="keepLoginName" id="keepLoginName">
+          	<c:set var="checkFlag" value="${'on' == keepLoginName ? 'checked' : '' }"></c:set>
+            <input type="checkbox" name="keepLoginName" id="keepLoginName" checked='${checkFlag}'>
             Remember me on this computer
           </label>
         </p>
@@ -32,6 +34,7 @@
           <input type="submit" class="loginCursorPointer" name="commit" value="Login">
         </p>
       </form>
+      <input id="pageStatus" name="pageStatus" type="hidden" value="${pageStatus}" />
     </div>
 
     <div class="login-help">

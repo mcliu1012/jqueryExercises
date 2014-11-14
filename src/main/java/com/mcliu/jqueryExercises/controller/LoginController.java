@@ -48,6 +48,7 @@ public class LoginController extends BaseController {
             // Never logged in
             retPage = "login";
         }
+        model.addAttribute("pageStatus", Constants.PAGE_STATUS_INIT);
 
         logger.info("==== login end ====");
         return retPage;
@@ -98,7 +99,8 @@ public class LoginController extends BaseController {
         if (StringUtils.isNotEmpty(loginUserInfo.getKeepLoginName())) {
             // Save the login name
             Cookie loginNameCookie = new Cookie(Constants.COOKIE_LOGIN_NAME, loginUserInfo.getLoginName());
-            loginNameCookie.setSecure(true);
+            // HTTPS
+//            loginNameCookie.setSecure(true);
             final int cookieMaxAge = 30 * 24 * 60 *60;
             loginNameCookie.setMaxAge(cookieMaxAge);
             response.addCookie(loginNameCookie);

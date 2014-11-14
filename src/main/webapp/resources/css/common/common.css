@@ -466,3 +466,9 @@ a:hover#preview_field img{
 .marginTop22 {
   margin-top: 22px;
 }
+
+.errorMsg {
+  color: red;
+  margin-top: 10px;
+  margin-left: 6px;
+}
