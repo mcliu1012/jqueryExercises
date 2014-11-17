@@ -10,12 +10,13 @@
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
 <%@include file="commonImport.jsp"%>
 
-<title>Login successfully!</title>
 </head>
-<body style="font-size:30px;">
-  <div class="container">
-	<h2 class="inlineBlock">登陆成功！！！</h2>
-    <a class="btn floatRight logoutA" href="<c:url value='/logout' />">返回到Login页面</a>
+<body>
+  <div id="header"><%@include file="header.jsp" %></div>
+  <div id="left"><%@include file="left.jsp"%></div>
+  <div id="content">
+	<div id="pIndexMsg">请从左边的菜单中选择。</div>
   </div>
+  <div id="footer"><%@include file="footer.jsp"%></div>
 </body>
 </html>
