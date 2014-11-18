@@ -18,7 +18,7 @@
 <title>System Error!</title>
 </head>
 <body style="font-size: 18px;">
-    <div id="main">
+    <div id="pErrorDiv">
       非常抱歉，请稍后重试。
       <a class="btn" href="<c:url value='/login'/>">返回到Login页面</a>
     </div>

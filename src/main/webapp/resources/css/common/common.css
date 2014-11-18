@@ -380,3 +380,8 @@ input.error {
   margin-top: 20px;
   text-align: center;
 }
+
+#pErrorDiv {
+  margin-left: 70px;
+  margin-top: 60px;
+}
