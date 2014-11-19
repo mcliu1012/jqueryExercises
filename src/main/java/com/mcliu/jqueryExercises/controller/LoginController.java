@@ -35,7 +35,7 @@ public class LoginController extends BaseController {
      * @param request
      * @return
      */
-    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
+    @RequestMapping(value = "login", method = RequestMethod.GET)
     public String login(Model model, HttpServletRequest request) {
         logger.info("==== login start ====");
 
@@ -54,7 +54,7 @@ public class LoginController extends BaseController {
         return retPage;
     }
 
-    @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
+    @RequestMapping(value = "login", method = RequestMethod.POST)
     public String index(LoginUserInfo userInfo, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         logger.info("==== index START ====");

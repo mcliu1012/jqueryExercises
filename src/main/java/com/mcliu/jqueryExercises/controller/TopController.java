@@ -16,7 +16,7 @@ public class TopController {
      *
      * @return
      */
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = "index")
     public String index() {
         logger.info("==== index START  ====");
 
@@ -32,7 +32,7 @@ public class TopController {
      * @param request
      * @return
      */
-    @RequestMapping(value = "/logout")
+    @RequestMapping(value = "logout")
     public String logout(HttpServletRequest request) {
         logger.info("==== logout START  ====");
 

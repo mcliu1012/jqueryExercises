@@ -15,8 +15,15 @@
   <div id="header"><%@include file="header.jsp" %></div>
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
-	<div id="pIndexMsg">请从左边的菜单中选择。</div>
+    <div class="jumbotron" style="height: 100%;">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p style="font-size: 25px;">Whatever is worth doing is worth doing well.</p>
+        <p style="font-size: 25px;">←▁← ←▁← ←▁←Please select from the menu on the left.</p>
+      </div>
+    </div>
   </div>
+
   <div id="footer"><%@include file="footer.jsp"%></div>
 </body>
 </html>

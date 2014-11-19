@@ -12,9 +12,9 @@
 <title>Login</title>
 </head>
 <body>
-  <section class="container">
+  <section class="pLoginSectionContainer">
     <div class="login">
-      <h1>Login to MCLIU's APP</h1>
+      <h1>Login to MCLIU's App</h1>
       <div class="errorMsg">${error }</div>
       <form method="post" action="login">
         <p>
