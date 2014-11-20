@@ -16,6 +16,7 @@
 <%-- <spring:url value='${baseUrl}/css/lib/bootstrap-datetimepicker.min.css' var='bootstrapdatepickercss' /> --%>
 <%-- <spring:url value='${baseUrl}/css/lib/bootstrap-slider.css' var='bootstrapslidercss' /> --%>
 <spring:url value='${baseUrl}/css/index.css' var='indexcss' />
+<spring:url value='${baseUrl}/css/lib/font-awesome.min.css' var='fontawesomemincss' />
 
 <spring:url value='${baseUrl}/js/lib/jquery-1.11.0.min.js' var='jquery' />
 <%-- <spring:url value='${baseUrl}/js/lib/jquery-migrate-1.2.1.min.js' var='jquerymigrate' /> --%>
@@ -41,6 +42,7 @@
 <%-- <link media='screen' rel='stylesheet' href='${bootstrapslidercss}?<%= sysDate %>' type='text/css' /> --%>
 <%-- <link media='screen' rel='stylesheet' href='${select2css}?<%= sysDate %>' type='text/css' /> --%>
 <link media='screen' rel='stylesheet' href='${indexcss}?<%= sysDate %>' type='text/css' />
+<link media='screen' rel='stylesheet' href='${fontawesomemincss}?<%= sysDate %>' type='text/css' />
 
 <script type='text/javascript' src='${jquery}?<%= sysDate %>'></script>
 <%-- <script type='text/javascript' src='${jquerymigrate}?<%= sysDate %>'></script> --%>
