@@ -18,8 +18,14 @@
     <div class="jumbotron" style="height: 100%;">
       <div class="container">
         <h1>Hello, world!</h1>
-        <p style="font-size: 25px;">Whatever is worth doing is worth doing well.</p>
-        <p style="font-size: 25px;">←▁← ←▁← ←▁←Please select from the menu on the left.</p>
+        <p>Whatever is worth doing is worth doing well.</p>
+        <p>
+          <span class="icon-hand-left"></span>
+          <span class="icon-hand-left"></span>
+          <span class="icon-hand-left"></span>
+          <span class="icon-hand-left"></span>
+          <span class="icon-hand-left"></span> Please select from the menu on the left.
+        </p>
       </div>
     </div>
   </div>

@@ -2,3 +2,11 @@
   margin: 11px 0;
   border: 1px solid;
 }
+
+.container p {
+  font-size: 25px;
+}
+
+.container span {
+  font-size: 20px;
+}
