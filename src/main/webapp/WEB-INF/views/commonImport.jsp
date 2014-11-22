@@ -5,6 +5,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>MCLIU</title>
 <c:url value="resources" var="baseUrl" />
 <spring:url value='${baseUrl}/css/common/common.css' var='commoncss' />
@@ -17,6 +18,7 @@
 <%-- <spring:url value='${baseUrl}/css/lib/bootstrap-slider.css' var='bootstrapslidercss' /> --%>
 <spring:url value='${baseUrl}/css/index.css' var='indexcss' />
 <spring:url value='${baseUrl}/css/lib/font-awesome.min.css' var='fontawesomemincss' />
+<spring:url value='${baseUrl}/css/qqservice.css' var='qqservicecss' />
 
 <spring:url value='${baseUrl}/js/lib/jquery-1.11.0.min.js' var='jquery' />
 <%-- <spring:url value='${baseUrl}/js/lib/jquery-migrate-1.2.1.min.js' var='jquerymigrate' /> --%>
@@ -32,6 +34,7 @@
 <%-- <spring:url value='${baseUrl}/js/lib/jquery.mousewheel.min.js' var='jquerymousewheelminjs' /> --%>
 <spring:url value='${baseUrl}/js/common/common.js' var='commonjs' />
 <spring:url value='${baseUrl}/js/lib/jquery.cookie.js' var='jquerycookie' />
+<spring:url value='${baseUrl}/js/qqservice.js' var='qqservicejs' />
 
 <link media='screen' rel='stylesheet' href='${jqueryuicss}?<%= sysDate %>' type='text/css' />
 <link media='screen' rel='stylesheet' href='${bootstrapmincss}?<%= sysDate %>' type='text/css' />
@@ -43,6 +46,7 @@
 <%-- <link media='screen' rel='stylesheet' href='${select2css}?<%= sysDate %>' type='text/css' /> --%>
 <link media='screen' rel='stylesheet' href='${indexcss}?<%= sysDate %>' type='text/css' />
 <link media='screen' rel='stylesheet' href='${fontawesomemincss}?<%= sysDate %>' type='text/css' />
+<link media='screen' rel='stylesheet' href='${qqservicecss}?<%= sysDate %>' type='text/css' />
 
 <script type='text/javascript' src='${jquery}?<%= sysDate %>'></script>
 <%-- <script type='text/javascript' src='${jquerymigrate}?<%= sysDate %>'></script> --%>
@@ -57,3 +61,4 @@
 <%-- <script type='text/javascript' src='${jquerymousewheelminjs}?<%= sysDate %>'></script> --%>
 <script type='text/javascript' src='${commonjs}?<%= sysDate %>'></script>
 <script type='text/javascript' src='${jquerycookie}?<%= sysDate %>'></script>
+<script type='text/javascript' src='${qqservicejs}?<%= sysDate %>'></script>

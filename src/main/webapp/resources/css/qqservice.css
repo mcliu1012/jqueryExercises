@@ -1,0 +1,84 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#qqlist a {
+	text-decoration: none;
+	color: wheat;
+	font-size: 12px;
+	display: block;
+	line-height: 28px;
+	vertical-align: middle;
+}
+
+img {
+	line-height: 28px;
+	vertical-align: middle;
+	text-align: center;
+	padding-bottom: 6px;
+}
+
+#cs {
+	width: 100%;
+	height: 0px;
+	border-bottom: 3px solid red;
+	-webkit-box-shadow: 2px 2px 2px #999;
+	position: relative;
+	top: 0px;
+	-moz-box-shadow: 2px 2px 2px #999;
+	box-shadow: 2px 2px 2px #999;
+	opacity: 0.97;
+	background-color: black;
+}
+
+#qqlist {
+	position: absolute;
+	left: -200px;
+	top: 150px;
+	z-index: 1;
+}
+
+#qqlist ul li {
+	width: 108px;
+	height: 28px;
+	margin: 10px;
+}
+
+#bg {
+	width: 918px;
+	height: 500px;
+	position: absolute;
+	right: 10px;
+	display: none;
+	filter: alpha(opacity : 0);
+	opacity: 0;
+}
+
+#btn {
+	width: 100px;
+	height: 20px;
+	margin: auto;
+	background: red;
+	-webkit-box-shadow: 2px 2px 2px #999;
+	border-radius: 0 0 8px 8px;
+	position: relative;
+	top: 0px;
+	-moz-box-shadow: 2px 2px 2px #999;
+	box-shadow: 2px 2px 2px #999;
+}
+
+#btn span {
+	display: block;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+#foot_bm a,#foot_bm,p,p a {
+	color: #666;
+	position: relative;
+}

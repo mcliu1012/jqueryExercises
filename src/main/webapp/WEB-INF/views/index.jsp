@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-
   <div id="footer"><%@include file="footer.jsp"%></div>
+  <%@include file="qqservice.jsp" %>
 </body>
 </html>
