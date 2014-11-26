@@ -181,6 +181,7 @@ body {
 }
 .login p.submit {
   text-align: right;
+  margin-top: 50px;
 }
 
 .login p input.loginCursorPointer {
