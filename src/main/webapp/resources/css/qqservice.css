@@ -23,14 +23,14 @@ img {
 #cs {
 	width: 100%;
 	height: 0px;
-	border-bottom: 3px solid red;
+	border-bottom: 3px solid #428bca;
 	-webkit-box-shadow: 2px 2px 2px #999;
 	position: relative;
 	top: 0px;
 	-moz-box-shadow: 2px 2px 2px #999;
 	box-shadow: 2px 2px 2px #999;
 	opacity: 0.9;
-	background-color: black;
+	background-color: midnightblue;
 }
 
 #qqlist {
@@ -60,7 +60,7 @@ img {
 	width: 100px;
 	height: 20px;
 	margin: auto;
-	background: red;
+	background: #428bca;
 	-webkit-box-shadow: 2px 2px 2px #999;
 	border-radius: 0 0 8px 8px;
 	position: relative;

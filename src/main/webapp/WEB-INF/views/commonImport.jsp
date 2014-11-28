@@ -6,6 +6,9 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="icon" href="/jqueryExercises/resources/img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="/jqueryExercises/resources/img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
+
 <title>MCLIU</title>
 <c:url value="resources" var="baseUrl" />
 <spring:url value='${baseUrl}/css/common/common.css' var='commoncss' />
