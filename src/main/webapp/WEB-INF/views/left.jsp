@@ -4,9 +4,10 @@
 <div>
   <div class="pLeftOuterDiv">
     <ul class="nav nav-pills nav-stacked" role="tablist">
-      <li role="presentation" class="active"><a href="validateExercise">Home</a></li>
-      <li role="presentation"><a href="javascript:void(0);">Profile</a></li>
-      <li role="presentation"><a href="javascript:void(0);">Messages</a></li>
+      <li id="pLeftRH" role="presentation"><a href="javascript:void(0);">返回首页</a></li>
+      <li id="pLeftF1" role="presentation"><a href="javascript:void(0);">Feature1</a></li>
+      <li id="pLeftF2" role="presentation"><a href="javascript:void(0);">Feature2</a></li>
+      <li id="pLeftF3" role="presentation"><a href="javascript:void(0);">Feature3</a></li>
     </ul>
   </div>
 </div>

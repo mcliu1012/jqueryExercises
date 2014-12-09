@@ -12,7 +12,7 @@
   <div id="header"><%@include file="header.jsp" %></div>
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
-    <div style="height: 100%;">
+    <div id="pVEDiv" style="height: 100%;">
       test
     </div>
   </div>

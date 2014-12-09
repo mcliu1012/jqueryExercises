@@ -12,7 +12,7 @@
   <div id="header"><%@include file="header.jsp" %></div>
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
-    <div class="jumbotron" style="height: 100%;">
+    <div id="pIndexContentDiv" class="jumbotron" style="height: 100%;">
       <div class="container">
         <h1>Hello, world!</h1>
         <p>Whatever is worth doing is worth doing well.</p>
