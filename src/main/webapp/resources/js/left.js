@@ -1,13 +1,16 @@
 $(function() {
+    pLeftSetStatus();
     pLeftSetListener();
+});
 
+function pLeftSetStatus() {
     $('.active').removeClass('active');
     if ($('#pIndexContentDiv')[0]) {
         $('#pLeftRH').addClass('active');
     } else if ($('#pVEDiv')[0]) {
-        $('#pLeftF1').addClass('active');
+        $('#pLeftJV').addClass('active');
     }
-});
+}
 
 function pLeftSetListener() {
     $('.pLeftOuterDiv li').off('click').on('click', function() {
@@ -16,7 +19,7 @@ function pLeftSetListener() {
             case 'pLeftRH':
                 window.location.href = "index";
                 break;
-            case 'pLeftF1':
+            case 'pLeftJV':
                 window.location.href = "validateExercise";
                 break;
             case 'pLeftF2':

@@ -1,0 +1,15 @@
+#pVEForm {
+  padding: 50px 0 0 50px;
+}
+
+#pVEForm .form-group {
+  width: 50%;
+}
+
+#pVEForm .col-sm-10 {
+  width: 38.333333%;
+}
+
+#pVEForm .col-sm-offset-2 {
+  margin-left: 30.666667%;
+}
