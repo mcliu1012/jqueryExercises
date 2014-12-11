@@ -7,9 +7,25 @@
 }
 
 #pVEForm .col-sm-10 {
-  width: 38.333333%;
+  width: 75.333333%;
+}
+
+#pVEForm .col-sm-2 {
+  width: 23.666667%;
 }
 
 #pVEForm .col-sm-offset-2 {
-  margin-left: 30.666667%;
+  margin-left: 40.666667%;
+}
+
+#pVEForm .form-control {
+  width: 47%;
+}
+
+#pVEForm .error {
+  display: inline-block;
+}
+
+#invalid {
+  display: none;
 }

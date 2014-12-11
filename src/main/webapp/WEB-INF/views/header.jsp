@@ -6,6 +6,6 @@
   </div>
   <div id="pHeaderMsgDiv" class="inlineBlock">Test</div>
   <div id="pHeaderLogoutDiv" class="inlineblock">
-    <a class="btn logoutA" href="<c:url value='/logout' />"><span class="icon-reply"></span> 返回到Login页面</a>
+    <a class="btn logoutA" href="<c:url value='/logout' />"><span class="icon-reply"></span> 返回到Login界面</a>
   </div>
 </div>
