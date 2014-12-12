@@ -1,5 +1,8 @@
 package com.mcliu.jqueryExercises.dao.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -29,8 +32,23 @@ public class ValidateExerciseDaoImpl implements ValidateExerciseDao {
      */
     @Override
     public void insertUser(User user) throws Exception {
-        // TODO 自動生成されたメソッド・スタブ
-
+        String sql =
+                " INSERT INTO t_user "
+                        + " ( t_login_name , "
+                        + "  t_password , "
+                        + "  t_name ) "
+                        + " VALUES "
+                        + " ( "
+                        + " :loginName, "
+                        + " :password, "
+                        + " :name "
+                        + " )";
+        // 参数作成
+        Map<String, Object> key = new HashMap<>();
+        key.put("loginName", user.getLoginName());
+        key.put("password", user.getPassword());
+        key.put("name", user.getName());
+        this.namedParameterJdbcTemplate.update(sql, key);
     }
 
 }

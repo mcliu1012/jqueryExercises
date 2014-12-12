@@ -245,6 +245,7 @@ input.error {
 .errorMsg {
   color: red;
   margin-top: 10px;
+  margin-left: 6px;
 }
 
 .msg {
@@ -367,12 +368,6 @@ input.error {
 
 .confirm .ui-dialog-buttonpane button {
   margin: 0.5em 1em 1em 2em
-}
-
-.errorMsg {
-  color: red;
-  margin-top: 10px;
-  margin-left: 6px;
 }
 
 #pErrorDiv {

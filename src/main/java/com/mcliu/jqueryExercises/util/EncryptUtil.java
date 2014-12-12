@@ -14,7 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  */
 public class EncryptUtil implements PasswordEncoder {
 
-    private Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
+    private static Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
 
     /**
      * Encryption with java.
@@ -22,7 +22,7 @@ public class EncryptUtil implements PasswordEncoder {
      * @param str Target value
      * @return Encrypted value
      */
-    public String encrypt(String str) {
+    public static String encrypt(String str) {
 
         String encryptStr = "";
         if (str != null) {
@@ -43,7 +43,7 @@ public class EncryptUtil implements PasswordEncoder {
         return encryptStr;
     }
 
-    private String asHex(byte bytes[]) {
+    private static String asHex(byte bytes[]) {
         StringBuffer strbuf = new StringBuffer(bytes.length * 2);
         for (int index = 0; index < bytes.length; index++) {
             int bt = bytes[index] & 0xff;

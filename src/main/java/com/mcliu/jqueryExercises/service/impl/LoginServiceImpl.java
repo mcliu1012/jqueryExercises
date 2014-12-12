@@ -39,8 +39,7 @@ public class LoginServiceImpl implements LoginService {
         String dbPassword = loginUserInfo.getPassword();
 
         // Encrypt the input password
-        EncryptUtil encryptUtil = new EncryptUtil();
-        String codePassword = encryptUtil.encrypt(inputPassword);
+        String codePassword = EncryptUtil.encrypt(inputPassword);
         boolean isLoginSuccessFlag = codePassword.equals(dbPassword);
 
         logger.info("==== isLoginSuccess END ====");
