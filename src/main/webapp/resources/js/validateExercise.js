@@ -33,11 +33,17 @@ function setPVEResetBtnClickHandler() {
  */
 function setPVESignUpBtnClickHandler() {
     $('#pVESignUpBtn').off('click').on('click', function() {
+        alert('---------start----------');
         $.ajax({
-            url: "validateExercise/registUser",
+            url: $.getBaseURL() + "/validateExercise/registUser",
             type: "POST",
+            cache: false,
+            dataType: "json",
             success: function(data, textStatus) {
                 alert('---------success----------');
+                if (data.error) {
+                    $('#errorMsg').html(data.error);
+                }
             },
             error: function(request, status, error) {
                 alert('---------error----------');

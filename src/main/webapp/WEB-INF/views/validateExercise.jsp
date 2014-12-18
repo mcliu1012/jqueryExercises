@@ -13,7 +13,8 @@
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
     <div id="pVEDiv" style="height: 100%;">
-      <form id="pVEForm" class="form-horizontal" action="registUser" role="form" method="POST">
+      <form id="pVEForm" class="form-horizontal" action="" role="form" method="POST">
+        <div id="errorMsg"></div>
         <div class="form-group">
           <label for="pVEEmailInput" class="col-sm-2 control-label">电子邮箱：</label>
           <div class="col-sm-10">
@@ -41,7 +42,7 @@
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
             <button type="reset" id="pVEResetBtn" class="btn btn-default">重置</button>
-            <button type="submit" id="pVESignUpBtn" class="btn btn-primary">注册</button>
+            <button type="button" id="pVESignUpBtn" class="btn btn-primary">注册</button>
           </div>
         </div>
       </form>

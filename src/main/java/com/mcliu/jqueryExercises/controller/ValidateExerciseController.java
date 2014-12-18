@@ -10,8 +10,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mcliu.jqueryExercises.model.LoginUserInfo;
 import com.mcliu.jqueryExercises.service.LoginService;
@@ -48,8 +50,9 @@ public class ValidateExerciseController extends BaseController {
      * @param loginUserInfo
      * @return
      */
+    @ResponseBody
     @RequestMapping(value = "registUser", method = RequestMethod.POST)
-    public String registUser(LoginUserInfo loginUserInfo) throws Exception {
+    public String registUser(LoginUserInfo loginUserInfo, Model model) throws Exception {
         logger.info("==== registUser START ====");
 
         System.out.println("E-mail:" + loginUserInfo.getLoginName());
@@ -66,7 +69,7 @@ public class ValidateExerciseController extends BaseController {
         }
 
         logger.info("==== registUser END ====");
-        return "validateExercise";
+        return JSON.encode(model);
     }
 
     private boolean isParamCheck(LoginUserInfo loginUserInfo, StringBuffer errorMessage) throws Exception {

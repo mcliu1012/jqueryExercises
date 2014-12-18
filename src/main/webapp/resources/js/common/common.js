@@ -147,3 +147,65 @@ function createPagination(paginationId) {
         doSearch(pageNo);
     });
 }
+
+$(function() {
+    $.extend($.fn, {
+        /**
+         * 半透明のレイヤーを追加する
+         */
+        mask : function mask() {
+            $(this).prepend("<div class='mask' style='position: absolute;'></div>");
+            $(this).addClass("ui-state-disabled");
+            $(".mask").css({
+                "display" : "block",
+                "width" : this.width(),
+                "height" : this.height()
+            });
+            $(this).find("*").disable();
+        },
+
+        /**
+         * 半透明のレイヤーを削除する
+         */
+        unMask : function unMask() {
+            $(this).find(".mask").remove();
+            $(this).removeClass("ui-state-disabled");
+            $(this).find("*").enable();
+        },
+
+        /**
+         * アニメーション 効果は指定する
+         */
+        txtCrossFade : function txtCrossFade(text, fadeIn, delay, fadeOut) {
+            if (fadeIn === null) {
+                fadeIn = 1000;
+            }
+            if (delay === null) {
+                delay = 1500;
+            }
+            if (fadeOut === null) {
+                fadeOut = 2000;
+            }
+            $(this).text(text);
+            $(this).fadeIn(1000).delay(1500).fadeOut(2000);
+        },
+
+        disable : function() {
+            return this.each(function() {
+                if (typeof this.disabled != "undefined") {
+                    $(this).data("jquery.disabled", this.disabled);
+
+                    this.disabled = true;
+                }
+            });
+        },
+
+        enable : function() {
+            return this.each(function() {
+                if (typeof this.disabled != "undefined") {
+                    this.disabled = $(this).data("jquery.disabled");
+                }
+            });
+        }
+    });
+});
