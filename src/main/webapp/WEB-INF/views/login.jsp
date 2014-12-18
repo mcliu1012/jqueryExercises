@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <%@include file="commonImport.jsp" %>
 
-<spring:url value="${baseUrl}/css/login.css" var="logincss"></spring:url>
-<spring:url value="${baseUrl}/js/login.js" var="loginjs"></spring:url>
+<spring:url value="/resources/css/login.css" var="logincss"></spring:url>
+<spring:url value="/resources/js/login.js" var="loginjs"></spring:url>
 <link rel="stylesheet" type="text/css" href='${logincss}?<%=sysDate%>'>
 <script type="text/javascript" src="${loginjs}?<%=sysDate%>"></script>
 <title>Login</title>

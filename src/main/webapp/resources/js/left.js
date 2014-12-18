@@ -17,10 +17,10 @@ function pLeftSetListener() {
         var pLeftId = $(this).attr('id');
         switch (pLeftId) {
             case 'pLeftRH':
-                window.location.href = "index";
+                window.location.href = $.getBaseURL() + "/index";
                 break;
             case 'pLeftJV':
-                window.location.href = "validateExercise";
+                window.location.href = $.getBaseURL() + "/validateExercise/init";
                 break;
             case 'pLeftF2':
                 break;

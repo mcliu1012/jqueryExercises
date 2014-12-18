@@ -1,6 +1,6 @@
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
-<link rel="stylesheet" type="text/css" href="${baseUrl}/css/left.css" />
-<script type="text/javascript" src="${baseUrl}/js/left.js"></script>
+<link rel="stylesheet" type="text/css" href="/jqueryExercises/resources/css/left.css" />
+<script type="text/javascript" src="/jqueryExercises/resources/js/left.js"></script>
 <div>
   <div class="pLeftOuterDiv">
     <ul class="nav nav-pills nav-stacked" role="tablist">

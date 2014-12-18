@@ -5,15 +5,30 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.mcliu.jqueryExercises.util.EncryptUtil;
-
 public class Test {
 
     public static void main(String[] args) {
 //        testHashMap();
-        EncryptUtil encryptUtil = new EncryptUtil();
-        String aesStr = encryptUtil.encrypt("123456");
-        System.out.println(aesStr);
+
+//        EncryptUtil encryptUtil = new EncryptUtil();
+//        String aesStr = encryptUtil.encrypt("123456");
+//        System.out.println(aesStr);
+
+//        boolean isEmail = "871702098@a.c".matches("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
+//        System.out.println(isEmail);
+
+//        StringBuffer stringBuffer = new StringBuffer();
+//        if (!isSaveValue(stringBuffer)) {
+//            System.out.println("stringBuffer.toString():\t" + stringBuffer.toString());
+//        }
+
+        String string = String.valueOf("aaaaa");
+        System.out.println(string);
+    }
+
+    private static boolean isSaveValue(StringBuffer stringBuffer) {
+        stringBuffer.append("aaaaaaaaaaaaaaaaa");
+        return false;
     }
 
     private static void testHashMap() {

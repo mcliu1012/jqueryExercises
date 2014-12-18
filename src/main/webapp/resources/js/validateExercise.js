@@ -10,10 +10,42 @@ function setStatusInit() {
     $('#pVEEmailInput').focus();
 }
 
+/**
+ * 事件监听
+ */
 function setListeners() {
+    setPVEResetBtnClickHandler();
+    setPVESignUpBtnClickHandler();
+}
+
+/**
+ * 点击【重置】按钮
+ */
+function setPVEResetBtnClickHandler() {
     $('#pVEResetBtn').off('click').on('click', function() {
         $('#pVEEmailInput').focus();
         pVEValidator.resetForm();
+    });
+}
+
+/**
+ * 点击【注册】按钮
+ */
+function setPVESignUpBtnClickHandler() {
+    $('#pVESignUpBtn').off('click').on('click', function() {
+        $.ajax({
+            url: "validateExercise/registUser",
+            type: "POST",
+            success: function(data, textStatus) {
+                alert('---------success----------');
+            },
+            error: function(request, status, error) {
+                alert('---------error----------');
+            },
+            complete: function(XMLHttpRequest, textStatus) {
+                alert('---------complete----------');
+            }
+        });
     });
 }
 
@@ -58,7 +90,7 @@ function setValidator() {
           }
       },
       submitHandler: function(form) {
-          $(form).ajaxSubmit();
+//          $(form).ajaxSubmit();
       }
   });
 }

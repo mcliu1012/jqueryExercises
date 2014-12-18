@@ -4,8 +4,8 @@
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
 <%@include file="commonImport.jsp"%>
-<link rel="stylesheet" type="text/css" href="${baseUrl}/css/validateExercise.css"/>
-<script type="text/javascript" src="${baseUrl}/js/validateExercise.js"></script>
+<link rel="stylesheet" type="text/css" href="/jqueryExercises/resources/css/validateExercise.css"/>
+<script type="text/javascript" src="/jqueryExercises/resources/js/validateExercise.js"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <div id="pVEDiv" style="height: 100%;">
       <form id="pVEForm" class="form-horizontal" action="registUser" role="form" method="POST">
         <div class="form-group">
-          <label for="pVEEmailInput" class="col-sm-2 control-label">电子邮箱地址：</label>
+          <label for="pVEEmailInput" class="col-sm-2 control-label">电子邮箱：</label>
           <div class="col-sm-10">
             <input type="email" class="form-control" id="pVEEmailInput" placeholder="Email" name="loginName">
           </div>

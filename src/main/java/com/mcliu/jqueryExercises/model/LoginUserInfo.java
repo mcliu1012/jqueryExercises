@@ -2,6 +2,7 @@ package com.mcliu.jqueryExercises.model;
 
 public class LoginUserInfo {
     private String loginName;
+    private String passwordFirst;
     private String password;
     private String name;
     private String keepLoginName;
@@ -36,6 +37,14 @@ public class LoginUserInfo {
 
     public void setKeepLoginName(String keepLoginName) {
         this.keepLoginName = keepLoginName;
+    }
+
+    public String getPasswordFirst() {
+        return passwordFirst;
+    }
+
+    public void setPasswordFirst(String passwordFirst) {
+        this.passwordFirst = passwordFirst;
     }
 
 }
