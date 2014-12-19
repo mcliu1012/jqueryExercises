@@ -379,3 +379,22 @@ input.error {
   border: 1px solid;
   margin-left: 20px;
 }
+
+/* modal */
+.modal-alert {
+	display: none;
+	width: 300px;
+	position: absolute;
+/* 	top: -70px; */
+	left: 50%;
+	margin-left: -175px;
+	z-index: 2000;
+}
+
+.frontModal {
+	z-index: 2000;
+}
+
+.secondBackdrop {
+	z-index: 1600;
+}

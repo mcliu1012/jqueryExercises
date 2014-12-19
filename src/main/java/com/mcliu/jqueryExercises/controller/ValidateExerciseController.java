@@ -83,10 +83,11 @@ public class ValidateExerciseController extends BaseController {
         // Email格式验证
         if (!loginUserInfo.getLoginName().matches("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*")) {
             errorMessage.append("E-mail地址格式不正确(S)");
+            return false;
         }
         // 是否重复注册验证
         LoginUserInfo dbLoginUserInfo = loginService.getUserByLoginName(loginUserInfo.getLoginName());
-        if (dbLoginUserInfo == null) {
+        if (dbLoginUserInfo != null) {
             errorMessage.append("该Email已注册，请重新填写或直接登录");
             return false;
         }

@@ -177,17 +177,19 @@ $(function() {
          * アニメーション 効果は指定する
          */
         txtCrossFade : function txtCrossFade(text, fadeIn, delay, fadeOut) {
-            if (fadeIn === null) {
-                fadeIn = 1000;
+            if ($(this).css("display") === "none") {
+                if (fadeIn === null) {
+                    fadeIn = 1000;
+                }
+                if (delay === null) {
+                    delay = 1500;
+                }
+                if (fadeOut === null) {
+                    fadeOut = 2000;
+                }
+                $(this).text(text);
+                $(this).fadeIn(1000).delay(1500).fadeOut(2000);
             }
-            if (delay === null) {
-                delay = 1500;
-            }
-            if (fadeOut === null) {
-                fadeOut = 2000;
-            }
-            $(this).text(text);
-            $(this).fadeIn(1000).delay(1500).fadeOut(2000);
         },
 
         disable : function() {

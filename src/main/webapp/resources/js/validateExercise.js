@@ -33,24 +33,24 @@ function setPVEResetBtnClickHandler() {
  */
 function setPVESignUpBtnClickHandler() {
     $('#pVESignUpBtn').off('click').on('click', function() {
-        alert('---------start----------');
         if ($('#pVEForm').valid()) {
             $.ajax({
                 url: $.getBaseURL() + "/validateExercise/registUser",
                 type: "POST",
                 cache: false,
                 dataType: "json",
+                data: $('#pVEForm').serialize(),
                 success: function(data, textStatus) {
-                    alert('---------success----------');
                     if (data.error) {
-                        $('#errorMsg').html(data.error);
+                        $('#pVEErrorMsg').txtCrossFade(data.error);
+                        $('#pVEEmailInput').focus();
                     }
                 },
                 error: function(request, status, error) {
-                    alert('---------error----------');
+                    $('#pVEErrorMsg').txtCrossFade("发生异常，请稍后重试。");
                 },
                 complete: function(XMLHttpRequest, textStatus) {
-                    alert('---------complete----------');
+
                 }
             });
         }

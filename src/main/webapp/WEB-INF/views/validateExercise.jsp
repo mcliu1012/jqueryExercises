@@ -13,8 +13,8 @@
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
     <div id="pVEDiv" style="height: 100%;">
+      <div id="pVEErrorMsg" class="alert alert-danger modal-alert modal-alert-error" role="alert"></div>
       <form id="pVEForm" class="form-horizontal" action="" role="form" method="POST">
-        <div id="errorMsg"></div>
         <div class="form-group">
           <label for="pVEEmailInput" class="col-sm-2 control-label">电子邮箱：</label>
           <div class="col-sm-10">
