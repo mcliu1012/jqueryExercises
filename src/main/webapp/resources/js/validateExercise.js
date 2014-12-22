@@ -7,7 +7,7 @@ $(function() {
 });
 
 function setStatusInit() {
-    $('#pVEEmailInput').focus();
+    $("#pVEEmailInput").focus();
 }
 
 /**
@@ -22,8 +22,8 @@ function setListeners() {
  * 点击【重置】按钮
  */
 function setPVEResetBtnClickHandler() {
-    $('#pVEResetBtn').off('click').on('click', function() {
-        $('#pVEEmailInput').focus();
+    $("#pVEResetBtn").off("click").on("click", function() {
+        $("#pVEEmailInput").focus();
         pVEValidator.resetForm();
     });
 }
@@ -32,22 +32,24 @@ function setPVEResetBtnClickHandler() {
  * 点击【注册】按钮
  */
 function setPVESignUpBtnClickHandler() {
-    $('#pVESignUpBtn').off('click').on('click', function() {
-        if ($('#pVEForm').valid()) {
+    $("#pVESignUpBtn").off("click").on("click", function() {
+        if ($("#pVEForm").valid()) {
             $.ajax({
                 url: $.getBaseURL() + "/validateExercise/registUser",
                 type: "POST",
                 cache: false,
                 dataType: "json",
-                data: $('#pVEForm').serialize(),
+                data: $("#pVEForm").serialize(),
                 success: function(data, textStatus) {
                     if (data.error) {
-                        $('#pVEErrorMsg').txtCrossFade(data.error);
-                        $('#pVEEmailInput').focus();
+                        $("#pVEErrorMsg").txtCrossFade(data.error);
+                        $("#pVEEmailInput").focus();
+                        return;
                     }
+                    window.location.href = $.getBaseURL() + "/validateExercise/userListInit";
                 },
                 error: function(request, status, error) {
-                    $('#pVEErrorMsg').txtCrossFade("发生异常，请稍后重试。");
+                    $("#pVEErrorMsg").txtCrossFade("发生异常，请稍后重试。");
                 },
                 complete: function(XMLHttpRequest, textStatus) {
 
@@ -58,7 +60,7 @@ function setPVESignUpBtnClickHandler() {
 }
 
 function setValidator() {
-    pVEValidator = $('#pVEForm').validate({
+    pVEValidator = $("#pVEForm").validate({
 //      onfocusout: false, // 是否在获取焦点时验证 默认:true
 //      onkeyup: false, // 是否在敲击键盘时验证 默认:true
 //      focusInvalid:false, // 提交表单后,未通过验证的表单(第一个或提交之前获得焦点的未通过验证的表单)会获得焦点 默认:true

@@ -1,11 +1,20 @@
 package com.mcliu.jqueryExercises.model;
 
 public class LoginUserInfo {
+    private int id;
     private String loginName;
     private String passwordFirst;
     private String password;
     private String name;
     private String keepLoginName;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getLoginName() {
         return loginName;

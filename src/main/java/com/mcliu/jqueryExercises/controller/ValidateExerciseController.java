@@ -1,6 +1,7 @@
 package com.mcliu.jqueryExercises.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import net.arnx.jsonic.JSON;
@@ -67,6 +68,7 @@ public class ValidateExerciseController extends BaseController {
             logger.debug(error);
             return error;
         }
+        validateExerciseService.addUser(loginUserInfo);
 
         logger.info("==== registUser END ====");
         return JSON.encode(model);
@@ -87,7 +89,7 @@ public class ValidateExerciseController extends BaseController {
         }
         // 是否重复注册验证
         LoginUserInfo dbLoginUserInfo = loginService.getUserByLoginName(loginUserInfo.getLoginName());
-        if (dbLoginUserInfo != null) {
+        if (dbLoginUserInfo.getLoginName() != null) {
             errorMessage.append("该Email已注册，请重新填写或直接登录");
             return false;
         }
@@ -110,5 +112,28 @@ public class ValidateExerciseController extends BaseController {
             return false;
         }
         return true;
+    }
+
+    @RequestMapping(value = "userListInit", method = RequestMethod.GET)
+    public String userListInit(Model model) throws Exception {
+        logger.info("==== userListInit START ====");
+
+        List<LoginUserInfo> loginUserInfoList = validateExerciseService.getLoginUserInfoList();
+        model.addAttribute("loginUserInfoList", loginUserInfoList);
+
+        logger.info("==== userListInit END ====");
+        return "userList";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "getLoginUserInfoList", method = RequestMethod.GET)
+    public String getLoginUserInfoList(Model model) throws Exception {
+        logger.info("==== getLoginUserInfoList START ====");
+
+        List<LoginUserInfo> loginUserInfoList = validateExerciseService.getLoginUserInfoList();
+        model.addAttribute("loginUserInfoList", loginUserInfoList);
+
+        logger.info("==== getLoginUserInfoList END ====");
+        return JSON.encode(model);
     }
 }

@@ -68,12 +68,11 @@ public class LoginServiceImpl implements LoginService {
         LoginUserInfo loginUserInfo = null;
 
         User user = loginDao.selectUserByLoginName(loginName);
-        if (user != null) {
-            loginUserInfo = new LoginUserInfo();
-            loginUserInfo.setLoginName(user.getLoginName());
-            loginUserInfo.setPassword(user.getPassword());
-            loginUserInfo.setName(user.getName());
-        }
+        loginUserInfo = new LoginUserInfo();
+        loginUserInfo.setLoginName(user.getLoginName());
+        loginUserInfo.setPassword(user.getPassword());
+        loginUserInfo.setName(user.getName());
+
         return loginUserInfo;
     }
 
