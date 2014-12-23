@@ -12,8 +12,7 @@
   <div id="header"><%@include file="header.jsp"%></div>
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
-    <div id="pVEDiv" style="height: 100%;">
-      <div id="pULSuccessInfoDiv" class="alert alert-success modal-alert modal-alert-error" role="alert"></div>
+    <div id="pULDiv" style="height: 100%; padding: 50px 60px;">
       注册成功！<br/>
       用户信息一览页面<a href="<c:url value='/validateExercise/init' />">返回到用户注册界面</a>
 <!--       <table border="1" cellspacing="0" cellpadding="0"> -->
@@ -36,7 +35,7 @@
 <%--             </c:forEach> --%>
 <!--         </tbody> -->
 <!--       </table> -->
-        <table id="pULTable">
+        <table id="pULTable" class="table">
           <tbody>
           </tbody>
         </table>

@@ -13,6 +13,7 @@
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
     <div id="pVEDiv" style="height: 100%;">
+      <div id="pVESuccessInfoDiv" class="alert alert-success modal-alert modal-alert-error" role="alert"></div>
       <div id="pVEErrorMsg" class="alert alert-danger modal-alert modal-alert-error" role="alert"></div>
       <form id="pVEForm" class="form-horizontal" action="" role="form" method="POST">
         <div class="form-group">

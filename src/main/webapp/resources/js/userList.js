@@ -4,14 +4,24 @@ $(function() {
 });
 
 function pULStatusInit() {
-    $("#pULSuccessInfoDiv").txtCrossFade("恭喜你！注册成功");
+
 }
 
 function pULTableInit() {
     pULGetLoginUserInfoList(function(loginUserInfoList) {
-        $.each(loginUserInfoList, function(i, item) {
-//            $("#pULTable")
-        });
+        $("#pULTable tbody").empty();
+        var tableRow = "<tr><td>ID</td><td>Email</td><td>Password</td><td>Nick Name</td></tr>";
+        if (loginUserInfoList.length <= 0) {
+            tableRow += "<tr><td colspan='4'>当前还没有注册的用户！</td></tr>";
+        } else {
+            $.each(loginUserInfoList, function(i, item) {
+                tableRow += "<tr><td>" + item.id + "</td>" +
+                                "<td>" + item.loginName + "</td>" +
+                                "<td>" + item.password + "</td>" +
+                                "<td>" + item.name + "</td></tr>";
+            });
+        }
+        $("#pULTable tbody").append(tableRow);
     });
 }
 

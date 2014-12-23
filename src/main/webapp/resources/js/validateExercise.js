@@ -46,7 +46,10 @@ function setPVESignUpBtnClickHandler() {
                         $("#pVEEmailInput").focus();
                         return;
                     }
-                    window.location.href = $.getBaseURL() + "/validateExercise/userListInit";
+                    $("#pVESuccessInfoDiv").txtCrossFade("恭喜你！注册成功");
+                    setTimeout(function() {
+                        window.location.href = $.getBaseURL() + "/validateExercise/userListInit";
+                    }, 1500);
                 },
                 error: function(request, status, error) {
                     $("#pVEErrorMsg").txtCrossFade("发生异常，请稍后重试。");
