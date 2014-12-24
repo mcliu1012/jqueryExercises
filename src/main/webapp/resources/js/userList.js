@@ -10,15 +10,15 @@ function pULStatusInit() {
 function pULTableInit() {
     pULGetLoginUserInfoList(function(loginUserInfoList) {
         $("#pULTable tbody").empty();
-        var tableRow = "<tr><td>ID</td><td>Email</td><td>Password</td><td>Nick Name</td></tr>";
+        var tableRow = "";
         if (loginUserInfoList.length <= 0) {
-            tableRow += "<tr><td colspan='4'>当前还没有注册的用户！</td></tr>";
+            tableRow += "<tr>当前还没有注册的用户！</tr>";
         } else {
             $.each(loginUserInfoList, function(i, item) {
-                tableRow += "<tr><td>" + item.id + "</td>" +
-                                "<td>" + item.loginName + "</td>" +
-                                "<td>" + item.password + "</td>" +
-                                "<td>" + item.name + "</td></tr>";
+                tableRow += "<tr><td class='pULIdTd width20percent'>" + item.id + "</td>" +
+                                "<td class='pULLoginNameTd width20percent'>" + item.loginName + "</td>" +
+                                "<td class='pULPasswordTd width20percent'>" + item.password + "</td>" +
+                                "<td class='pULNameTd width20percent'>" + item.name + "</td></tr>";
             });
         }
         $("#pULTable tbody").append(tableRow);

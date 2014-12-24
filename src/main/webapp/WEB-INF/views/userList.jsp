@@ -35,7 +35,16 @@
 <%--             </c:forEach> --%>
 <!--         </tbody> -->
 <!--       </table> -->
+
         <table id="pULTable" class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Nick Name</th>
+            </tr>
+          </thead>
           <tbody>
           </tbody>
         </table>
