@@ -25,29 +25,31 @@
 <!--           </tr> -->
 <!--         </thead> -->
 <!--         <tbody> -->
-<%--             <c:forEach items="${loginUserInfoList}" var="info"> --%>
+<%--             <c:forEach items="${loginUserInfoList}" var="userInfo"> --%>
 <!--               <tr> -->
-<%--                 <td>${info.id}</td> --%>
-<%--                 <td>${info.loginName}</td> --%>
-<%--                 <td>${info.password}</td> --%>
-<%--                 <td>${info.name}</td> --%>
+<%--                 <td>${userInfo.id}</td> --%>
+<%--                 <td>${userInfo.loginName}</td> --%>
+<%--                 <td>${userInfo.password}</td> --%>
+<%--                 <td>${userInfo.name}</td> --%>
 <!--               </tr> -->
 <%--             </c:forEach> --%>
 <!--         </tbody> -->
 <!--       </table> -->
 
-        <table id="pULTable" class="table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Email</th>
-              <th>Password</th>
-              <th>Nick Name</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+        <div id="pULTableDiv">
+          <table id="pULTable" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th class="pULIdTh width15percent">ID</th>
+                <th class="pULEmailTh width20percent">Email</th>
+                <th class="pULPasswordTh width40percent">Password</th>
+                <th class="pULNickNameTh width25percent">Nick Name</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
     </div>
   </div>
   <div id="footer"><%@include file="footer.jsp"%></div>

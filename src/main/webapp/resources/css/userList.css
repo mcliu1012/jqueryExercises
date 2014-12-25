@@ -1,5 +1,12 @@
+#pULTableDiv {
+  width: 70%;
+  max-height: 200px;
+  overflow-y: scroll;
+  border: 1px solid red;
+}
+
 #pULTable {
-  width: 50%;
+  border: 1px solid blue;
 }
 
 #pULTable tbody tr pULIdTd {
