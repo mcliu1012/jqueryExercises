@@ -1,14 +1,64 @@
-#pULTableDiv {
-  width: 70%;
-  max-height: 200px;
-  overflow-y: scroll;
-  border: 1px solid red;
+#pULJSPTableDiv {
+  height: 300px;
 }
 
-#pULTable {
-  border: 1px solid blue;
+#pULJSPTable {
+  margin: auto;
 }
 
-#pULTable tbody tr pULIdTd {
-
+#pULJSTableDiv {
+  margin-top: 20px;
 }
+
+#pULDiv thead tr {
+  background-color: #5F9EA0;
+}
+
+#pULDiv tbody tr:hover {
+  background-color: #CCFFCC;
+}
+
+.width21percent {
+  width: 21%;
+}
+
+.width24percent {
+  width: 24%;
+}
+
+#pULTableContentDiv {
+  max-height: 260px;
+  overflow: auto;
+}
+
+#pULTableTitleDiv {
+  height: 38px;
+}
+
+
+
+
+
+/*********************************/
+/* table { */
+/*     border-collapse: collapse; */
+/*     width: 300px; */
+/*     overflow-x: scroll; */
+/*     display: block; */
+/* } */
+/* thead { */
+/*     background-color: #EFEFEF; */
+/* } */
+/* thead, tbody { */
+/*     display: block; */
+/* } */
+/* tbody { */
+/*     overflow-y: auto; */
+/*     overflow-x: hidden; */
+/*     height: 140px; */
+/* } */
+/* td, th { */
+/*     min-width: 100px; */
+/*     height: 25px; */
+/*     border: dashed 1px lightblue; */
+/* } */
