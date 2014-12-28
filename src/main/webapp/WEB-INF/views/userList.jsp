@@ -14,20 +14,17 @@
   <div id="content">
     <div id="pULDiv" style="height: 100%; padding: 40px 60px;">
       注册成功！<br/>
-      用户信息一览&nbsp;&nbsp;&nbsp;&nbsp;<a href="<c:url value='/validateExercise/init' />">返回到用户注册界面</a>
-        <div id="pULJSPTableDiv" class="width70percent">
+      <h4>用户信息一览&nbsp;&nbsp;&nbsp;&nbsp;<a href="<c:url value='/validateExercise/init' />">返回到用户注册界面</a></h4>
+        <div id="pULJSPTableDiv" class="width70percent marginTop20">
+      	  <h6><b>JSP中使用&lt;c:forEach&gt;循环显示用户列表：</b></h6>
           <div id="pULTableTitleDiv">
-            <table class="table table-bordered table-striped">
+            <table border="0" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th class="width15percent">ID</th>
-                  <th class="width21percent">Email</th>
-                  <th class="width40percent">Password</th>
-                  <th class="width24percent">Nick Name</th>
-<!--                   <th style="width: 129px;" class="width15percent">ID</th> -->
-<!--                   <th style="width: 178px;" class="width21percent">Email</th> -->
-<!--                   <th style="width: 339px;" class="width40percent">Password</th> -->
-<!--                   <th style="width: 219px;" class="width24percent">Nick Name</th> -->
+                  <th class="width15percent textAlignCenter">ID</th>
+                  <th class="width21percent textAlignCenter">Email</th>
+                  <th class="width40percent textAlignCenter">Password</th>
+                  <th class="width24percent textAlignCenter">Nick Name</th>
                 </tr>
               </thead>
             </table>
@@ -47,14 +44,15 @@
             </table>
           </div>
         </div>
-        <div id="pULJSTableDiv" class="width70percent">
-          <table id="pULJSTable" class="table table-bordered table-striped">
+        <div class="width70percent marginTop20">
+          <h6><b>JS中动态循环显示用户列表：</b></h6>
+          <table id="pULJSTable"  border="0" class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th class="pULIdTh width15percent">ID</th>
-                <th class="pULEmailTh width21percent">Email</th>
-                <th class="pULPasswordTh width40percent">Password</th>
-                <th class="pULNickNameTh width24percent">Nick Name</th>
+                <th class="pULIdTh width15percent textAlignCenter">ID</th>
+                <th class="pULEmailTh width21percent textAlignCenter">Email</th>
+                <th class="pULPasswordTh width40percent textAlignCenter">Password</th>
+                <th class="pULNickNameTh width24percent textAlignCenter">Nick Name</th>
               </tr>
             </thead>
             <tbody>

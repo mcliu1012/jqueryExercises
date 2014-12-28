@@ -1,383 +1,387 @@
 * {
-/*   font-family: 'MS PGothic', sans-serif; */
-  font-size: 14px;
+	/*   font-family: 'MS PGothic', sans-serif; */
+	font-size: 14px;
 }
 
 input[type='button'],input[type='submit'] {
-  width: 80px;
-  height: 30px;
+	width: 80px;
+	height: 30px;
 }
 
 input[type='button'].fiveCharButton {
-  width: 90px;
-  height: 30px;
+	width: 90px;
+	height: 30px;
 }
 
 input[type='text'] {
-  width: 300px;
+	width: 300px;
 }
 
 input:-moz-placeholder,textarea:-moz-placeholder {
-  color: #999999;
+	color: #999999;
 }
 
 input:-ms-input-placeholder,textarea:-ms-input-placeholder {
-  color: #999999;
+	color: #999999;
 }
 
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
-  color: #999999;
+	color: #999999;
 }
 
 select {
-  width: 128px;
+	width: 128px;
 }
 
 #header {
-  position: absolute;
-  top: 0px;
-  height: 100px;
-  width: 100%;
-  border-bottom: 1px solid #999D9E;
+	position: absolute;
+	top: 0px;
+	height: 100px;
+	width: 100%;
+	border-bottom: 1px solid #999D9E;
 }
 
 #pHeaderMsgDiv {
-  font-size: 28px;
-  top: 31px;
-  position: absolute;
+	font-size: 28px;
+	top: 31px;
+	position: absolute;
 }
 
 #pHeaderImgDiv {
-  margin: 33px 7px 0 10px;
+	margin: 33px 7px 0 10px;
 }
 
-#pHeaderImg{
-  width: 300px;
+#pHeaderImg {
+	width: 300px;
 }
 
 #p001DivUser {
-  width: 340px;
-  text-align: right;
-  margin-right: 15px;
-  font-size: 14px;
-  font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	width: 340px;
+	text-align: right;
+	margin-right: 15px;
+	font-size: 14px;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #p001DivUserEmail {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 #pHeaderLogoutDiv {
-  position: absolute;
-  right: 8px;
-  top: 22px;
+	position: absolute;
+	right: 8px;
+	top: 22px;
 }
 
 #footer {
-  background-color: #FFFFFF;
-  color: #7f8c8d;
-  text-align: center;
-  border-top: 1px solid #999D9E;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 50px;
+	background-color: #FFFFFF;
+	color: #7f8c8d;
+	text-align: center;
+	border-top: 1px solid #999D9E;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 50px;
 }
 
 #pFooterDiv {
-  margin-top: 18px;
+	margin-top: 18px;
 }
 
 #left {
-  position: absolute;
-  left: 0px;
-  top: 100px;
-  bottom: 50px;
-  width: 180px;
-  overflow: hidden;
-  border-right: 1px solid #999D9E;
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	bottom: 50px;
+	width: 180px;
+	overflow: hidden;
+	border-right: 1px solid #999D9E;
 }
 
 .p001Left {
-  margin: 6px 0 0 13px;
+	margin: 6px 0 0 13px;
 }
 
 .p001LeftTop {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 #content {
-  position: absolute;
-  left: 180px;
-  right: 0px;
-  bottom: 50px;
-  top: 100px;
-  overflow: auto;
+	position: absolute;
+	left: 180px;
+	right: 0px;
+	bottom: 50px;
+	top: 100px;
+	overflow: auto;
 }
 
 .inlineBlock {
-  display: inline-block;
+	display: inline-block;
 }
 
 .table {
-  display: table;
+	display: table;
 }
 
 .tableCell {
-  vertical-align: middle;
-  display: table-cell;
+	vertical-align: middle;
+	display: table-cell;
 }
 
 .verticalMiddle {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 .nowrap {
-  white-space: nowrap;
+	white-space: nowrap;
 }
 
 .wrapByWord {
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 .wrapByCharacter {
-  white-space: normal;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word; /* Non standard for webkit */
+	white-space: normal;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word; /* Non standard for webkit */
 }
 
 .offScreen {
-  position: absolute;
-  top: -10000px;
-  left: -10000px;
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
 }
 
 .formTableContainer {
-  min-width: 400px;
-  max-width: 600px;
+	min-width: 400px;
+	max-width: 600px;
 }
 
 .formTable {
-  table-layout: fixed;
-  border-collapse: collapse;
-  width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 .formTable td {
-  padding: 5px;
-  white-space: nowrap;
+	padding: 5px;
+	white-space: nowrap;
 }
 
 .formTable .th {
-  width: 150px;
+	width: 150px;
 }
 
 .formTable td.colon {
-  width: 10px;
-  text-align: left;
+	width: 10px;
+	text-align: left;
 }
 
 .formTable .buttons {
-  text-align: right;
+	text-align: right;
 }
 
 .formTable .setting>div {
-  width: 100%;
+	width: 100%;
 }
 
 .formTable .setting .settingBtn {
-  width: 120px;
+	width: 120px;
 }
 
 .dataTableContainer {
-  max-width: 600px;
-  min-width: 400px;
+	max-width: 600px;
+	min-width: 400px;
 }
 
 .dataTable {
-  table-layout: fixed;
-  border-collapse: collapse;
-  width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 .dataTable td {
-  border: 1px solid black;
-  padding: 3px;
+	border: 1px solid black;
+	padding: 3px;
 }
 
 .pagination {
-  text-align: right;
-  margin-bottom: 5px;
+	text-align: right;
+	margin-bottom: 5px;
 }
 
 .pagination>div {
-  display: inline-block;
-  margin-left: 10px;
+	display: inline-block;
+	margin-left: 10px;
 }
 
 .pagination .disabled {
-  color: gray;
+	color: gray;
 }
 
 .pagination .pageLink {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 label.error {
-  color: red;
-  font-style: italic;
-  display: block;
+	color: red;
+	font-style: italic;
+	display: block;
 }
 
 input.error {
-  border: 1px solid red;
-  outline: none;
+	border: 1px solid red;
+	outline: none;
 }
 
 .errorMsg {
-  color: red;
-  margin-top: 10px;
-  margin-left: 6px;
+	color: red;
+	margin-top: 10px;
+	margin-left: 6px;
 }
 
 .msg {
-  color: red;
-  margin-top: 10px;
+	color: red;
+	margin-top: 10px;
 }
 
 .textAlignLeft {
-  text-align: left;
+	text-align: left;
 }
 
 .textAlignRight {
-  text-align: right;
+	text-align: right;
 }
 
 .textAlignCenter {
-  text-align: center;
+	text-align: center;
 }
 
 .verticalAlignMiddle {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 .marginLeft10 {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 .marginTop10 {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 .marginTop200 {
-  margin-top: 200px;
+	margin-top: 200px;
+}
+
+.marginTop20 {
+	margin-top: 20px;
 }
 
 .marginTop30 {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 .bkBlue {
-  background-color: lightblue;
+	background-color: lightblue;
 }
 
 .width15percent {
-  width: 15%;
+	width: 15%;
 }
 
 .width20percent {
-  width: 20%;
+	width: 20%;
 }
 
 .width25percent {
-  width: 25%;
+	width: 25%;
 }
 
 .width40percent {
-  width: 40%;
+	width: 40%;
 }
 
 .width60percent {
-  width: 60%;
+	width: 60%;
 }
 
 .width70percent {
-  width: 70%;
+	width: 70%;
 }
 
 .width80percent {
-  width: 80%;
+	width: 80%;
 }
 
 .width100percent {
-  width: 100%;
+	width: 100%;
 }
 
 .width600px {
-  width: 600px;
+	width: 600px;
 }
 
 .fontWeightBold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .titleH2 {
-  font-size: 20px;
-  font-weight: bold;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .displayNone {
-  display: none
+	display: none
 }
 
 .requiredMark {
-  color: red;
-  font-weight: normal;
+	color: red;
+	font-weight: normal;
 }
 /* hide close "x" for jquery ui dialog*/
 .ui-dialog-titlebar-close {
-  visibility: hidden;
+	visibility: hidden;
 }
 /* dialog title font size */
 .ui-dialog-title {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 /* confirm style */
 .confirm .ui-widget-content {
-  border: medium none;
+	border: medium none;
 }
 
 .confirm .ui-dialog-titlebar {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border: medium none;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: medium none;
 }
 
 .confirm .ui-dialog-buttonpane .ui-dialog-buttonset {
-  float: none;
-  text-align: center;
+	float: none;
+	text-align: center;
 }
 
 .confirm .ui-dialog-buttonpane button {
-  margin: 0.5em 1em 1em 2em
+	margin: 0.5em 1em 1em 2em
 }
 
 #pErrorDiv {
-  margin-left: 70px;
-  margin-top: 60px;
+	margin-left: 70px;
+	margin-top: 60px;
 }
 
 .pErrorA {
-  border: 1px solid;
-  margin-left: 20px;
+	border: 1px solid;
+	margin-left: 20px;
 }
 
 /* modal */
@@ -385,7 +389,7 @@ input.error {
 	display: none;
 	width: 300px;
 	position: absolute;
-/* 	top: -70px; */
+	/* 	top: -70px; */
 	left: 50%;
 	margin-left: -175px;
 	z-index: 2000;
