@@ -7,19 +7,21 @@
 }
 
 #pVEForm .col-sm-10 {
-  width: 75.333333%;
+  width: 80%;
+}
+
+#pVEForm .col-sm-10:nth-child(1) {
+  text-align: right;
+  width: 64%;
+  padding-right: 0px;
+}
+
+#pVEForm .col-sm-10:nth-child(2) .form-control {
+  width: 55%;
 }
 
 #pVEForm .col-sm-2 {
-  width: 23.666667%;
-}
-
-#pVEForm .col-sm-offset-2 {
-  margin-left: 40.666667%;
-}
-
-#pVEForm .form-control {
-  width: 47%;
+  width: 20%;
 }
 
 #pVEForm .error {

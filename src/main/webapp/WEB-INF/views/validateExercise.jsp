@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
+          <div class="col-sm-10">
             <button type="reset" id="pVEResetBtn" class="btn btn-default">重置</button>
             <button type="button" id="pVESignUpBtn" class="btn btn-primary">注册</button>
           </div>
