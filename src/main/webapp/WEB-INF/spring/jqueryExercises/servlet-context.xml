@@ -52,6 +52,7 @@
           <mvc:exclude-mapping path="/resources/css/**"/>
           <mvc:exclude-mapping path="/resources/js/**"/>
           <mvc:exclude-mapping path="/resources/img/**"/>
+          <mvc:exclude-mapping path="/resources/font/**"/>
           <beans:bean class="com.mcliu.jqueryExercises.interceptor.AuthenticationInterceptor" />
       </mvc:interceptor>
 <!--       token interceptor -->

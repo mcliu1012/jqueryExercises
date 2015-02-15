@@ -28,4 +28,12 @@ public interface LoginDao {
      * @throws Exception
      */
     public List<User> selectUserListByName(String name) throws Exception;
+
+    /**
+     * 更新需要改密码的用户的validateCode和outDate
+     *
+     * @param user
+     * @throws Exception
+     */
+    public void updatePasswordForgetUser(User user) throws Exception;
 }

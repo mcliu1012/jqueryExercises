@@ -87,4 +87,51 @@ public class LoginServiceImpl implements LoginService {
         return loginDao.selectUserListByName(name);
     }
 
+    /**
+     * 更新需要改密码的用户的validateCode和outDate
+     *
+     * @param user
+     * @throws Exception
+     */
+    @Override
+    public void updatePasswordForgetUser(LoginUserInfo loginUserInfo) throws Exception {
+        logger.info("==== updatePasswordForgetUser START ====");
+
+        User user = convertLoginUserInfoToUser(loginUserInfo);
+        loginDao.updatePasswordForgetUser(user);
+
+        logger.info("==== updatePasswordForgetUser END ====");
+    }
+
+    /**
+     * 前台Info转换成后台Entity
+     *
+     * @param loginUserInfo
+     * @return
+     */
+    private static User convertLoginUserInfoToUser(LoginUserInfo loginUserInfo) {
+        User user = new User();
+        user.setLoginName(loginUserInfo.getLoginName());
+        user.setPassword(loginUserInfo.getPassword());
+        user.setName(loginUserInfo.getName());
+        user.setValidateCode(loginUserInfo.getValidateCode());
+        user.setOutDate(loginUserInfo.getOutDate());
+        return user;
+    }
+
+    /**
+     * 后台Entity转换成前台Info
+     * @param user
+     * @return
+     */
+    private static LoginUserInfo convertUserToLoginUserInfo(User user) {
+        LoginUserInfo info = new LoginUserInfo();
+        info.setId(user.getId());
+        info.setLoginName(user.getLoginName());
+        info.setPassword(user.getPassword());
+        info.setName(user.getName());
+        info.setValidateCode(user.getValidateCode());
+        info.setOutDate(user.getOutDate());
+        return info;
+    }
 }

@@ -96,7 +96,7 @@ select {
 	left: 0px;
 	top: 100px;
 	bottom: 50px;
-	width: 180px;
+	width: 240px;
 	overflow: hidden;
 	border-right: 1px solid #999D9E;
 }
@@ -111,7 +111,7 @@ select {
 
 #content {
 	position: absolute;
-	left: 180px;
+	left: 240px;
 	right: 0px;
 	bottom: 50px;
 	top: 100px;
@@ -401,4 +401,8 @@ input.error {
 
 .secondBackdrop {
 	z-index: 1600;
+}
+
+.cursorPointer {
+  cursor: pointer;
 }

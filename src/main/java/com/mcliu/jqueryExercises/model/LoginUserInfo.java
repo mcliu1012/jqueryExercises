@@ -1,5 +1,7 @@
 package com.mcliu.jqueryExercises.model;
 
+import java.sql.Timestamp;
+
 public class LoginUserInfo {
     private int id;
     private String loginName;
@@ -7,6 +9,10 @@ public class LoginUserInfo {
     private String password;
     private String name;
     private String keepLoginName;
+    // 找回密码用-验证码
+    private String validateCode;
+    // 找回密码用-过时日期
+    private Timestamp outDate;
 
     public int getId() {
         return id;
@@ -54,6 +60,22 @@ public class LoginUserInfo {
 
     public void setPasswordFirst(String passwordFirst) {
         this.passwordFirst = passwordFirst;
+    }
+
+    public String getValidateCode() {
+        return validateCode;
+    }
+
+    public void setValidateCode(String validateCode) {
+        this.validateCode = validateCode;
+    }
+
+    public Timestamp getOutDate() {
+        return outDate;
+    }
+
+    public void setOutDate(Timestamp outDate) {
+        this.outDate = outDate;
     }
 
 }

@@ -39,7 +39,7 @@
 
     <div class="login-help">
       <p>
-        Forgot your password? <a href="index.html">Click here to reset it</a>.
+        Forgot your password? <a href="<c:url value='/passwordForget' />">Click here to reset it</a>.
       </p>
     </div>
   </section>

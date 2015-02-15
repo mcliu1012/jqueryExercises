@@ -42,4 +42,12 @@ public interface LoginService {
      * @throws Exception
      */
     public List<User> getUserListByName(String name) throws Exception;
+
+    /**
+     * 更新需要改密码的用户的validateCode和outDate
+     *
+     * @param user
+     * @throws Exception
+     */
+    public void updatePasswordForgetUser(LoginUserInfo loginUserInfo) throws Exception;
 }

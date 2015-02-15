@@ -96,6 +96,28 @@ public class LoginDaoImpl implements LoginDao {
         return namedParameterJdbcTemplate.query(sql, param, new UserRowMapper());
     }
 
+    /**
+     * 更新需要改密码的用户的validateCode和outDate
+     *
+     * @param user
+     * @throws Exception
+     */
+    @Override
+    public void updatePasswordForgetUser(User user) throws Exception {
+        String sql = "UPDATE "
+                + "t_user "
+                + "SET "
+                + "t_validate_code = :validateCode, "
+                + "t_out_date = :outDate "
+                + "WHERE t_login_name = :loginName ";
+
+        Map<String, Object> param = new HashMap<String, Object>();
+        param.put("validateCode", user.getValidateCode());
+        param.put("outDate", user.getOutDate());
+        param.put("loginName", user.getLoginName());
+        namedParameterJdbcTemplate.update(sql, param);
+    }
+
     protected class UserResultSetExtractor implements ResultSetExtractor<User> {
 
         @Override
