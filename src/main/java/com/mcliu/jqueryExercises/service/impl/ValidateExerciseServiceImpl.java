@@ -82,6 +82,8 @@ public class ValidateExerciseServiceImpl implements ValidateExerciseService {
         info.setLoginName(user.getLoginName());
         info.setPassword(user.getPassword());
         info.setName(user.getName());
+        info.setValidateCode(user.getValidateCode());
+        info.setOutDate(user.getOutDate());
         return info;
     }
 }

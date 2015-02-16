@@ -63,7 +63,9 @@ public class ValidateExerciseDaoImpl implements ValidateExerciseDao {
                 + "t_id, "
                 + "t_login_name, "
                 + "t_password, "
-                + "t_name "
+                + "t_name, "
+                + "t_validate_code, "
+                + "t_out_date "
                 + "FROM t_user ";
 
         List<User> userList = this.namedParameterJdbcTemplate.query(sql, new UserListRowMapper());
@@ -79,6 +81,8 @@ public class ValidateExerciseDaoImpl implements ValidateExerciseDao {
             user.setLoginName(rs.getString("t_login_name"));
             user.setPassword(rs.getString("t_password"));
             user.setName(rs.getString("t_name"));
+            user.setValidateCode(rs.getString("t_validate_code"));
+            user.setOutDate(rs.getTimestamp("t_out_date"));
             return user;
         }
 

@@ -7,19 +7,19 @@
 
 <spring:url value="/resources/css/login.css" var="logincss"></spring:url>
 <link rel="stylesheet" type="text/css" href='${logincss}?<%=sysDate%>'>
-<title>Forgot your password? · MCLIU</title>
+<title>Password sent! · MCLIU</title>
 </head>
 <body>
   <section class="pLoginSectionContainer">
     <div class="login">
-      <h1>Forgot password</h1>
-      <div class="errorMsg">${error }</div>
-      <form method="post" action="passwordReset">
+      <h1>重置密码确认信息已经发送！</h1>
+      <form method="get" action="login">
         <p>
-          <input type="text" name="loginName" placeholder="Enter your email address" autofocus>
+          我们给您一个电子邮件,其中包含一个链接,将允许您在接下来的30分钟内重置您的密码。<br/><br/>
+          如果电子邮件在几分钟内不出现，请检查您的垃圾邮件文件夹。
         </p>
         <p class="submit">
-          <input type="submit" class="cursorPointer" name="commit" value="Submit">
+          <input style="width:100px;" type="submit" class="cursorPointer" value="返回登录界面">
         </p>
       </form>
     </div>

@@ -14,7 +14,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 
     // 認証チェック以外のパス
 //    public static String[] loginNotRequirePaths = new String[] {"logout", "login", ""};
-    public static String[] loginNotRequirePaths = new String[] {"logout", "login", "passwordForget", "passwordReset"};
+    public static String[] loginNotRequirePaths = new String[] {"logout", "login", "passwordForget", "passwordReset", "checkLink"};
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)

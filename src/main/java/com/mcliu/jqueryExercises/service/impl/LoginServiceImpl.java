@@ -65,15 +65,8 @@ public class LoginServiceImpl implements LoginService {
      */
     @Override
     public LoginUserInfo getUserByLoginName(String loginName) throws Exception {
-        LoginUserInfo loginUserInfo = null;
-
         User user = loginDao.selectUserByLoginName(loginName);
-        loginUserInfo = new LoginUserInfo();
-        loginUserInfo.setLoginName(user.getLoginName());
-        loginUserInfo.setPassword(user.getPassword());
-        loginUserInfo.setName(user.getName());
-
-        return loginUserInfo;
+        return convertUserToLoginUserInfo(user);
     }
 
     /**

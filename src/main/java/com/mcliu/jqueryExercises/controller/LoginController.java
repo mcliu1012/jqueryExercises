@@ -17,11 +17,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mcliu.jqueryExercises.common.Constants;
 import com.mcliu.jqueryExercises.model.LoginUserInfo;
 import com.mcliu.jqueryExercises.service.LoginService;
 import com.mcliu.jqueryExercises.util.EncryptUtil;
+import com.mcliu.jqueryExercises.util.mail.MailSenderInfo;
+import com.mcliu.jqueryExercises.util.mail.SimpleMailSender;
 
 /**
  * LoginController
@@ -150,15 +153,94 @@ public class LoginController extends BaseController {
                 + digitalSignature + "&loginName=" + loginUserInfo.getLoginName();
         String emailContent = "请勿回复本邮件.点击下面的链接,重设密码<br/><a href="
                 + resetPassHref + " target='_BLANK'>" + resetPassHref
-                + "</a>  或者    <a href=" + resetPassHref
+                + "</a> <br/>或者    <a href=" + resetPassHref
                 + " target='_BLANK'>点击我重新设置密码</a>"
-                + "<br/>tips:本邮件超过30分钟,链接将会失效，需要重新申请'找回密码'" + key
-                + "\t" + digitalSignature;
+                + "<br/>提示 : 本邮件超过30分钟,链接将会失效，需要重新申请'找回密码'。"
+                + "<br/>Thanks,<br/>来自MCLIU。";
 
         // 发送邮件
-
+        // 这个类主要是设置邮件
+        MailSenderInfo mailInfo = new MailSenderInfo();
+        mailInfo.setMailServerHost("smtp.126.com");
+        mailInfo.setMailServerPort("25");
+        mailInfo.setValidate(true);
+        mailInfo.setUserName("mailsender1012@126.com");
+        mailInfo.setPassword("password");// 您的邮箱密码
+        mailInfo.setFromAddress("mailsender1012@126.com");
+        mailInfo.setToAddress("liujiahenan@gmail.com");
+        mailInfo.setSubject("[MCLIU] 请重置你的密码");
+        mailInfo.setContent(emailContent);
+        // 这个类主要来发送邮件
+        SimpleMailSender.sendHtmlMail(mailInfo);// 发送html格式
 
         logger.info("==== passwordReset END ====");
+        return "passwordResetConfirm";
+    }
+
+    /**
+     * 点击邮件中的链接
+     *
+     * @param model
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "checkLink", method = RequestMethod.GET)
+    public String checkLink(Model model,
+                @RequestParam String sid,
+                @RequestParam String loginName,
+                HttpServletRequest request) throws Exception {
+        logger.info("==== checkLink START ====");
+
+        logger.info("sid ====>" + sid);
+
+        if (sid.equals("") || loginName.equals("")) {
+            String errorMsg = messageSource.getMessage("error.email.link.notComplete", null, null);
+            model.addAttribute("error", errorMsg);
+            return "login";
+        }
+
+        LoginUserInfo loginUserInfo = loginService.getUserByLoginName(loginName);
+        if (StringUtils.isEmpty(loginUserInfo.getLoginName())) {
+            String errorMsg = messageSource.getMessage("error.email.link.notFound", null, null);
+            model.addAttribute("error", errorMsg);
+            return "login";
+        }
+
+        Timestamp outDate = loginUserInfo.getOutDate();
+        logger.info("outDate ====>" + outDate);
+        if (outDate.getTime() <= System.currentTimeMillis()) { // 表示已经过期
+            String errorMsg = messageSource.getMessage("error.email.link.outDate", null, null);
+            model.addAttribute("error", errorMsg);
+            return "login";
+        }
+
+        String key = loginUserInfo.getLoginName() + "$" + outDate.getTime() / 1000 * 1000 + "$" + loginUserInfo.getValidateCode();// 数字签名
+
+        logger.info("key link ====>" + key);
+        String digitalSignature = EncryptUtil.encrypt(key);// 数字签名
+
+        logger.info("digitalSignature ====>" + digitalSignature);
+        if (!digitalSignature.equals(sid)) {
+            String errorMsg = messageSource.getMessage("error.email.link.notMatch", null, null);
+            model.addAttribute("error", errorMsg);
+            return "login";
+        }
+        // 链接验证通过 转到修改密码页面
+        HttpSession session = request.getSession(true);
+        // save the user's information to session
+        session.setAttribute("userInfo", loginUserInfo);
+        model.addAttribute("loginName", loginName);
+
+        logger.info("==== checkLink END ====");
+        return "passwordResetFinal";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "passwordResetFinal", method = RequestMethod.POST)
+    public String passwordResetFinalInit(Model model, LoginUserInfo loginUserInfo, HttpServletRequest request) {
+        logger.info("==== passwordResetFinal START ====");
+
+        logger.info("==== passwordResetFinal END ====");
         return "login";
     }
 
