@@ -1,3 +1,11 @@
 .pLeftOuterDiv {
   margin: 4px;
 }
+
+ul li a {
+  height: 40px;
+}
+
+#pLeftGame a {
+  padding-top: 5px;
+}

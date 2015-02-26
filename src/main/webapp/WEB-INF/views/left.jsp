@@ -6,7 +6,7 @@
     <ul class="nav nav-pills nav-stacked" role="tablist">
       <li id="pLeftRH" role="presentation"><a href="javascript:void(0);">返回首页</a></li>
       <li id="pLeftJV" role="presentation"><a href="javascript:void(0);">Jquery Validate</a></li>
-      <li id="pLeftF2" role="presentation"><a href="javascript:void(0);">Feature2</a></li>
+      <li id="pLeftGame" role="presentation"><a href="javascript:void(0);"><img src="/jqueryExercises/resources/img/game.png"/>Game</a></li>
       <li id="pLeftF3" role="presentation"><a href="javascript:void(0);">Feature3</a></li>
     </ul>
   </div>
