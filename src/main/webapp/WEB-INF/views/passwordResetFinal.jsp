@@ -15,7 +15,7 @@
   <section class="pLoginSectionContainer">
     <div class="login">
       <h1>重置密码</h1>
-      <div class="errorMsg">${error }</div>
+      <div class="errorMsg"></div>
       <form method="post">
         <p>
           <input type="password" name="passwordFirst" placeholder="Password" autofocus>

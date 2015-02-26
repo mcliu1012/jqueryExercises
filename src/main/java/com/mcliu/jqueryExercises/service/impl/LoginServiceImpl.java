@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mcliu.jqueryExercises.dao.LoginDao;
 import com.mcliu.jqueryExercises.entity.User;
@@ -87,6 +88,7 @@ public class LoginServiceImpl implements LoginService {
      * @throws Exception
      */
     @Override
+    @Transactional(rollbackFor=Exception.class)
     public void updatePasswordForgetUser(LoginUserInfo loginUserInfo) throws Exception {
         logger.info("==== updatePasswordForgetUser START ====");
 
@@ -94,6 +96,26 @@ public class LoginServiceImpl implements LoginService {
         loginDao.updatePasswordForgetUser(user);
 
         logger.info("==== updatePasswordForgetUser END ====");
+    }
+
+    /**
+     * 重置密码
+     *
+     * @param loginUserInfo
+     * @throws Exception
+     */
+    @Override
+    @Transactional(rollbackFor=Exception.class)
+    public void updatePassword(LoginUserInfo loginUserInfo) throws Exception {
+        logger.info("==== updatePassword START ====");
+
+        User user = convertLoginUserInfoToUser(loginUserInfo);
+        // Encrypt the input password
+        String codePassword = EncryptUtil.encrypt(user.getPassword());
+        user.setPassword(codePassword);
+        loginDao.updatePassword(user);
+
+        logger.info("==== updatePassword END ====");
     }
 
     /**

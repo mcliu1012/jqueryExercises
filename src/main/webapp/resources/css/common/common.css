@@ -248,6 +248,12 @@ input.error {
 	margin-left: 6px;
 }
 
+.successMsg {
+    color: green;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+
 .msg {
 	color: red;
 	margin-top: 10px;

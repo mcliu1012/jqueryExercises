@@ -50,4 +50,12 @@ public interface LoginService {
      * @throws Exception
      */
     public void updatePasswordForgetUser(LoginUserInfo loginUserInfo) throws Exception;
+
+    /**
+     * 重置密码
+     *
+     * @param loginUserInfo
+     * @throws Exception
+     */
+    public void updatePassword(LoginUserInfo loginUserInfo) throws Exception;
 }

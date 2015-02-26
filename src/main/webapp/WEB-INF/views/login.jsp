@@ -15,6 +15,7 @@
   <section class="pLoginSectionContainer">
     <div class="login">
       <h1>Login to MCLIU's website</h1>
+      <div class="successMsg">${successMsg }</div>
       <div class="errorMsg">${error }</div>
       <form method="post" action="login">
         <p>

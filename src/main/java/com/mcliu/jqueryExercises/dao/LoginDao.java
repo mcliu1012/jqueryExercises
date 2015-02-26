@@ -36,4 +36,12 @@ public interface LoginDao {
      * @throws Exception
      */
     public void updatePasswordForgetUser(User user) throws Exception;
+
+    /**
+     * 充值密码
+     *
+     * @param user
+     * @throws Exception
+     */
+    public void updatePassword(User user) throws Exception;
 }

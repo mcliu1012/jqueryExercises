@@ -1,12 +1,16 @@
 package com.mcliu.jqueryExercises.controller;
 
 import java.sql.Timestamp;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import net.arnx.jsonic.JSON;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -235,13 +239,72 @@ public class LoginController extends BaseController {
         return "passwordResetFinal";
     }
 
+    /**
+     * 重置密码
+     *
+     * @param model
+     * @param loginUserInfo
+     * @param request
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "passwordResetFinal", method = RequestMethod.POST)
-    public String passwordResetFinalInit(Model model, LoginUserInfo loginUserInfo, HttpServletRequest request) {
+    public String passwordResetFinalInit(Model model, LoginUserInfo loginUserInfo, HttpServletRequest request) throws Exception {
         logger.info("==== passwordResetFinal START ====");
+        // セッションを削除
+        request.getSession().invalidate();
+
+        StringBuffer errorMessage = new StringBuffer();
+        if (!isParamCheck(loginUserInfo, errorMessage)) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("error", errorMessage.toString());
+
+            HttpSession session = request.getSession(true);
+            // save the user's information to session
+            session.setAttribute("userInfo", loginUserInfo);
+            return JSON.encode(map);
+        }
+        // 验证通过，重置密码
+        loginService.updatePassword(loginUserInfo);
 
         logger.info("==== passwordResetFinal END ====");
+        return JSON.encode(model);
+    }
+
+    /**
+     * 修改密码成功，跳转至Login页面
+     *
+     * @param model
+     * @param request
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "passwordResetSuccess", method = RequestMethod.GET)
+    public String passwordResetSuccess(Model model, HttpServletRequest request) throws Exception {
+        String successMsg = messageSource.getMessage("success.login.password.reset", null, null);
+        model.addAttribute("successMsg", successMsg);
         return "login";
+    }
+
+    private boolean isParamCheck(LoginUserInfo loginUserInfo, StringBuffer errorMessage) throws Exception {
+        // Password
+        if (StringUtils.isEmpty(loginUserInfo.getPassword()) || StringUtils.isEmpty(loginUserInfo.getPasswordFirst())) {
+            errorMessage.append("请输入密码(S)");
+            return false;
+        }
+        if (loginUserInfo.getPassword().length() < 2 || loginUserInfo.getPasswordFirst().length() < 2) {
+            errorMessage.append("密码长度不能小于2(S)");
+            return false;
+        }
+        if (loginUserInfo.getPassword().length() > 14 || loginUserInfo.getPasswordFirst().length() > 14) {
+            errorMessage.append("密码长度不能大于14(S)");
+            return false;
+        }
+        if (!loginUserInfo.getPassword().equals(loginUserInfo.getPasswordFirst())) {
+            errorMessage.append("两次输入的密码不一致(S)");
+            return false;
+        }
+        return true;
     }
 
     /**

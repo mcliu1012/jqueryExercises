@@ -122,6 +122,26 @@ public class LoginDaoImpl implements LoginDao {
         namedParameterJdbcTemplate.update(sql, param);
     }
 
+    /**
+     * 重置密码
+     *
+     * @param user
+     * @throws Exception
+     */
+    @Override
+    public void updatePassword(User user) throws Exception {
+        String sql = "UPDATE "
+                + "t_user "
+                + "SET "
+                + "t_password = :password "
+                + "WHERE t_login_name = :loginName ";
+
+        Map<String, Object> param = new HashMap<String, Object>();
+        param.put("password", user.getPassword());
+        param.put("loginName", user.getLoginName());
+        namedParameterJdbcTemplate.update(sql, param);
+    }
+
     protected class UserResultSetExtractor implements ResultSetExtractor<User> {
 
         @Override
