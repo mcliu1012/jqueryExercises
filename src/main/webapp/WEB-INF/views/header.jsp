@@ -2,7 +2,7 @@
 <script src="/jqueryExercises/resources/js/header.js"></script>
 <div>
   <div id="pHeaderImgDiv" class="inlineBlock">
-    <img id="pHeaderImg" src="/jqueryExercises/resources/img/monoliths_logo_footer.png" />
+    <img id="pHeaderImg" src="/jqueryExercises/resources/img/logo.png" />
   </div>
   <div id="pHeaderMsgDiv" class="inlineBlock">Jquery Exercises</div>
   <div id="pHeaderLogoutDiv" class="inlineblock">
