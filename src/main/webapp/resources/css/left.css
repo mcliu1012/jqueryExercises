@@ -2,10 +2,6 @@
   margin: 4px;
 }
 
-ul li a {
-  height: 40px;
-}
-
-#pLeftGame a {
-  padding-top: 5px;
+.pLeftOuterDiv i, .pLeftOuterDiv img {
+  padding-right: 5px;
 }

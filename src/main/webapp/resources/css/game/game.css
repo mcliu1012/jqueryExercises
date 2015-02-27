@@ -85,7 +85,7 @@ body {
 }
 
 .statbox .title+.value {
-  margin-top: -3px;
+  margin-top: 24px;
 }
 
 .statbox .title,.statbox .value {

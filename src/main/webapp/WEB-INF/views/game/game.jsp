@@ -17,12 +17,12 @@
         <div class="col-md-4">
           <div class="statbox widget box box-shadow">
             <div class="widget-content">
-              <div class="visual red">
-                <i class="fa fa-gamepad"></i>
+              <div class="visual">
+                  <img alt="2048" src="/jqueryExercises/resources/img/2048.png">
               </div>
               <div class="title">2048</div>
               <div class="value">2048</div>
-              <a href="/game/2048/" class="more">进入游戏<i class="pull-right icon-angle-right"></i></a>
+              <a href="<c:url value='/game/2048' />" target="_blank" class="more">进入游戏<i class="pull-right icon-angle-right"></i></a>
             </div>
           </div>
         </div>

@@ -4,8 +4,8 @@
 <div>
   <div class="pLeftOuterDiv">
     <ul class="nav nav-pills nav-stacked" role="tablist">
-      <li id="pLeftRH" role="presentation"><a href="javascript:void(0);">返回首页</a></li>
-      <li id="pLeftJV" role="presentation"><a href="javascript:void(0);">Jquery Validate</a></li>
+      <li id="pLeftRH" role="presentation"><a href="javascript:void(0);"><i class="icon-home icon-large"></i>首页</a></li>
+      <li id="pLeftJV" role="presentation"><a href="javascript:void(0);"><i class="icon-user icon-large"></i>注册</a></li>
       <li id="pLeftGame" role="presentation"><a href="javascript:void(0);"><img src="/jqueryExercises/resources/img/game.png"/>Game</a></li>
       <li id="pLeftF3" role="presentation"><a href="javascript:void(0);">Feature3</a></li>
     </ul>

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("game")
 public class GameController extends BaseController {
     private Logger logger = LoggerFactory.getLogger(GameController.class);
 
@@ -15,11 +16,24 @@ public class GameController extends BaseController {
      *
      * @return
      */
-    @RequestMapping(value = "game", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String initGame() {
         logger.info("==== initGame START ====");
 
         logger.info("==== initGame END ====");
         return "game/game";
+    }
+
+    /**
+     * 2048
+     *
+     * @return
+     */
+    @RequestMapping(value = "2048", method = RequestMethod.GET)
+    public String initGame2048() {
+        logger.info("==== initGame2048 START ====");
+
+        logger.info("==== initGame2048 END ====");
+        return "game/2048/2048";
     }
 }
