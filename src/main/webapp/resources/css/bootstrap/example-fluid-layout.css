@@ -1,0 +1,207 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	font-family: '楷体';
+	background-color: burlywood;
+}
+
+.leaderboard {
+	padding: 3.00%;
+	background-repeat: repeat;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color: chocolate;
+}
+
+.leaderboard h1 {
+	font-size: 40px;
+	margin-bottom: 5px;
+	line-height: 1;
+	letter-spacing: -1px;
+	color: #92B901;
+}
+
+.leaderboard p {
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 27px;
+}
+
+.memberOutDiv {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color: antiquewhite;
+	width: 100%;
+}
+
+.memberParentDiv {
+	padding: 1.35%;
+	width: auto;
+	width: initial;
+}
+
+.memberInDiv {
+	padding: 3.75%;
+}
+
+.membersAllDiv {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color: darksalmon;
+	width: 100%;
+}
+
+.conditionParentDiv {
+	padding: 0.75%;
+	width: auto;
+}
+
+.members {
+	font-family: "楷书";
+	font-size: 12px;
+	width: initial;
+	margin-left: auto;
+}
+
+.alipayP {
+	float: right;
+}
+
+#yzxDiv {
+	margin-left: 1.02766%;
+}
+
+#dwxDiv {
+	margin-left: 1.12766%;
+}
+
+#ljDiv {
+	margin-left: 1.12766%;
+}
+
+.memberDiv {
+	border: 0px solid #B94A48;
+	cursor: default;
+	width: 100%;
+}
+
+.memberInfo-cantSelect {
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background-color: #DADADA;
+	color: silver;
+	height: inherit;
+	max-height: inherit;
+	float: left;
+}
+
+.memberInfo {
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background-color: #ffffff;
+	border: 1px solid #da4c80;
+	color: maroon;
+	height: inherit;
+	max-height: inherit;
+	cursor: default;
+	float: left;
+}
+
+.memberInfo-onmouse {
+	position: relative;
+	left: 6px;
+	top: 6px;
+	z-index: 1;
+	max-height: inherit;
+}
+
+.shadowDesignAnder-cantSelect {
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	z-index: 0;
+	background-color: #DADADA;
+	height: 100%;
+	max-height: inherit;
+	margin-left: 0px;
+}
+
+.shadowDesignAnder {
+	position: absolute;
+	left: 8px;
+	top: 6px;
+	z-index: 0;
+	background-color: #f7c8c9;
+	height: 100%;
+	max-height: inherit;
+	box-sizing: border-box;
+}
+
+.memberOverlap {
+	position: relative;
+}
+
+.disabled {
+	cursor: default;
+	color: currentcolor !important;
+	background-color: darkgray !important;
+}
+
+.dimmedWord {
+	color: silver;
+}
+
+#orderModal {
+	width: 360px;
+	margin: -80px 0 0 -160px;
+}
+
+.alertOutDiv {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin-left: 0px;
+}
+
+#alertDiv {
+	font-family: "宋体";
+	font-size: large;
+	background-color: red;
+	color: blanchedalmond;
+	-webkit-transition: opacity 2.05s linear;
+	-moz-transition: opacity 2.05s linear;
+	-ms-transition: opacity 2.05s linear;
+	-o-transition: opacity 2.05s linear;
+	transition: opacity 2.05s linear;
+}
+
+.selectbox {
+	margin-bottom: 0px;
+}
+
+#photoModal {
+	max-height: 750px;
+	overflow: auto;
+	width: 705px;
+	margin: -320px 0 0 -350px;
+}
+
+.padding0 {
+	padding: 10px;
+}
+
+.myCarousel {
+	margin-bottom: 0px;
+}
+
+.textAlignRight {
+	text-align: right;
+}

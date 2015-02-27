@@ -5,3 +5,11 @@
 .pLeftOuterDiv i, .pLeftOuterDiv img {
   padding-right: 5px;
 }
+
+.pLeftOuterDiv ul li {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.pLeftOuterDiv ul li:last-child {
+  border-bottom: none;
+}

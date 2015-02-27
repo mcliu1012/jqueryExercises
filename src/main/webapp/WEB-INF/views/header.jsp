@@ -4,7 +4,7 @@
   <div id="pHeaderImgDiv" class="inlineBlock">
     <img id="pHeaderImg" src="/jqueryExercises/resources/img/logo.png" />
   </div>
-  <div id="pHeaderMsgDiv" class="inlineBlock">Jquery Exercises</div>
+  <div id="pHeaderMsgDiv" class="inlineBlock">MCLIU Personal Website</div>
   <div id="pHeaderLogoutDiv" class="inlineblock">
     <a class="btn logoutA" href="<c:url value='/logout' />"><span class="icon-reply"></span> 返回到Login界面</a>
   </div>

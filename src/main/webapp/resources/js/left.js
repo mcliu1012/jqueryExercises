@@ -8,9 +8,11 @@ function pLeftSetStatus() {
     if ($("#pIndexContentDiv")[0]) {
         $("#pLeftRH").addClass("active");
     } else if ($("#pVEDiv")[0]) {
-        $("#pLeftJV").addClass("active");
+        $("#pLeftRegist").addClass("active");
     } else if($("#pGameOutDiv")[0]) {
         $("#pLeftGame").addClass("active");
+    } else if ($("#pBootstrapMainDiv")[0]) {
+        $("#pLeftBD").addClass("active");
     }
 }
 
@@ -21,13 +23,14 @@ function pLeftSetListener() {
             case "pLeftRH":
                 window.location.href = $.getBaseURL() + "/index";
                 break;
-            case "pLeftJV":
+            case "pLeftRegist":
                 window.location.href = $.getBaseURL() + "/validateExercise/init";
                 break;
             case "pLeftGame":
                 window.location.href = $.getBaseURL() + "/game";
                 break;
-            case "pLeftF3":
+            case "pLeftBD":
+                window.location.href = $.getBaseURL() + "/bootstrap";
                 break;
         }
     });
