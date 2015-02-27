@@ -10,6 +10,12 @@
   <div id="header"><%@include file="../header.jsp"%></div>
   <div id="left"><%@include file="../left.jsp"%></div>
   <div id="content">
+    <div class="breadcrumbDiv">
+      <ul class="breadcrumb">
+        <li><a href="<c:url value="index" />"><span class="icon-home"></span>首页</a></li>
+        <li class="active">Bootstrap Demo</li>
+      </ul>
+    </div>
     <div id="pBootstrapMainDiv" class="marginLeft20 marginTop10">
       <a href="<c:url value='/bootstrap/bootstrapFluidLayout' />" target="_blank">Bootstrap流式布局</a>
     </div>

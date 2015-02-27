@@ -12,7 +12,13 @@
   <div id="header"><%@include file="../header.jsp"%></div>
   <div id="left"><%@include file="../left.jsp"%></div>
   <div id="content">
-    <div id="pGameOutDiv" style="height: 100%;" class="container">
+    <div class="breadcrumbDiv">
+      <ul class="breadcrumb">
+        <li><a href="<c:url value="index" />"><span class="icon-home"></span>首页</a></li>
+        <li class="active">Game</li>
+      </ul>
+    </div>
+    <div id="pGameOutDiv" class="container">
       <div class="row margin-top-30">
         <div class="col-md-4">
           <div class="statbox widget box box-shadow">

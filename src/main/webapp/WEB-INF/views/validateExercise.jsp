@@ -12,7 +12,13 @@
   <div id="header"><%@include file="header.jsp"%></div>
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
-    <div id="pVEDiv" style="height: 100%;">
+    <div class="breadcrumbDiv">
+      <ul class="breadcrumb">
+        <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
+        <li class="active">注册</li>
+      </ul>
+    </div>
+    <div id="pVEDiv">
       <div id="pVESuccessInfoDiv" class="alert alert-success modal-alert modal-alert-error" role="alert"></div>
       <div id="pVEErrorMsg" class="alert alert-danger modal-alert modal-alert-error" role="alert"></div>
       <div class="pVETitle"><h2>用户注册界面</h2></div>

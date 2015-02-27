@@ -12,7 +12,14 @@
   <div id="header"><%@include file="header.jsp"%></div>
   <div id="left"><%@include file="left.jsp"%></div>
   <div id="content">
-    <div id="pULDiv" style="height: 100%; padding: 40px 60px;">
+    <div class="breadcrumbDiv">
+      <ul class="breadcrumb">
+        <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
+        <li><a href="<c:url value="/validateExercise/init" />"><span class="icon-user"></span>注册</a></li>
+        <li class="active">用户列表</li>
+      </ul>
+    </div>
+    <div id="pULDiv" style="padding: 40px 60px;">
       注册成功！<br/>
       <h4>用户信息一览&nbsp;&nbsp;&nbsp;&nbsp;<a href="<c:url value='/validateExercise/init' />">返回到用户注册界面</a></h4>
         <div id="pULJSPTableDiv" class="width70percent marginTop20">

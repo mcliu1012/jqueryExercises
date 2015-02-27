@@ -7,9 +7,15 @@
 }
 
 .pLeftOuterDiv ul li {
+  height: 50px;
   border-bottom: 1px solid #ebebeb;
 }
 
 .pLeftOuterDiv ul li:last-child {
   border-bottom: none;
+}
+
+.pLeftOuterDiv ul li a {
+  height: 100%;
+  padding-top: 15px;
 }

@@ -416,3 +416,12 @@ input.error {
 .cursorPointer {
   cursor: pointer;
 }
+
+.breadcrumbDiv {
+  height: 38px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
