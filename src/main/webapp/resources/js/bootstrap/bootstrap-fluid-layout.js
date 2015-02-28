@@ -12,6 +12,9 @@ $(function() {
     $("#btnCancel").bind("click", function() {
         $("#orderModal").modal("hide");
     });
+    $("#btnDonateCancel").bind("click", function() {
+        $("#donateModal").modal("hide");
+    });
     $("#btnOK").bind("click", function() {
         $("#alertDiv").show();
         setTimeout(function() {
@@ -90,7 +93,11 @@ $(function() {
                     break;
                 case 3:
                     $(this).bind("click", function() {
-                        window.open('https://me.alipay.com/ljhnxx');
+                        $("#donateModal").modal({
+                            keyboard: false,// true：按esc键，弹出框消失。false：esc键不起作用
+                            backdrop: true,// true:会有个背景颜色，点击背景颜色，弹出框消逝。false:没有背景颜色，点击弹出框以外区域，弹出框不消失
+                            show: true,// true：点击激活按钮后显示弹出框。false：点击激活按钮后，该弹出框不显示
+                        });
                     });
                     index++;
                     break;

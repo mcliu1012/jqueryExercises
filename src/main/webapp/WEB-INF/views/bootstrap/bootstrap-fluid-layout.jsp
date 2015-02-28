@@ -91,7 +91,7 @@
 								<p>身高：160cm</p>
 								<p>体重：60kg</p>
 								<p class="alipayP">
-									<a class="btn btn-success btn-large disabled btnNotShoppingcar">捐钱给他看病</a>
+									<a class="btn btn-success btn-large disabled btnNotShoppingcar">拿钱砸死他</a>
 								</p>
 							</div>
 						</div>
@@ -111,7 +111,7 @@
 		role="dialog" style="display: none">
 		<div class="modal-header">
 			<button class="close" type="button" data-dismiss="modal">×</button>
-			<h3 id="myModalLabel">友情提示</h3>
+			<h3>友情提示</h3>
 		</div>
 		<div class="modal-body">
 			<p>真的要把这个大块头放进购物车么？</p>
@@ -122,12 +122,28 @@
 		</div>
 	</div>
 
-	<!-- bootstrap模态对话框 -->
+    <div class="modal hide fade modalDiv" id="donateModal" tabindex="-1" role="dialog" style="display: none">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal">×</button>
+        <h3>捐赠</h3>
+      </div>
+      <div class="modal-body">
+        <div class="textAlignCenter">
+          <p style="font-size: 15px;"><strong>非常感谢您的支持，请使用支付宝钱包扫描下方的二维码，以完成捐赠！</strong></p>
+          <img alt="QR Code" src="../resources/img/QR_Code.png">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn" id="btnDonateCancel">后悔了</a>
+      </div>
+    </div>
+
+  <!-- bootstrap模态对话框 -->
 	<div class="modal hide fade" id="photoModal" tabindex="-1"
 		role="dialog" style="display: none">
 		<div class="modal-header">
 			<button class="close" type="button" data-dismiss="modal">×</button>
-			<h3 id="myModalLabel">写真集</h3>
+			<h3>写真集</h3>
 		</div>
 		<div class="modal-body padding0">
 			<!-- bootstrap轮播 -->
