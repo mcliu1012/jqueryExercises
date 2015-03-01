@@ -18,7 +18,7 @@
         <li class="active">Game</li>
       </ul>
     </div>
-    <div id="pGameOutDiv" class="container">
+    <div id="pGameOutDiv" class="container" style="width:100%;">
       <div class="row margin-top-30">
         <div class="col-md-4">
           <div class="statbox widget box box-shadow">
