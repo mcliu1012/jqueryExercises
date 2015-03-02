@@ -171,7 +171,7 @@ public class LoginController extends BaseController {
         mailInfo.setUserName("mailsender1012@126.com");
         mailInfo.setPassword("password");// 您的邮箱密码
         mailInfo.setFromAddress("mailsender1012@126.com");
-        mailInfo.setToAddress("liujiahenan@gmail.com");
+        mailInfo.setToAddress(loginUserInfo.getLoginName());
         mailInfo.setSubject("[MCLIU] 请重置你的密码");
         mailInfo.setContent(emailContent);
         // 这个类主要来发送邮件
