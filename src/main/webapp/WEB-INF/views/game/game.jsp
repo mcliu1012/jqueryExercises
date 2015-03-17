@@ -4,8 +4,8 @@
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
 <%@include file="../commonImport.jsp"%>
-<link rel="stylesheet" type="text/css" href="/jqueryExercises/resources/css/game/game.css"/>
-<script type="text/javascript" src="/jqueryExercises/resources/js/game/game.js"></script>
+<link rel="stylesheet" type="text/css" href="/mcliu/resources/css/game/game.css"/>
+<script type="text/javascript" src="/mcliu/resources/js/game/game.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
           <div class="statbox widget box box-shadow">
             <div class="widget-content">
               <div class="visual">
-                  <img alt="2048" src="/jqueryExercises/resources/img/2048.png">
+                  <img alt="2048" src="/mcliu/resources/img/2048.png">
               </div>
               <div class="title">2048</div>
               <div class="value">2048</div>

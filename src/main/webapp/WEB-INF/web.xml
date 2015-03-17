@@ -29,7 +29,7 @@
 		<init-param>
 			<!-- 指定配置文件的位置 -->
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/jqueryExercises/servlet-context.xml</param-value>
+			<param-value>/WEB-INF/spring/mcliu/servlet-context.xml</param-value>
 		</init-param>
 		<!-- 服务器启动即加载 -->
 		<load-on-startup>1</load-on-startup>

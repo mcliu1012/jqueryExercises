@@ -2,10 +2,10 @@
 <html>
 <head>
   <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
-  <link rel="icon" href="/jqueryExercises/resources/img/favicon/2048.ico" type="image/vnd.microsoft.icon">
-  <link rel="shortcut icon" href="/jqueryExercises/resources/img/favicon/2048.ico" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="/mcliu/resources/img/favicon/2048.ico" type="image/vnd.microsoft.icon">
+  <link rel="shortcut icon" href="/mcliu/resources/img/favicon/2048.ico" type="image/vnd.microsoft.icon">
   <title>2048</title>
-  <link href="/jqueryExercises/resources/css/game/2048/main.css" rel="stylesheet" type="text/css">
+  <link href="/mcliu/resources/css/game/2048/main.css" rel="stylesheet" type="text/css">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
   <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
   <!-- iPhone 5+-->
@@ -74,15 +74,15 @@
       <strong>更大的数字!</strong>
     </p>
     <hr></div>
-  <script src="/jqueryExercises/resources/js/game/2048/bind_polyfill.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/classlist_polyfill.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/animframe_polyfill.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/keyboard_input_manager.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/html_actuator.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/grid.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/tile.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/local_storage_manager.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/game_manager.js"></script>
-  <script src="/jqueryExercises/resources/js/game/2048/application.js"></script>
+  <script src="/mcliu/resources/js/game/2048/bind_polyfill.js"></script>
+  <script src="/mcliu/resources/js/game/2048/classlist_polyfill.js"></script>
+  <script src="/mcliu/resources/js/game/2048/animframe_polyfill.js"></script>
+  <script src="/mcliu/resources/js/game/2048/keyboard_input_manager.js"></script>
+  <script src="/mcliu/resources/js/game/2048/html_actuator.js"></script>
+  <script src="/mcliu/resources/js/game/2048/grid.js"></script>
+  <script src="/mcliu/resources/js/game/2048/tile.js"></script>
+  <script src="/mcliu/resources/js/game/2048/local_storage_manager.js"></script>
+  <script src="/mcliu/resources/js/game/2048/game_manager.js"></script>
+  <script src="/mcliu/resources/js/game/2048/application.js"></script>
 </body>
 </html>

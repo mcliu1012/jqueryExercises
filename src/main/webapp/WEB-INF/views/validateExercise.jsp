@@ -4,8 +4,8 @@
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
 <%@include file="commonImport.jsp"%>
-<link rel="stylesheet" type="text/css" href="/jqueryExercises/resources/css/validateExercise.css"/>
-<script type="text/javascript" src="/jqueryExercises/resources/js/validateExercise.js"></script>
+<link rel="stylesheet" type="text/css" href="/mcliu/resources/css/validateExercise.css"/>
+<script type="text/javascript" src="/mcliu/resources/js/validateExercise.js"></script>
 </head>
 
 <body>

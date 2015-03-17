@@ -1,8 +1,8 @@
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
-<script src="/jqueryExercises/resources/js/header.js"></script>
+<script src="/mcliu/resources/js/header.js"></script>
 <div>
   <div id="pHeaderImgDiv" class="inlineBlock">
-    <img id="pHeaderImg" src="/jqueryExercises/resources/img/logo.png" />
+    <img id="pHeaderImg" src="/mcliu/resources/img/logo.png" />
   </div>
   <div id="pHeaderMsgDiv" class="inlineBlock">MCLIU Personal Website</div>
   <div id="pHeaderLogoutDiv" class="inlineblock">

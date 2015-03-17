@@ -14,13 +14,13 @@
 <title>Example of Fluid Layout with Bootstrap version 2.0</title>
 
 <!-- Le styles -->
-<link href="/jqueryExercises/resources/css/bootstrap/bootstrap.css" rel="stylesheet">
-<link href="/jqueryExercises/resources/css/bootstrap/example-fluid-layout.css" rel="stylesheet">
+<link href="/mcliu/resources/css/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="/mcliu/resources/css/bootstrap/example-fluid-layout.css" rel="stylesheet">
 
-<script type="text/javascript" src="/jqueryExercises/resources/js/lib/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/jqueryExercises/resources/js/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="/mcliu/resources/js/lib/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/mcliu/resources/js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript"
-	src="/jqueryExercises/resources/js/bootstrap/bootstrap-fluid-layout.js"></script>
+	src="/mcliu/resources/js/bootstrap/bootstrap-fluid-layout.js"></script>
 </head>
 
 <body>
@@ -155,21 +155,21 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="item">
-						<img src="/jqueryExercises/resources/img/bootstrap/Skiing.jpg" alt="">
+						<img src="/mcliu/resources/img/bootstrap/Skiing.jpg" alt="">
 						<div class="carousel-caption">
 							<h4>弓长岭滑雪</h4>
 							<p>高山滑雪分三步，第一步你要会滑雪；第二步你要学会从高处往下滑；第三步也是最重要的一步，你一定要学会架着拐走路。。。</p>
 						</div>
 					</div>
 					<div class="item">
-						<img src="/jqueryExercises/resources/img/bootstrap/GSZ.jpg" alt="">
+						<img src="/mcliu/resources/img/bootstrap/GSZ.jpg" alt="">
 						<div class="carousel-caption">
 							<h4>铁岭拓展训练</h4>
 							<p>手里捧着本次拓展训练的毕业证书，脸上笑开了花。我只想说，明年我还来！</p>
 						</div>
 					</div>
 					<div class="item active">
-						<img src="/jqueryExercises/resources/img/bootstrap/FHS.jpg" alt="">
+						<img src="/mcliu/resources/img/bootstrap/FHS.jpg" alt="">
 						<div class="carousel-caption">
 							<h4>丹东凤凰山</h4>
 							<p>猛然间，我又相信爱情了。</p>

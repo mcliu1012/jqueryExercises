@@ -30,7 +30,7 @@
 		</ul>
 	</div>
 	<div id="bg">
-		<img src="/jqueryExercises/resources/img/map.png" />
+		<img src="/mcliu/resources/img/map.png" />
 	</div>
 </div>
 <div id="btn">

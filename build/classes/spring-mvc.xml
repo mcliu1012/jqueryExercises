@@ -8,8 +8,8 @@
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
 			http://www.springframework.org/schema/context
 			http://www.springframework.org/schema/context/spring-context-2.5.xsd">
-	<bean id="loginController" class="com.mcliu.jqueryExercises.controller.LoginController"></bean>
-	<bean id="mainController" class="com.mcliu.jqueryExercises.controller.MainController"></bean>
+	<bean id="loginController" class="com.lj.mcliu.controller.LoginController"></bean>
+	<bean id="mainController" class="com.lj.mcliu.controller.MainController"></bean>
 
 	<!-- 配置HandleMapping组件,用于实现请求与处理器之间的映射 -->
 	<bean id="urlMapping"
