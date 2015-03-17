@@ -8,6 +8,19 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+	<!-- 强制安全访问 -->
+	<security-constraint>
+		<!-- Authorization setting for SSL -->
+		<web-resource-collection>
+			<web-resource-name>mcliu</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+<!-- 			<transport-guarantee>CONFIDENTIAL</transport-guarantee> -->
+			<transport-guarantee>NONE</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
     <!-- encoding filter -->
     <filter>
         <filter-name>encoding-filter</filter-name>
