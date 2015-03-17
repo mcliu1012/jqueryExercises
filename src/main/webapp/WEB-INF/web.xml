@@ -16,8 +16,8 @@
 			<url-pattern>/*</url-pattern>
 		</web-resource-collection>
 		<user-data-constraint>
-<!-- 			<transport-guarantee>CONFIDENTIAL</transport-guarantee> -->
-			<transport-guarantee>NONE</transport-guarantee>
+			<!-- 如果你希望关闭 SSL ，只需要将 CONFIDENTIAL 改为 NONE 即可。 -->
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
 		</user-data-constraint>
 	</security-constraint>
 
