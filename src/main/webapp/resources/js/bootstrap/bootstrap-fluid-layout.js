@@ -62,12 +62,12 @@ $(function() {
             }
         } else {
             // 使用不可时
-            $(".topDiv").off("hover");
             $(".h2Shoppingcar").addClass("dimmedWord");
             $(".h2NotShoppingcar").addClass("dimmedWord");
             $(".btn-large").addClass("disabled").unbind("click");
             $(".topDiv").removeClass("memberInfo").addClass("memberInfo-cantSelect");
             $(".shadowDiv").removeClass("shadowDesignAnder").addClass("shadowDesignAnder-cantSelect");
+            $(".topDiv").unbind();
         }
     });
 
@@ -130,6 +130,7 @@ $(function() {
         $memberInfoFirst.removeClass("memberInfo").addClass("memberInfo-cantSelect");
         $memberInfoFirst.off("hover");
         $memberInfoFirst.next().removeClass("shadowDesignAnder").addClass("shadowDesignAnder-cantSelect");
+        $("#yzxDiv").children("div").eq(0).unbind();
         // 设置其他会员模块为有效，并做出阴影状
         $(".memberOverlapNotFirst").each(function() {
             var $memberInfo = $(this).children("div").eq(0);
