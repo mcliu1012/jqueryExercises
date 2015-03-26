@@ -79,7 +79,7 @@ $(function() {
                     $(this).bind("click", function() {
                         $("#orderModal").modal({
                             keyboard: false,// true：按esc键，弹出框消失。false：esc键不起作用
-                            backdrop: true,// true:会有个背景颜色，点击背景颜色，弹出框消逝。false:没有背景颜色，点击弹出框以外区域，弹出框不消失
+                            backdrop: 'static',// true:会有个背景颜色，点击背景颜色，弹出框消逝。false:没有背景颜色，点击弹出框以外区域，弹出框不消失。static:点击模态对话框的外部区域不会将其关闭。
                             show: true,// true：点击激活按钮后显示弹出框。false：点击激活按钮后，该弹出框不显示
                         });
                     });
@@ -95,7 +95,7 @@ $(function() {
                     $(this).bind("click", function() {
                         $("#donateModal").modal({
                             keyboard: false,// true：按esc键，弹出框消失。false：esc键不起作用
-                            backdrop: true,// true:会有个背景颜色，点击背景颜色，弹出框消逝。false:没有背景颜色，点击弹出框以外区域，弹出框不消失
+                            backdrop: 'static',// true:会有个背景颜色，点击背景颜色，弹出框消逝。false:没有背景颜色，点击弹出框以外区域，弹出框不消失
                             show: true,// true：点击激活按钮后显示弹出框。false：点击激活按钮后，该弹出框不显示
                         });
                     });
