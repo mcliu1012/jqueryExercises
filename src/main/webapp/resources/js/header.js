@@ -1,6 +1,29 @@
 $(function() {
-    setLogoImgListener();
+    setListener();
 });
+
+function setListener() {
+    setLogoImgListener();
+
+    // 显示/隐藏 侧边栏
+    $("#pHeaderShowHideP").click(function() {
+        // 通过判断按钮btn有没有active这个class名判断是否已经点击过
+        if ($(this).hasClass("active")) {
+            // 如果有了active，假设已经点击过了
+            // 执行你的代码
+            $("#left").css("left", "0px");
+            $("#content").css("left", "240px");
+            // 把active去掉
+            $(this).removeClass("active");
+        } else {
+            // 没有active，假设还没有点击过
+            // 执行你的代码
+            $("#left").css("left", "-240px");
+            $("#content").css("left", "0px");
+            $(this).addClass("active");
+        }
+    });
+}
 
 /**
  * LOGO Image

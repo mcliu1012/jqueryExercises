@@ -45,6 +45,7 @@ select {
 	font-size: 28px;
 	top: 31px;
 	position: absolute;
+	margin-left: 20px;
 }
 
 #pHeaderImgDiv {
@@ -273,6 +274,10 @@ input.error {
 
 .verticalAlignMiddle {
 	vertical-align: middle;
+}
+
+.verticalAlignBottom {
+	vertical-align: bottom;
 }
 
 .marginLeft10 {
