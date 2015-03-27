@@ -12,6 +12,7 @@
 <title>Login</title>
 </head>
 <body>
+  <div id="pLoginSignUp"><button type="button" class="btn btn-primary btn-lg">Sign up</button></div>
   <section class="pLoginSectionContainer">
     <div class="login">
       <h1>Login to MCLIU's website</h1>

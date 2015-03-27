@@ -37,7 +37,7 @@ public class ValidateExerciseController extends BaseController {
      *
      * @return
      */
-    @RequestMapping(value = "init", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String initValidateExercise() {
         logger.info("==== validateExercise START ====");
 
