@@ -39,12 +39,8 @@ function setSignUpBtnClickHandler() {
             backdrop: "static",
             keyboard: false
         });
-        $("#pLoginRegistModal").on("shown.bs.modal", function (e) {
-            $("#pLoginEmailInput").focus();
-            $("#pLoginEmailInput").val("");
-            $("#pLoginPasswordInput").val("");
-            $("#pLoginPasswordConfirmInput").val("");
-            $("#pLoginNickNameInput").val("");
+        $("#pLoginRegistModal").on("hide.bs.modal", function (e) {
+            setStatusInit();
         });
     });
 }
@@ -54,13 +50,20 @@ function setSignUpBtnClickHandler() {
  */
 function setResetBtnClickHandler() {
     $("#pLoginRegistModal button[type='reset']").off("click").on("click", function() {
-        pLoginValidator.resetForm();
-        $("#pLoginEmailInput").focus();
-        $("#pLoginEmailInput").val("");
-        $("#pLoginPasswordInput").val("");
-        $("#pLoginPasswordConfirmInput").val("");
-        $("#pLoginNickNameInput").val("");
+        setStatusInit();
     });
+}
+
+/**
+ * 状态初始化
+ */
+function setStatusInit() {
+    pLoginValidator.resetForm();
+    $("#pLoginEmailInput").focus();
+    $("#pLoginEmailInput").val("");
+    $("#pLoginPasswordInput").val("");
+    $("#pLoginPasswordConfirmInput").val("");
+    $("#pLoginNickNameInput").val("");
 }
 
 /**
