@@ -35,7 +35,7 @@ function setPVESignUpBtnClickHandler() {
     $("#pVESignUpBtn").off("click").on("click", function() {
         if ($("#pVEForm").valid()) {
             $.ajax({
-                url: $.getBaseURL() + "/validateExercise/registUser",
+                url: $.getBaseURL() + "/laboratory/registUser",
                 type: "POST",
                 cache: false,
                 dataType: "json",
@@ -48,7 +48,7 @@ function setPVESignUpBtnClickHandler() {
                     }
                     $("#pVESuccessInfoDiv").txtCrossFade("恭喜你！注册成功");
                     setTimeout(function() {
-                        window.location.href = $.getBaseURL() + "/validateExercise/userListInit";
+                        window.location.href = $.getBaseURL() + "/laboratory/userListInit";
                     }, 1500);
                 },
                 error: function(request, status, error) {

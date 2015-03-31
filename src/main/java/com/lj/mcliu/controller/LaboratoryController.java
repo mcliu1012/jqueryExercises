@@ -22,9 +22,9 @@ import com.lj.mcliu.service.ValidateExerciseService;
 import com.lj.mcliu.util.CommonUtil;
 
 @Controller
-@RequestMapping("validateExercise")
-public class ValidateExerciseController extends BaseController {
-    private Logger logger = LoggerFactory.getLogger(ValidateExerciseController.class);
+@RequestMapping("laboratory")
+public class LaboratoryController extends BaseController {
+    private Logger logger = LoggerFactory.getLogger(LaboratoryController.class);
 
     @Autowired
     private ValidateExerciseService validateExerciseService;
@@ -38,11 +38,11 @@ public class ValidateExerciseController extends BaseController {
      * @return
      */
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String initValidateExercise() {
-        logger.info("==== validateExercise START ====");
+    public String initLaboratory() {
+        logger.info("==== laboratory START ====");
 
-        logger.info("==== validateExercise END ====");
-        return "validateExercise";
+        logger.info("==== laboratory END ====");
+        return "laboratory";
     }
 
     /**

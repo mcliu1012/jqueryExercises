@@ -70,7 +70,7 @@ function setRegistBtnClickHandler() {
     $("#pLoginRegistBtn").off("click").on("click", function() {
         if ($("#pLoginForm").valid()) {
             $.ajax({
-                url: $.getBaseURL() + "/validateExercise/registUser",
+                url: $.getBaseURL() + "/laboratory/registUser",
                 type: "POST",
                 cache: false,
                 dataType: "json",

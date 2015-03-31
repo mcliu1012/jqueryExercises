@@ -27,7 +27,7 @@ function pULJSTableInit() {
 
 function pULGetLoginUserInfoList(callback) {
     $.ajax({
-        url: $.getBaseURL() + "/validateExercise/getLoginUserInfoList",
+        url: $.getBaseURL() + "/laboratory/getLoginUserInfoList",
         type: "GET",
         cache: false,
         dataType: "json",

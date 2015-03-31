@@ -4,8 +4,8 @@
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
 <%@include file="commonImport.jsp"%>
-<link rel="stylesheet" type="text/css" href="/mcliu/resources/css/validateExercise.css"/>
-<script type="text/javascript" src="/mcliu/resources/js/validateExercise.js"></script>
+<link rel="stylesheet" type="text/css" href="/mcliu/resources/css/laboratory.css"/>
+<script type="text/javascript" src="/mcliu/resources/js/laboratory.js"></script>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
       </form>
     </div>
     <div id="pVEDiv">
-      <div class="pVETitle"><h2>用户注册界面</h2></div>
+      <div class="pVETitle"><h2>TODO...</h2></div>
     </div>
   </div>
   <div id="footer"><%@include file="footer.jsp"%></div>

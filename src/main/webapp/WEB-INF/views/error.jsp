@@ -20,7 +20,7 @@
 <body style="font-size: 18px;">
     <div id="pErrorDiv">
       非常抱歉，请稍后重试。
-      <a class="btn pErrorA" href="<c:url value='/logout'/>">返回到Login页面</a>
+      <a class="btn pErrorA btn-default" href="<c:url value='/logout'/>">返回到Login页面</a>
     </div>
 </body>
 </html>

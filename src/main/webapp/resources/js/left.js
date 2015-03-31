@@ -24,7 +24,7 @@ function pLeftSetListener() {
                 window.location.href = $.getBaseURL() + "/index";
                 break;
             case "pLeftLaboratory":
-                window.location.href = $.getBaseURL() + "/validateExercise";
+                window.location.href = $.getBaseURL() + "/laboratory";
                 break;
             case "pLeftGame":
                 window.location.href = $.getBaseURL() + "/game";
