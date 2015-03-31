@@ -18,8 +18,9 @@
         <p>
           <input type="text" name="loginName" placeholder="Enter your email address" autofocus>
         </p>
-        <p class="submit">
-          <input type="submit" class="cursorPointer" name="commit" value="Submit">
+        <p class="submit" style="width: 100%;">
+          <a class="btn btn-default" href="login">返回</a>
+          <button type="submit" class="btn btn-primary">提交</button>
         </p>
       </form>
     </div>
