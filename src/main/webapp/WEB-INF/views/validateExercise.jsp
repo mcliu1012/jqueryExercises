@@ -15,13 +15,13 @@
     <div class="breadcrumbDiv">
       <ul class="breadcrumb">
         <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
-        <li class="active">注册</li>
+        <li class="active">实验室</li>
       </ul>
     </div>
-    <div id="pVEDiv">
-      <div id="pVESuccessInfoDiv" class="alert alert-success modal-alert modal-alert-error" role="alert"></div>
-      <div id="pVEErrorMsg" class="alert alert-danger modal-alert modal-alert-error" role="alert"></div>
-      <div class="pVETitle"><h2>用户注册界面</h2></div>
+    <div id="pVERegistDiv">
+      <div id="pVESuccessInfoDiv" class="alert alert-success modal-alert modal-alert-error pVEAlert" role="alert">aaaaa</div>
+      <div id="pVEErrorMsg" class="alert alert-danger modal-alert modal-alert-error pVEAlert" role="alert"></div>
+      <div class="pVETitle"><h2>用户注册</h2></div>
       <form id="pVEForm" class="form-horizontal" action="" role="form" method="POST">
         <div class="form-group">
           <label for="pVEEmailInput" class="col-sm-2 control-label">电子邮箱：</label>
@@ -54,6 +54,9 @@
           </div>
         </div>
       </form>
+    </div>
+    <div id="pVEDiv">
+      <div class="pVETitle"><h2>用户注册界面</h2></div>
     </div>
   </div>
   <div id="footer"><%@include file="footer.jsp"%></div>

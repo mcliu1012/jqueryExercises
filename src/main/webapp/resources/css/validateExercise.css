@@ -1,9 +1,18 @@
-#pVEForm {
-  padding: 50px 0 0 50px;
+/**********用户注册界面*************/
+#pVERegistDiv {
+  width: 50%;
+  max-height: 400px;
+  overflow-x: hidden;
+  float: left;
+  border-bottom: 5px solid #428bca;
+  border-right: 5px solid #428bca;
+  border-radius: 10px;
+  outline: 5px solid #EFF4F7;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12) inset;
 }
 
-#pVEForm .form-group {
-  width: 50%;
+#pVEForm {
+  padding: 50px 0 0 50px;
 }
 
 #pVEForm .col-sm-10 {
@@ -34,4 +43,19 @@
 
 .pVETitle {
   padding: 10px 0 0 40px;
+}
+
+.pVEAlert {
+  position: relative;
+  margin-bottom: -52px;
+}
+
+/**********XXX界面**************/
+#pVEDiv {
+  width: 50%;
+  overflow-x: hidden;
+  float: right;
+  border-bottom: 5px solid #428bca;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12) inset;
 }

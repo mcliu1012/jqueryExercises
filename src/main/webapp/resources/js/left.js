@@ -7,8 +7,8 @@ function pLeftSetStatus() {
     $(".active").removeClass("active");
     if ($("#pIndexContentDiv")[0]) {
         $("#pLeftRH").addClass("active");
-    } else if ($("#pVEDiv")[0]) {
-        $("#pLeftRegist").addClass("active");
+    } else if ($("#pVERegistDiv")[0]) {
+        $("#pLeftLaboratory").addClass("active");
     } else if($("#pGameOutDiv")[0]) {
         $("#pLeftGame").addClass("active");
     } else if ($("#pBootstrapMainDiv")[0]) {
@@ -23,7 +23,7 @@ function pLeftSetListener() {
             case "pLeftRH":
                 window.location.href = $.getBaseURL() + "/index";
                 break;
-            case "pLeftRegist":
+            case "pLeftLaboratory":
                 window.location.href = $.getBaseURL() + "/validateExercise";
                 break;
             case "pLeftGame":
