@@ -16,7 +16,7 @@
       <ul class="breadcrumb">
         <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
         <li><a href="<c:url value="/laboratory" />"><span class="icon-beaker"></span>实验室</a></li>
-        <li class="active">用户列表</li>
+        <li class="active">用户注册</li>
       </ul>
     </div>
     <div id="pULDiv" style="padding: 40px 60px;">
