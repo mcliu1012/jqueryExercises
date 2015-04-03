@@ -45,7 +45,7 @@
       </p>
     </div>
   </section>
-  <div id="pLoginRegistModal" class="modal fade">
+  <div id="pLoginRegistModal" class="modal fade" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

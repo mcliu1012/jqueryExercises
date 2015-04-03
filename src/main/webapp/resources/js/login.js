@@ -39,6 +39,9 @@ function setSignUpBtnClickHandler() {
             backdrop: "static",
             keyboard: false
         });
+        $("#pLoginRegistModal").on("shown.bs.modal", function (e) {
+            $("#pLoginEmailInput").focus();
+        });
         $("#pLoginRegistModal").on("hide.bs.modal", function (e) {
             setStatusInit();
         });
