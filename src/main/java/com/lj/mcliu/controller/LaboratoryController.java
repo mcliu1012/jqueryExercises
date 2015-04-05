@@ -42,7 +42,7 @@ public class LaboratoryController extends BaseController {
         logger.info("==== laboratory START ====");
 
         logger.info("==== laboratory END ====");
-        return "laboratory";
+        return "laboratory/laboratory";
     }
 
     /**
@@ -122,7 +122,7 @@ public class LaboratoryController extends BaseController {
         model.addAttribute("loginUserInfoList", loginUserInfoList);
 
         logger.info("==== userListInit END ====");
-        return "userList";
+        return "laboratory/userRegist/userList";
     }
 
     @ResponseBody

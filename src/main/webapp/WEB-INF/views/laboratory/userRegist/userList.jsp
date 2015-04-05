@@ -3,14 +3,14 @@
 <head>
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
-<%@include file="commonImport.jsp"%>
+<%@include file="../../commonImport.jsp"%>
 <link rel="stylesheet" type="text/css" href="/mcliu/resources/css/userList.css"/>
 <script type="text/javascript" src="/mcliu/resources/js/userList.js"></script>
 </head>
 
 <body>
-  <div id="header"><%@include file="header.jsp"%></div>
-  <div id="left"><%@include file="left.jsp"%></div>
+  <div id="header"><%@include file="../../header.jsp"%></div>
+  <div id="left"><%@include file="../../left.jsp"%></div>
   <div id="content">
     <div class="breadcrumbDiv">
       <ul class="breadcrumb">
@@ -68,7 +68,7 @@
         </div>
     </div>
   </div>
-  <div id="footer"><%@include file="footer.jsp"%></div>
-  <%@include file="qqservice.jsp"%>
+  <div id="footer"><%@include file="../../footer.jsp"%></div>
+  <%@include file="../../qqservice.jsp"%>
 </body>
 </html>
