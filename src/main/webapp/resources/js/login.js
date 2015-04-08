@@ -63,10 +63,7 @@ function setResetBtnClickHandler() {
 function setStatusInit() {
     pLoginValidator.resetForm();
     $("#pLoginEmailInput").focus();
-    $("#pLoginEmailInput").val("");
-    $("#pLoginPasswordInput").val("");
-    $("#pLoginPasswordConfirmInput").val("");
-    $("#pLoginNickNameInput").val("");
+    $("#pLoginForm")[0].reset();
 }
 
 /**
