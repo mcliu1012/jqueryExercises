@@ -5,7 +5,7 @@
     <img id="pHeaderImg" src="/mcliu/resources/img/logo.png" />
   </div>
   <p id="pHeaderShowHideP" class="inlineBlock verticalAlignBottom cursorPointer btn-default"><span class="icon-reorder icon-2x"></span></p>
-  <div id="pHeaderMsgDiv" class="inlineBlock">MCLIU Personal Website</div>
+  <div id="pHeaderMsgDiv" class="inlineBlock">MCLIU’s Personal Website</div>
   <div id="pHeaderLogoutDiv" class="inlineblock">
     <a class="btn logoutA btn-primary" href="<c:url value='/logout' />"><span class="icon-reply"></span> 退出</a>
   </div>
