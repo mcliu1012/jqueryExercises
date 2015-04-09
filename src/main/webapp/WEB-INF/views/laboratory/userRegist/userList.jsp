@@ -24,36 +24,38 @@
       <h4>用户信息一览&nbsp;&nbsp;&nbsp;&nbsp;<a href="<c:url value='/laboratory' />">返回到实验室</a></h4>
         <div id="pULJSPTableDiv" class="width70percent marginTop20">
       	  <h6><b>JSP中使用&lt;c:forEach&gt;循环显示用户列表：</b></h6>
-          <div id="pULTableTitleDiv">
-            <table border="0" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th class="width15percent textAlignCenter">ID</th>
-                  <th class="width21percent textAlignCenter">Email</th>
-                  <th class="width40percent textAlignCenter">Password</th>
-                  <th class="width24percent textAlignCenter">Nick Name</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-          <div id="pULTableContentDiv">
-            <table id="pULJSPTable" class="table table-bordered table-striped">
-              <tbody>
-                  <c:forEach items="${loginUserInfoList}" var="userInfo">
+            <table border="1" class="table table-bordered table-striped" style="margin: auto;">
+              <tr>
+                <table border="1" class="table table-bordered table-striped" style="margin: auto;">
+                  <thead>
                     <tr>
-                      <td class="width15percent">${userInfo.id}</td>
-                      <td class="width21percent wrapByCharacter">${userInfo.loginName}</td>
-                      <td class="width40percent wrapByCharacter">${userInfo.password}</td>
-                      <td class="width24percent wrapByCharacter">${userInfo.name}</td>
+                      <th style="width: 128px;" class="textAlignCenter">ID</th>
+                      <th style="width: 237px;" class="textAlignCenter">Email</th>
+                      <th style="width: 342px;" class="textAlignCenter">Password</th>
+                      <th class="textAlignCenter">Nick Name</th>
                     </tr>
-                  </c:forEach>
-              </tbody>
+                  </thead>
+                </table>
+              </tr>
+              <tr>
+                <div style="max-height: 260px; overflow-y: auto;">
+                  <table border="1" class="table table-bordered table-striped" id="pULContentTable">
+                    <c:forEach items="${loginUserInfoList}" var="userInfo">
+                      <tr>
+                        <td style="width: 128px;">${userInfo.id}</td>
+                        <td style="width: 237px;" class="wrapByCharacter">${userInfo.loginName}</td>
+                        <td style="width: 342px;" class="wrapByCharacter">${userInfo.password}</td>
+                        <td class="wrapByCharacter">${userInfo.name}</td>
+                      </tr>
+                    </c:forEach>
+                  </table>
+                </div>
+              </tr>
             </table>
-          </div>
         </div>
         <div class="width70percent marginTop20">
           <h6><b>JS中动态循环显示用户列表：</b></h6>
-          <table id="pULJSTable"  border="0" class="table table-bordered table-striped">
+          <table id="pULJSTable"  border="0" class="table table-bordered table-striped tablesorter">
             <thead>
               <tr>
                 <th class="pULIdTh width15percent textAlignCenter">ID</th>

@@ -22,6 +22,7 @@ function pULJSTableInit() {
             });
         }
         $("#pULJSTable tbody").append(tableRow);
+        $("#pULJSTable").tablesorter( {sortList: [[0,0], [1,0]]} );
     });
 }
 

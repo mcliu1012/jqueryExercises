@@ -12,6 +12,7 @@
 <title>MCLIU</title>
 <spring:url value='/resources/css/common/common.css' var='commoncss' />
 <spring:url value='/resources/css/lib/jquery-ui.css' var='jqueryuicss' />
+<spring:url value='/resources/css/lib/jquery-tablesorter-style.css' var='jquerytablesorterstylecss' />
 <spring:url value='/resources/css/lib/bootstrap.min.css' var='bootstrapmincss' />
 <%-- <spring:url value='/resources/css/lib/bootstrap.css' var='bootstrapcss' /> --%>
 <%-- <spring:url value='/resources/css/lib/bootstrap-responsive.css' var='bootstrapresponsivecss' /> --%>
@@ -24,6 +25,7 @@
 
 <spring:url value='/resources/js/lib/jquery-1.11.0.min.js' var='jquery' />
 <%-- <spring:url value='/resources/js/lib/jquery-migrate-1.2.1.min.js' var='jquerymigrate' /> --%>
+<spring:url value='/resources/js/lib/jquery.tablesorter.js' var='jquerytablesorter' />
 <spring:url value='/resources/js/lib/jquery-ui.js' var='jqueryui' />
 <spring:url value='/resources/js/lib/bootstrap.min.js' var='bootstrapminjs' />
 <%-- <spring:url value='/resources/js/lib/bootstrap.js' var='bootstrapjs' /> --%>
@@ -39,6 +41,7 @@
 <spring:url value='/resources/js/qqservice.js' var='qqservicejs' />
 
 <link media='screen' rel='stylesheet' href='${jqueryuicss}?<%= sysDate %>' type='text/css' />
+<link media='screen' rel='stylesheet' href='${jquerytablesorterstylecss}?<%= sysDate %>' type='text/css' />
 <link media='screen' rel='stylesheet' href='${bootstrapmincss}?<%= sysDate %>' type='text/css' />
 <%-- <link media='screen' rel='stylesheet' href='${bootstrapcss}?<%= sysDate %>' type='text/css' /> --%>
 <%-- <link media='screen' rel='stylesheet' href='${bootstrapresponsivecss}?<%= sysDate %>' type='text/css' /> --%>
@@ -52,6 +55,7 @@
 
 <script type='text/javascript' src='${jquery}?<%= sysDate %>'></script>
 <%-- <script type='text/javascript' src='${jquerymigrate}?<%= sysDate %>'></script> --%>
+<script type='text/javascript' src='${jquerytablesorter}?<%= sysDate %>'></script>
 <script type='text/javascript' src='${validatejs}?<%= sysDate %>'></script>
 <script type='text/javascript' src='${bootstrapminjs}?<%= sysDate %>'></script>
 <%-- <script type='text/javascript' src='${bootstrapdatepickerjs}?<%= sysDate %>'></script> --%>
