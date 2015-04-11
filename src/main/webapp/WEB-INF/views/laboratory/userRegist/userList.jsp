@@ -29,9 +29,9 @@
                 <table border="1" class="table table-bordered table-striped" style="margin: auto;">
                   <thead>
                     <tr>
-                      <th style="width: 128px;" class="textAlignCenter">ID</th>
-                      <th style="width: 237px;" class="textAlignCenter">Email</th>
-                      <th style="width: 342px;" class="textAlignCenter">Password</th>
+                      <th class="textAlignCenter pULIDThTd">ID</th>
+                      <th class="textAlignCenter pULEmailThTd">Email</th>
+                      <th class="textAlignCenter pULPasswordThTd">Password</th>
                       <th class="textAlignCenter">Nick Name</th>
                     </tr>
                   </thead>
@@ -42,9 +42,9 @@
                   <table border="1" class="table table-bordered table-striped" id="pULContentTable">
                     <c:forEach items="${loginUserInfoList}" var="userInfo">
                       <tr>
-                        <td style="width: 128px;">${userInfo.id}</td>
-                        <td style="width: 237px;" class="wrapByCharacter">${userInfo.loginName}</td>
-                        <td style="width: 342px;" class="wrapByCharacter">${userInfo.password}</td>
+                        <td class="pULIDThTd">${userInfo.id}</td>
+                        <td class="pULEmailThTd wrapByCharacter">${userInfo.loginName}</td>
+                        <td class="pULPasswordThTd wrapByCharacter">${userInfo.password}</td>
                         <td class="wrapByCharacter">${userInfo.name}</td>
                       </tr>
                     </c:forEach>
@@ -59,9 +59,9 @@
             <thead>
               <tr>
                 <th class="pULIdTh width15percent textAlignCenter">ID</th>
-                <th class="pULEmailTh width21percent textAlignCenter">Email</th>
+                <th class="pULEmailTh width25percent textAlignCenter">Email</th>
                 <th class="pULPasswordTh width40percent textAlignCenter">Password</th>
-                <th class="pULNickNameTh width24percent textAlignCenter">Nick Name</th>
+                <th class="pULNickNameTh width20percent textAlignCenter">Nick Name</th>
               </tr>
             </thead>
             <tbody>

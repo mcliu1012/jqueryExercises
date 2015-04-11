@@ -17,3 +17,18 @@
 #pULContentTable {
   margin-bottom: 0;
 }
+
+.pULIDThTd {
+	width: 103px;
+	min-width: 103px;
+}
+
+.pULEmailThTd {
+	width: 172px;
+	min-width: 172px;
+}
+
+.pULPasswordThTd {
+	width: 276px;
+	min-width: 276px;
+}

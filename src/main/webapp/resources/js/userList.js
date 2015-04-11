@@ -16,9 +16,9 @@ function pULJSTableInit() {
         } else {
             $.each(loginUserInfoList, function(i, item) {
                 tableRow += "<tr><td class='pULIdTd width15percent'>" + item.id + "</td>" +
-                    "<td class='pULLoginNameTd width21percent wrapByCharacter'>" + item.loginName + "</td>" +
+                    "<td class='pULLoginNameTd width25percent wrapByCharacter'>" + item.loginName + "</td>" +
                     "<td class='pULPasswordTd width40percent wrapByCharacter'>" + item.password + "</td>" +
-                    "<td class='pULNameTd width24percent wrapByCharacter'>" + item.name + "</td></tr>";
+                    "<td class='pULNameTd width20percent wrapByCharacter'>" + item.name + "</td></tr>";
             });
         }
         $("#pULJSTable tbody").append(tableRow);
