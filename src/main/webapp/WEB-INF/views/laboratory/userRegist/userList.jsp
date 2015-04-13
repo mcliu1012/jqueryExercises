@@ -26,12 +26,12 @@
       	  <h6><b>JSP中使用&lt;c:forEach&gt;循环显示用户列表：</b></h6>
             <table border="1" class="table table-bordered table-striped" style="margin: auto;">
               <tr>
-                <table border="1" class="table table-bordered table-striped" style="margin: auto;">
+                <table id="pULHeaderTable" border="1" class="table table-bordered table-striped" style="margin: auto;">
                   <thead>
                     <tr>
-                      <th class="textAlignCenter pULIDThTd">ID</th>
-                      <th class="textAlignCenter pULEmailThTd">Email</th>
-                      <th class="textAlignCenter pULPasswordThTd">Password</th>
+                      <th class="textAlignCenter width15percent">ID</th>
+                      <th class="textAlignCenter width25percent">Email</th>
+                      <th class="textAlignCenter width40percent">Password</th>
                       <th class="textAlignCenter">Nick Name</th>
                     </tr>
                   </thead>
@@ -42,9 +42,9 @@
                   <table border="1" class="table table-bordered table-striped" id="pULContentTable">
                     <c:forEach items="${loginUserInfoList}" var="userInfo">
                       <tr>
-                        <td class="pULIDThTd">${userInfo.id}</td>
-                        <td class="pULEmailThTd wrapByCharacter">${userInfo.loginName}</td>
-                        <td class="pULPasswordThTd wrapByCharacter">${userInfo.password}</td>
+                        <td class="width15percent">${userInfo.id}</td>
+                        <td class="width25percent wrapByCharacter">${userInfo.loginName}</td>
+                        <td class="width40percent wrapByCharacter">${userInfo.password}</td>
                         <td class="wrapByCharacter">${userInfo.name}</td>
                       </tr>
                     </c:forEach>
@@ -53,7 +53,7 @@
               </tr>
             </table>
         </div>
-        <div class="width70percent marginTop20">
+        <div id="pULJSTableDiv" class="width70percent marginTop20">
           <h6><b>JS中动态循环显示用户列表：</b></h6>
           <table id="pULJSTable"  border="0" class="table table-bordered table-striped tablesorter">
             <thead>

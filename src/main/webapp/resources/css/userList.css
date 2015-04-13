@@ -18,17 +18,10 @@
   margin-bottom: 0;
 }
 
-.pULIDThTd {
-	width: 103px;
-	min-width: 103px;
+#pULHeaderTable thead tr th:nth-child(-n+3) {
+	border-right-style: hidden;
 }
 
-.pULEmailThTd {
-	width: 172px;
-	min-width: 172px;
-}
-
-.pULPasswordThTd {
-	width: 276px;
-	min-width: 276px;
+#pULJSPTableDiv, #pULJSTableDiv {
+	min-width: 450px;
 }
