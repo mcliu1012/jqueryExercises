@@ -47,7 +47,7 @@ public class LoginController extends BaseController {
      * @param request
      * @return
      */
-    @RequestMapping(value = "login", method = RequestMethod.GET)
+    @RequestMapping(value = {"", "login"}, method = RequestMethod.GET)
     public String login(Model model, HttpServletRequest request) {
         logger.info("==== login start ====");
 
