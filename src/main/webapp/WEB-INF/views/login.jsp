@@ -18,12 +18,12 @@
       <h1>Login to MCLIU's website</h1>
       <div class="successMsg">${successMsg }</div>
       <div class="errorMsg">${error }</div>
-      <form method="post" action="login">
+      <form id="pLogInForm" method="post" action="login">
         <p>
           <input type="text" id="loginNameInput" name="loginName" value="${loginName}" placeholder="Username or Email" autofocus>
         </p>
         <p>
-          <input type="password" name="password" value="${password}" placeholder="Password">
+          <input type="password" id="passwordInput" name="password" value="${password}" placeholder="Password">
         </p>
         <p class="remember_me">
           <label>

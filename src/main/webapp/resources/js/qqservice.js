@@ -101,8 +101,10 @@ window.onload = function() {
                 clearInterval(timer);
             }
         }, 20);
+        $("#btn").css("display", "block");
     }
     oBtn.onclick = function() {
+        $("#btn").css("display", "none");
         if (on == 0) {
             startFlex(oCs, {
                 height: 500
@@ -113,6 +115,7 @@ window.onload = function() {
             on = 1;
         } else {
             showQQ(-200);
+            $("#btn").css("display", "none");
             timer2 = setInterval(function() {
                 startMove(oImg, {
                     opacity: 0
@@ -124,6 +127,7 @@ window.onload = function() {
                 });
                 if (oCs.style.height == 2 + "px") {
                     clearInterval(timer2);
+                    $("#btn").css("display", "block");
                     oBtn.innerHTML = "CONTACT US";
                 }
             }, 500);

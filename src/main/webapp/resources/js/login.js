@@ -28,6 +28,8 @@ function setListener() {
     setResetBtnClickHandler();
     // 点击【注册】按钮
     setRegistBtnClickHandler();
+    // 点击【Login】按钮
+    setLoginBtnClickHandler();
 }
 
 /**
@@ -71,6 +73,19 @@ function setStatusInit() {
  */
 function setRegistBtnClickHandler() {
     $("#pLoginRegistBtn").off("click").on("click", function() {
+        var pLoginEmailInput = $("#pLoginEmailInput").val();
+        var pLoginPasswordInput = $("#pLoginPasswordInput").val();
+        var pLoginPasswordConfirmInput = $("#pLoginPasswordConfirmInput").val();
+        if (pLoginEmailInput === "") {
+            $("#pLoginEmailInput").focus();
+            return;
+        } else if (pLoginPasswordInput === "") {
+            $("#pLoginPasswordInput").focus();
+            return;
+        } else if (pLoginPasswordConfirmInput === "") {
+            $("#pLoginPasswordConfirmInput").focus();
+            return;
+        }
         if ($("#pLoginForm").valid()) {
             $.ajax({
                 url: $.getBaseURL() + "/laboratory/registUser",
@@ -147,4 +162,22 @@ function setValidator() {
           error.insertAfter(element.parent());
       }
   });
+}
+
+/**
+ * 点击【Login】按钮
+ */
+function setLoginBtnClickHandler() {
+    $("#pLogInForm").off("submit").on("submit", function() {
+        var loginNameInput = $("#loginNameInput").val();
+        var passwordInput = $("#passwordInput").val();
+        if (loginNameInput === "") {
+            $("#loginNameInput").focus();
+            return false;
+        } else if (passwordInput === "") {
+            $("#passwordInput").focus();
+            return false;
+        }
+        return true;
+    });
 }

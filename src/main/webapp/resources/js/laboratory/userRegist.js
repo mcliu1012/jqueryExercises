@@ -33,6 +33,19 @@ function setPVEResetBtnClickHandler() {
  */
 function setPVESignUpBtnClickHandler() {
     $("#pVESignUpBtn").off("click").on("click", function() {
+        var pVEEmailInput = $("#pVEEmailInput").val();
+        var pVEPasswordInput = $("#pVEPasswordInput").val();
+        var pVEPasswordConfirmInput = $("#pVEPasswordConfirmInput").val();
+        if (pVEEmailInput === "") {
+            $("#pVEEmailInput").focus();
+            return;
+        } else if (pVEPasswordInput === "") {
+            $("#pVEPasswordInput").focus();
+            return;
+        } else if (pVEPasswordConfirmInput === "") {
+            $("#pVEPasswordConfirmInput").focus();
+            return;
+        }
         if ($("#pVEForm").valid()) {
             $.ajax({
                 url: $.getBaseURL() + "/laboratory/registUser",
@@ -64,10 +77,10 @@ function setPVESignUpBtnClickHandler() {
 
 function setValidator() {
     pVEValidator = $("#pVEForm").validate({
-//      onfocusout: false, // 是否在获取焦点时验证 默认:true
-//      onkeyup: false, // 是否在敲击键盘时验证 默认:true
+      onfocusout: false, // 是否在获取焦点时验证 默认:true
+      onkeyup: false, // 是否在敲击键盘时验证 默认:true
 //      focusInvalid:false, // 提交表单后,未通过验证的表单(第一个或提交之前获得焦点的未通过验证的表单)会获得焦点 默认:true
-//      focusCleanup:true,  // 当未通过验证的元素获得焦点时,并移除错误提示（避免和 focusInvalid.一起使用）默认:false
+      focusCleanup:true,  // 当未通过验证的元素获得焦点时,并移除错误提示（避免和 focusInvalid.一起使用）默认:false
       rules: {
           loginName: {
               required: true,
