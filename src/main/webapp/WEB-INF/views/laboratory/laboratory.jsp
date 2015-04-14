@@ -10,19 +10,21 @@
 
 <body>
   <div id="header"><%@include file="../header.jsp"%></div>
-  <div id="left"><%@include file="../left.jsp"%></div>
-  <div id="content">
-    <div class="breadcrumbDiv">
-      <ul class="breadcrumb">
-        <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
-        <li class="active">实验室</li>
-      </ul>
-    </div>
-    <div id="pVERegistDiv">
-      <%@include file="userRegist/userRegist.jsp"%>
-    </div>
-    <div id="pVEDiv">
-      <div class="pVETitle"><h2>TODO...</h2></div>
+  <div id="leftAndContent">
+    <div id="left" class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block"><%@include file="../left.jsp"%></div>
+    <div id="content">
+      <div class="breadcrumbDiv">
+        <ul class="breadcrumb">
+          <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
+          <li class="active">实验室</li>
+        </ul>
+      </div>
+      <div id="pVERegistDiv">
+        <%@include file="userRegist/userRegist.jsp"%>
+      </div>
+      <div id="pVEDiv">
+        <div class="pVETitle"><h2>TODO...</h2></div>
+      </div>
     </div>
   </div>
   <div id="footer"><%@include file="../footer.jsp"%></div>

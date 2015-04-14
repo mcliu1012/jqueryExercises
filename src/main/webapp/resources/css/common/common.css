@@ -41,21 +41,6 @@ select {
 	border-bottom: 1px solid #999D9E;
 }
 
-#pHeaderMsgDiv {
-	font-size: 28px;
-	top: 31px;
-	position: absolute;
-	margin-left: 20px;
-}
-
-#pHeaderImgDiv {
-	margin: 33px 7px 0 10px;
-}
-
-#pHeaderImg {
-	width: 300px;
-}
-
 #p001DivUser {
 	width: 340px;
 	text-align: right;
@@ -68,12 +53,6 @@ select {
 
 #p001DivUserEmail {
 	vertical-align: middle;
-}
-
-#pHeaderLogoutDiv {
-	position: absolute;
-	right: 8px;
-	top: 22px;
 }
 
 #footer {
@@ -92,14 +71,12 @@ select {
 	margin-top: 18px;
 }
 
-#left {
-	position: absolute;
-	left: 0px;
-	top: 100px;
-	bottom: 50px;
-	width: 240px;
-	overflow: hidden;
-	border-right: 1px solid #999D9E;
+#left  {
+  width: 240px;
+  height: 100%;
+  float: left;
+  overflow: auto;
+  border-right: 1px solid #999D9E;
 }
 
 .p001Left {
@@ -111,12 +88,8 @@ select {
 }
 
 #content {
-	position: absolute;
-	left: 240px;
-	right: 0px;
-	bottom: 50px;
-	top: 100px;
-	overflow: auto;
+  height: 100%;
+  overflow: auto;
 }
 
 .inlineBlock {
@@ -430,4 +403,14 @@ input.error {
 
 a:hover, a:focus {
   text-decoration: none;
+}
+
+#leftAndContent {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  bottom: 50px;
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
 }

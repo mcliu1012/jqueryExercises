@@ -1,0 +1,31 @@
+#pHeaderShowHideP {
+  vertical-align: middle;
+  margin-top: 32px;
+  position: absolute;
+}
+
+#pHeaderMsgDiv, .pHeaderMsgDiv {
+	font-size: 28px;
+	top: 34px;
+	position: absolute;
+	margin-left: 58px;
+	color: #428bca;
+}
+
+#pHeaderImgDiv {
+	margin: 33px 7px 0 10px;
+}
+
+#pHeaderImg {
+	width: 300px;
+}
+
+#pHeaderLogoutDiv {
+	position: absolute;
+	right: 8px;
+	top: 26px;
+}
+
+#pHeaderShowHideP a:hover {
+  background-color: darkgray;
+}
