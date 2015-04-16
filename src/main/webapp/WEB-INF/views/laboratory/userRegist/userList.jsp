@@ -11,13 +11,15 @@
 <body>
   <div id="header"><%@include file="../../header.jsp"%></div>
   <div id="leftAndContent">
-    <div id="left" class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block"><%@include file="../../left.jsp"%></div>
+    <div id="left"><%@include file="../../left.jsp"%></div>
     <div id="content">
       <div class="breadcrumbDiv">
         <ul class="breadcrumb">
-          <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
-          <li><a href="<c:url value="/laboratory" />"><span class="icon-beaker"></span>实验室</a></li>
-          <li class="active">用户注册</li>
+          <li class="homeLi"><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
+          <li class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">
+            <a href="<c:url value="/laboratory" />"><span class="icon-beaker"></span>实验室</a>
+          </li>
+          <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">用户注册</li>
         </ul>
       </div>
       <div id="pULDiv" style="padding: 40px 60px;">

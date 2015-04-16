@@ -30,7 +30,9 @@
 		</ul>
 	</div>
 	<div id="bg">
-		<img src="/mcliu/resources/img/map.png" />
+		<img class="visible-lg-inline-block" src="/mcliu/resources/img/map.png" />
+		<img class="visible-md-inline-block mapMDImg" src="/mcliu/resources/img/map.png" />
+		<img class="visible-sm-inline-block mapSMImg" src="/mcliu/resources/img/map.png" />
 	</div>
 </div>
 <div id="btn">

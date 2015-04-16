@@ -1,6 +1,5 @@
 #pHeaderShowHideP {
-  vertical-align: middle;
-  margin-top: 32px;
+  margin-top: 40px;
   position: absolute;
 }
 
@@ -8,7 +7,7 @@
 	font-size: 28px;
 	top: 34px;
 	position: absolute;
-	margin-left: 58px;
+	margin-left: 40px;
 	color: #428bca;
 }
 
@@ -26,6 +25,6 @@
 	top: 26px;
 }
 
-#pHeaderShowHideP a:hover {
+#pHeaderShowHideP p:hover {
   background-color: darkgray;
 }

@@ -11,12 +11,12 @@
 <body>
   <div id="header"><%@include file="../header.jsp"%></div>
   <div id="leftAndContent">
-    <div id="left" class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block"><%@include file="../left.jsp"%></div>
+    <div id="left"><%@include file="../left.jsp"%></div>
     <div id="content">
       <div class="breadcrumbDiv">
         <ul class="breadcrumb">
-          <li><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
-          <li class="active">实验室</li>
+          <li class="homeLi"><a href="<c:url value="/index" />"><span class="icon-home"></span>首页</a></li>
+          <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">实验室</li>
         </ul>
       </div>
       <div id="pVERegistDiv">

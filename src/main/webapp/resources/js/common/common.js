@@ -211,3 +211,12 @@ $(function() {
         }
     });
 });
+
+$(function() {
+    $(window).resize(function(){
+        if ($(window).width() <= 767) {
+            $("#left").animate({"margin-left":"-240px"}, 100);
+            $("#pHeaderShowHideP").addClass("active");
+        }
+    });
+});

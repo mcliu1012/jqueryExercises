@@ -11,12 +11,12 @@
 <body>
   <div id="header"><%@include file="header.jsp" %></div>
   <div id="leftAndContent">
-    <div id="left" class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block"><%@include file="left.jsp"%></div>
+    <div id="left"><%@include file="left.jsp"%></div>
     <div id="content">
       <div id="pIndexContentDiv" class="jumbotron" style="height: 100%;">
         <div class="container">
           <h1>Hello, world!</h1>
-          <p>Whatever is worth doing is worth doing well.</p>
+          <p class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">Whatever is worth doing is worth doing well.</p>
           <p>
             <span class="icon-hand-left"></span>
             <span class="icon-hand-left"></span>
