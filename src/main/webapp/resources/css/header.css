@@ -1,5 +1,7 @@
 #pHeaderShowHideP {
-  margin-top: 40px;
+  width: 50px;
+  text-align: center;
+  height: 100%;
   position: absolute;
 }
 
@@ -7,8 +9,10 @@
 	font-size: 28px;
 	top: 34px;
 	position: absolute;
-	margin-left: 40px;
-	color: #428bca;
+	margin-left: 60px;
+	color: #666;
+	font-weight: 600;
+    font-style: italic;
 }
 
 #pHeaderImgDiv {
@@ -25,6 +29,10 @@
 	top: 26px;
 }
 
-#pHeaderShowHideP p:hover {
-  background-color: darkgray;
+#pHeaderShowHideP:hover {
+  background-color: #E2E2E2;
+}
+
+#pHeaderShowHideP p {
+  margin-top: 40px;
 }

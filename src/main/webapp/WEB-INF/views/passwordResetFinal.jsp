@@ -18,14 +18,14 @@
       <div class="errorMsg"></div>
       <form method="post">
         <p>
-          <input type="password" name="passwordFirst" placeholder="Password" autofocus>
+          <input id="pPRFPasswordInput" type="password" name="passwordFirst" placeholder="Password" autofocus>
         </p>
         <p>
-          <input type="password" name="password" placeholder="Confirm password">
+          <input id="pPRFConfirmPasswordInput" type="password" name="password" placeholder="Confirm password">
         </p>
         <p class="submit">
           <input type="hidden" name="loginName" value="${loginName }" />
-          <input type="button" id="pPRFConfirmBtn" class="cursorPointer" name="commit" value="确认">
+          <button type="button" id="pPRFConfirmBtn" class="btn btn-primary" name="commit">确认</button>
         </p>
       </form>
     </div>

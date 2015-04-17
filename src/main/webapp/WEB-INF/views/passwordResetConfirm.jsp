@@ -19,7 +19,7 @@
           如果电子邮件在几分钟内不出现，请检查您的垃圾邮件文件夹。
         </p>
         <p class="submit">
-          <input style="width:100px;" type="submit" class="cursorPointer" value="返回登录界面">
+          <button type="submit" class="btn btn-primary">返回登录界面</button>
         </p>
       </form>
     </div>

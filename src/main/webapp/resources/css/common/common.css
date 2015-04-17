@@ -39,6 +39,7 @@ select {
 	height: 100px;
 	width: 100%;
 	border-bottom: 1px solid #999D9E;
+	background-color: #eee;
 }
 
 #p001DivUser {
@@ -56,7 +57,7 @@ select {
 }
 
 #footer {
-	background-color: #FFFFFF;
+	background-color: #eee;;
 	color: #7f8c8d;
 	text-align: center;
 	border-top: 1px solid #999D9E;
@@ -67,7 +68,7 @@ select {
 	height: 50px;
 }
 
-#pFooterDiv {
+#pFooterDiv, .pFooterDiv {
 	margin-top: 18px;
 }
 

@@ -1,5 +1,15 @@
 $(function() {
     $("#pPRFConfirmBtn").off("click").on("click", function() {
+        var pPRFPasswordInput = $("#pPRFPasswordInput").val();
+        var pPRFConfirmPasswordInput = $("#pPRFConfirmPasswordInput").val();
+        if (pPRFPasswordInput === "") {
+            $("#pPRFPasswordInput").focus();
+            return;
+        } else if (pPRFConfirmPasswordInput === "") {
+            $("#pPRFConfirmPasswordInput").focus();
+            return;
+        }
+
         $.ajax({
             url: $.getBaseURL() + "/passwordResetFinal",
             type: "POST",
