@@ -4,8 +4,8 @@
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
 <%@include file="../commonImport.jsp"%>
-<link rel="stylesheet" type="text/css" href="/mcliu/resources/css/game/game.css"/>
-<script type="text/javascript" src="/mcliu/resources/js/game/game.js"></script>
+<link rel="stylesheet" type="text/css" href="/resources/css/game/game.css"/>
+<script type="text/javascript" src="/resources/js/game/game.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <div class="statbox widget box box-shadow">
               <div class="widget-content">
                 <div class="visual">
-                    <img id="pGame2048Img" alt="2048" src="/mcliu/resources/img/2048.png" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="一款风靡全球的数字类游戏，赶快来玩吧！">
+                    <img id="pGame2048Img" alt="2048" src="/resources/img/2048.png" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="一款风靡全球的数字类游戏，赶快来玩吧！">
                 </div>
                 <div class="title">2048</div>
                 <div class="value">2048</div>

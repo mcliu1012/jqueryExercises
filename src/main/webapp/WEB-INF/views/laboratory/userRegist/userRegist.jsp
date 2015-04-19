@@ -1,5 +1,5 @@
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
-<script type="text/javascript" src="/mcliu/resources/js/laboratory/userRegist.js"></script>
+<script type="text/javascript" src="/resources/js/laboratory/userRegist.js"></script>
 <div id="pVESuccessInfoDiv" class="alert alert-success modal-alert modal-alert-error pVEAlert" role="alert"></div>
 <div id="pVEErrorMsg" class="alert alert-danger modal-alert modal-alert-error pVEAlert" role="alert"></div>
 <div class="pVETitle">

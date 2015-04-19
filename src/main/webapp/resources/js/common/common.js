@@ -20,8 +20,9 @@ $(function() {
         var protocol = window.location.protocol;
         var hostname = window.location.hostname;
         var port = (window.location.port && ":") + location.port;
-        var contextPath = window.location.pathname.split('/')[1];
-        return protocol + "//" + hostname + port + "/" + contextPath;
+        return protocol + "//" + hostname + port;
+//        var contextPath = window.location.pathname.split('/')[1];
+//        return protocol + "//" + hostname + port + "/" + contextPath;
     };
 
     /**
