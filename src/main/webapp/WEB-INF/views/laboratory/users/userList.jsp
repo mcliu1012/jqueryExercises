@@ -25,7 +25,7 @@
       <div id="pULDiv" style="padding: 20px 50px;">
         <h4>用户信息一览&nbsp;&nbsp;&nbsp;&nbsp;</h4>
           <div id="pULJSPTableDiv" class="width70percent marginTop20">
-        	  <h6><b>JSP中使用&lt;c:forEach&gt;循环显示用户列表：</b></h6>
+        	  <h6><b>静态表示：</b></h6>
               <table border="1" class="table table-bordered table-striped" style="margin: auto;">
                 <tr>
                   <table id="pULHeaderTable" border="1" class="table table-bordered table-striped" style="margin: auto;">
@@ -56,7 +56,7 @@
               </table>
           </div>
           <div id="pULJSTableDiv" class="width70percent marginTop20">
-            <h6><b>JS中动态循环显示用户列表：</b></h6>
+            <h6><b>AJAX表示：</b></h6>
             <table id="pULJSTable"  border="0" class="table table-bordered table-striped tablesorter">
               <thead>
                 <tr>

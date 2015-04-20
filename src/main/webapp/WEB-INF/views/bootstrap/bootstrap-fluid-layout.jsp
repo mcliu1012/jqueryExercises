@@ -35,7 +35,7 @@
 					<div class="span6">
 						<div class="members" style="float: left;">
 							身份： <select class="selectbox" id="roleSelect">
-								<option>请选择TA的身份</option>
+								<option>请选择【VIP中P】</option>
 								<option value="0">普通会员</option>
 								<option value="1">VIP中P</option>
 							</select>
@@ -45,7 +45,7 @@
 						<div class="members" style="float: right;">
 							价位： <select class="selectbox" id="priceSelect"
 								disabled="disabled">
-								<option>请选择TA的价位</option>
+								<option>请选择【2毛7分5】</option>
 								<option value="0">1毛6分8</option>
 								<option value="1">2毛7分5</option>
 							</select>
