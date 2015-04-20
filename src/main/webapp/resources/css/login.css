@@ -165,6 +165,8 @@ body {
 .login p.remember_me {
   float: left;
   line-height: 31px;
+  min-width: 105px;
+  overflow: hidden;
 }
 .login p.remember_me label {
   font-size: 12px;
