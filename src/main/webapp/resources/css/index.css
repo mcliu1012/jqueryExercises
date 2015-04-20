@@ -1,6 +1,5 @@
 .logoutA {
   margin: 11px 0;
-  border: 1px solid;
 }
 
 .container p {
@@ -18,5 +17,5 @@
 
 .container {
   position: absolute;
-  padding-left: 140px;
+  padding-left: 9%;
 }

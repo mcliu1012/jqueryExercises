@@ -3,6 +3,7 @@
 <head>
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
+<title>MCLIU | Game</title>
 <%@include file="../commonImport.jsp"%>
 <link rel="stylesheet" type="text/css" href="/resources/css/game/game.css"/>
 <script type="text/javascript" src="/resources/js/game/game.js"></script>

@@ -159,7 +159,9 @@ function setValidator() {
 //          $(form).ajaxSubmit();
       },
       errorPlacement: function(error, element) {
-          error.insertAfter(element.parent());
+//          error.insertAfter(element.parent());
+//          error.appendTo(element.parent());
+          $("#pLoginErrorMsg").txtCrossFade(error[0].innerHTML);
       }
   });
 }

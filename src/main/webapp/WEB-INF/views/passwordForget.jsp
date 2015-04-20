@@ -15,12 +15,16 @@
 <body>
   <section class="pLoginSectionContainer">
     <div class="login">
-      <h1>Forgot password</h1>
+      <h1>找回密码</h1>
       <div class="errorMsg">${error }</div>
       <form id="pPFForm" method="post" action="passwordReset">
-        <p>
-          <input id="pPFLoginNameInput" type="text" name="loginName" placeholder="Enter your email address" autofocus>
-        </p>
+        <div class="input-group">
+          <span class="input-group-addon min-width-45" id="basic-addon1">
+            <span class="icon-envelope" aria-hidden="true"></span>
+          </span>
+          <input id="pPFLoginNameInput" class="form-control" placeholder="电子邮箱"
+            aria-describedby="basic-addon1" name="loginName" autofocus>
+        </div>
         <p class="submit" style="width: 100%;">
           <a class="btn btn-default" href="login">返回</a>
           <button type="submit" class="btn btn-primary">提交</button>

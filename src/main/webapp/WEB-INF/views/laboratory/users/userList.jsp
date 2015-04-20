@@ -19,12 +19,11 @@
           <li class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">
             <a href="<c:url value="/laboratory" />"><span class="icon-beaker"></span>实验室</a>
           </li>
-          <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">用户注册</li>
+          <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">用户一览</li>
         </ul>
       </div>
-      <div id="pULDiv" style="padding: 40px 60px;">
-        注册成功！<br/>
-        <h4>用户信息一览&nbsp;&nbsp;&nbsp;&nbsp;<a href="<c:url value='/laboratory' />">返回到实验室</a></h4>
+      <div id="pULDiv" style="padding: 20px 50px;">
+        <h4>用户信息一览&nbsp;&nbsp;&nbsp;&nbsp;</h4>
           <div id="pULJSPTableDiv" class="width70percent marginTop20">
         	  <h6><b>JSP中使用&lt;c:forEach&gt;循环显示用户列表：</b></h6>
               <table border="1" class="table table-bordered table-striped" style="margin: auto;">

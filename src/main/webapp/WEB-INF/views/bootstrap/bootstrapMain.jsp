@@ -3,6 +3,7 @@
 <head>
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
+<title>MCLIU | Bootstrap</title>
 <%@include file="../commonImport.jsp"%>
 </head>
 
@@ -17,7 +18,7 @@
           <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">Bootstrap Demo</li>
         </ul>
       </div>
-      <div id="pBootstrapMainDiv" class="marginLeft20 marginTop10">
+      <div id="pBootstrapMainDiv" class="marginLeft20 marginTop10 min-width-120">
         <a href="<c:url value='/bootstrap/bootstrapFluidLayout' />" target="_blank">Bootstrap流式布局</a>
       </div>
     </div>

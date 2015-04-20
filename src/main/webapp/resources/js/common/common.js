@@ -186,10 +186,10 @@ $(function() {
                     delay = 1500;
                 }
                 if (fadeOut === null) {
-                    fadeOut = 2000;
+                    fadeOut = 1000;
                 }
                 $(this).text(text);
-                $(this).fadeIn(1000).delay(1500).fadeOut(2000);
+                $(this).fadeIn(1000).delay(1500).fadeOut(1000);
             }
         },
 

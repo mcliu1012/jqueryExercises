@@ -11,13 +11,13 @@ function setListener() {
         if ($(this).hasClass("active")) {
             // 如果有了active，假设已经点击过了
             // 执行你的代码
-            $("#left").animate({"margin-left":"0px"}, 300);
+            $("#left").animate({"margin-left":"0px"}, 200);
             // 把active去掉
             $(this).removeClass("active");
         } else {
             // 没有active，假设还没有点击过
             // 执行你的代码
-            $("#left").animate({"margin-left":"-240px"}, 300);
+            $("#left").animate({"margin-left":"-240px"}, 200);
             $(this).addClass("active");
         }
     });

@@ -1,4 +1,9 @@
 $(function() {
+    $("#pPRFResetBtn").off("click").on("click", function() {
+        $(".errorMsg").text("");
+        $("#pPRFPasswordInput").focus();
+    });
+
     $("#pPRFConfirmBtn").off("click").on("click", function() {
         var pPRFPasswordInput = $("#pPRFPasswordInput").val();
         var pPRFConfirmPasswordInput = $("#pPRFConfirmPasswordInput").val();

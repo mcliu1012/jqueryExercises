@@ -3,9 +3,10 @@
 <head>
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
+<title>MCLIU | 实验室</title>
 <%@include file="../commonImport.jsp"%>
 <link rel="stylesheet" type="text/css" href="/resources/css/laboratory.css"/>
-<script type="text/javascript" src="/resources/js/laboratory.js"></script>
+<script type="text/javascript" src="/resources/js/laboratory/laboratory.js"></script>
 </head>
 
 <body>
@@ -19,11 +20,8 @@
           <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">实验室</li>
         </ul>
       </div>
-      <div id="pVERegistDiv">
-        <%@include file="userRegist/userRegist.jsp"%>
-      </div>
-      <div id="pVEDiv">
-        <div class="pVETitle"><h2>TODO...</h2></div>
+      <div id="pLaboratoryDiv" class="marginLeft20 marginTop10 min-width-120">
+        <a href="<c:url value="/laboratory/userListInit" />">显示所有用户信息</a>
       </div>
     </div>
   </div>

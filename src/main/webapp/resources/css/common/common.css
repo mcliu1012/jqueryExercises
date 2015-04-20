@@ -3,11 +3,6 @@
 	font-size: 14px;
 }
 
-input[type='button'],input[type='submit'] {
-	width: 80px;
-	height: 30px;
-}
-
 input[type='button'].fiveCharButton {
 	width: 90px;
 	height: 30px;
@@ -68,7 +63,7 @@ select {
 	height: 50px;
 }
 
-#pFooterDiv, .pFooterDiv {
+#pFooterDiv {
 	margin-top: 18px;
 }
 
@@ -223,6 +218,7 @@ input.error {
 	margin-top: 10px;
 	margin-left: 6px;
 	font-style: italic;
+	font-size: 14px;
 }
 
 .successMsg {
@@ -435,4 +431,35 @@ a:hover, a:focus {
   top: 110px;
   right: 0px;
   position: absolute;
+}
+
+.min-width-45 {
+  min-width: 45px;
+}
+
+form span, form input {
+  border-radius: 0px !important;
+}
+
+/*********passwordResetFinal**************/
+#pPRFForm input {
+  margin: auto;
+  outline: none;
+  width: 100%;
+}
+
+#pPRFForm .input-group {
+  padding: 5px;
+}
+
+.min-width-180 {
+  min-width: 180px;
+}
+
+.min-width-120 {
+  min-width: 120px;
+}
+
+.margin-top-6 {
+  margin-top: 6px;
 }

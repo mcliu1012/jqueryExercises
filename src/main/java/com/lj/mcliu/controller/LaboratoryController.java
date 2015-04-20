@@ -122,7 +122,7 @@ public class LaboratoryController extends BaseController {
         model.addAttribute("loginUserInfoList", loginUserInfoList);
 
         logger.info("==== userListInit END ====");
-        return "laboratory/userRegist/userList";
+        return "laboratory/users/userList";
     }
 
     @ResponseBody
