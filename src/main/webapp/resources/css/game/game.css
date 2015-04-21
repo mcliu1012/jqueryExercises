@@ -1,5 +1,4 @@
 .container {
-  /* max-width: none !important; */
   padding: 0 20px
 }
 
@@ -146,7 +145,6 @@ a {
 }
 
 .widget-content .more i {
-  /* margin-top: 2px; */
   margin-bottom: -3px;
 }
 
@@ -171,4 +169,12 @@ a {
 
 #pGameOutDiv a {
   text-decoration: none;
+}
+
+.popover {
+  top: 19px !important;
+}
+
+.arrow {
+  top: 50% !important;
 }
