@@ -542,7 +542,7 @@ body {
 }
 
 .statbox .title+.value {
-  margin-top: 24px;
+  margin-top: -3px;
 }
 
 .statbox .title,.statbox .value {
@@ -586,20 +586,6 @@ a {
 
 .fa-gamepad:before {
   content: "\f11b";
-}
-
-.statbox .visual {
-  min-width: 20px;
-  min-height: 17px;
-  padding: 13px;
-  text-align: center;
-  margin-right: 10px;
-  float: left;
-  overflow: hidden;
-  color: #fff;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
 }
 
 .widget-content .more i {
@@ -646,4 +632,8 @@ a {
 
 .arrow {
   top: 50% !important;
+}
+
+.statbox .visual.blue {
+	background-color: #54728c;
 }

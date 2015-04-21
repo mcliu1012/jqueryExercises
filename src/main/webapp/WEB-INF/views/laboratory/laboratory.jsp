@@ -67,7 +67,7 @@
             <div class="statbox widget box box-shadow">
               <div class="widget-content">
                 <div class="visual blue">
-                  <i class="fa fa-wifi"></i>
+                  <i class="icon-cogs"></i>
                 </div>
                 <div class="title">Network Tools</div>
                 <div class="value">网络工具</div>

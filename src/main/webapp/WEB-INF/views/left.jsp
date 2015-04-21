@@ -8,6 +8,7 @@
       <li id="pLeftLaboratory" role="presentation"><a href="javascript:void(0);"><i class="icon-beaker icon-large"></i>实验室</a></li>
       <li id="pLeftGame" role="presentation"><a href="javascript:void(0);"><img src="/resources/img/game.png"/>Game</a></li>
       <li id="pLeftBD" role="presentation"><a href="javascript:void(0);"><i class="icon-bold icon-large"></i>Bootstrap Demo</a></li>
+      <li id="pLeftBlog" role="presentation"><a href="javascript:void(0);"><i class="icon-copy icon-large"></i>博客 (施工中...)</a></li>
     </ul>
   </div>
 </div>

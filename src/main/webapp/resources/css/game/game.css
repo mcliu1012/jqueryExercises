@@ -5,3 +5,7 @@
 #pGameOutDiv a {
   text-decoration: none;
 }
+
+#pGameOutDiv .value {
+	margin-top: 24px;
+}
