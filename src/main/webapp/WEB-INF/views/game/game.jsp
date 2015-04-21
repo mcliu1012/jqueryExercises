@@ -22,7 +22,7 @@
       </div>
       <div id="pGameOutDiv" class="container" style="width:100%;">
         <div class="row margin-top-30">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="statbox widget box box-shadow">
               <div class="widget-content">
                 <div class="visual">

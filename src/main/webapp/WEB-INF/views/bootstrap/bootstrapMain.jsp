@@ -18,7 +18,7 @@
           <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">Bootstrap Demo</li>
         </ul>
       </div>
-      <div id="pBootstrapMainDiv" class="marginLeft20 marginTop10 min-width-120">
+      <div id="pBootstrapMainDiv" class="padding-20 min-width-120">
         <a href="<c:url value='/bootstrap/bootstrapFluidLayout' />" target="_blank">Bootstrap流式布局</a>
       </div>
     </div>

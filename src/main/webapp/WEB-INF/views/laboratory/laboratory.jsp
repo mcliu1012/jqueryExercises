@@ -5,7 +5,7 @@
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
 <title>MCLIU | 实验室</title>
 <%@include file="../commonImport.jsp"%>
-<link rel="stylesheet" type="text/css" href="/resources/css/laboratory.css"/>
+<link rel="stylesheet" type="text/css" href="/resources/css/laboratory/laboratory.css"/>
 <script type="text/javascript" src="/resources/js/laboratory/laboratory.js"></script>
 </head>
 
@@ -20,8 +20,75 @@
           <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">实验室</li>
         </ul>
       </div>
-      <div id="pLaboratoryDiv" class="marginLeft20 marginTop10 min-width-120">
-        <a href="<c:url value="/laboratory/userListInit" />">显示所有用户信息</a>
+      <div id="pLaboratoryDiv" class="padding-20 min-width-120">
+        <%-- 其他用户 --%>
+        <div class="row">
+          <div class="widget">
+            <div class="widget-header">
+              <h4>其他用户</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <a href="<c:url value="/laboratory/userListInit" />">显示所有用户信息</a>
+          </div>
+        </div>
+        <%-- 应用 --%>
+        <div class="row margin-top-30">
+          <div class="widget">
+            <div class="widget-header">
+              <h4>一些奇奇怪怪的应用</h4>
+            </div>
+          </div>
+<!--           <div class="col-md-3"> -->
+<!--             <div class="statbox widget box box-shadow"> -->
+<!--               <div class="widget-content"> -->
+<!--                 <div class="visual blue"> -->
+<!--                   <i>ROLL</i> -->
+<!--                 </div> -->
+<!--                 <div class="title">其他</div> -->
+<!--                 <div class="value">随机数</div> -->
+<!--                 <a href="/app/roll/" class="more">打开<i class="pull-right icon-angle-right"></i></a> -->
+<!--               </div> -->
+<!--             </div> -->
+<!--           </div> -->
+<!--           <div class="col-md-3"> -->
+<!--             <div class="statbox widget box box-shadow"> -->
+<!--               <div class="widget-content"> -->
+<!--                 <div class="visual blue"> -->
+<!--                   <i class="fa fa-qrcode"></i> -->
+<!--                 </div> -->
+<!--                 <div class="title">QR CODE</div> -->
+<!--                 <div class="value">生成二维码</div> -->
+<!--                 <a href="/app/qrcode/" class="more">打开<i class="pull-right icon-angle-right"></i></a> -->
+<!--               </div> -->
+<!--             </div> -->
+<!--           </div> -->
+          <div class="col-md-3">
+            <div class="statbox widget box box-shadow">
+              <div class="widget-content">
+                <div class="visual blue">
+                  <i class="fa fa-wifi"></i>
+                </div>
+                <div class="title">Network Tools</div>
+                <div class="value">网络工具</div>
+                <a href="/laboratory/network/" class="more">打开<i class="pull-right icon-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+<!--           <div class="col-md-3"> -->
+<!--             <div class="statbox widget box box-shadow"> -->
+<!--               <div class="widget-content"> -->
+<!--                 <div class="visual blue"> -->
+<!--                   <i class="fa fa-usd"></i> -->
+<!--                 </div> -->
+<!--                 <div class="title">金融</div> -->
+<!--                 <div class="value">汇率换算</div> -->
+<!--                 <a href="#" target="_blank" class="more">打开<i class="pull-right icon-angle-right"></i></a> -->
+<!--               </div> -->
+<!--             </div> -->
+<!--           </div> -->
+        </div>
+
       </div>
     </div>
   </div>

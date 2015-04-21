@@ -3,9 +3,10 @@
 <head>
 <%@ page session='true'%>
 <%@ page contentType='text/html;charset=UTF-8' pageEncoding='UTF-8'%>
+<title>MCLIU | 用户一览</title>
 <%@include file="../../commonImport.jsp"%>
-<link rel="stylesheet" type="text/css" href="/resources/css/userList.css"/>
-<script type="text/javascript" src="/resources/js/userList.js"></script>
+<link rel="stylesheet" type="text/css" href="/resources/css/laboratory/users/userList.css"/>
+<script type="text/javascript" src="/resources/js/laboratory/users/userList.js"></script>
 </head>
 
 <body>

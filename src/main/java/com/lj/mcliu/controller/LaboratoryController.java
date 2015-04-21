@@ -136,4 +136,13 @@ public class LaboratoryController extends BaseController {
         logger.info("==== getLoginUserInfoList END ====");
         return JSON.encode(model);
     }
+
+    @RequestMapping(value = "network", method = RequestMethod.GET)
+    public String network(Model model) throws Exception {
+        logger.info("==== network START ====");
+        // TODO
+
+        logger.info("==== network END ====");
+        return "laboratory/app/network";
+    }
 }
