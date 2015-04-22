@@ -9,7 +9,13 @@
 <%@include file="commonImport.jsp"%>
 </head>
 
-<body>
+<body onselectstart="return true;" ondragstart="return false;" onload="isHasLoad()">
+  <div id="loadDiv">
+    <div class="loadDiv-fix">
+      <img class="load" src="/resources/img/loading/load.png" />
+      <img class="loading" src="/resources/img/loading/loading.png" /> 加载中...
+    </div>
+  </div>
   <div id="header"><%@include file="header.jsp" %></div>
   <div id="leftAndContent">
     <div id="left"><%@include file="left.jsp"%></div>

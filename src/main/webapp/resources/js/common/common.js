@@ -221,3 +221,11 @@ $(function() {
         }
     });
 });
+
+function isHasLoad(){
+    var status = document.readyState;
+    if(status == "complete") {
+        var loadDiv = document.getElementById('loadDiv');
+        loadDiv.style.display='none';
+    }
+}
