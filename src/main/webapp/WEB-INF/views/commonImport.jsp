@@ -22,7 +22,6 @@
 <spring:url value='/resources/css/index.css' var='indexcss' />
 <spring:url value='/resources/css/lib/font-awesome.min.css' var='fontawesomemincss' />
 <spring:url value='/resources/css/qqservice.css' var='qqservicecss' />
-<spring:url value='/resources/css/loading/loading.css' var='loadingcss' />
 
 <spring:url value='/resources/js/lib/jquery-1.11.0.min.js' var='jquery' />
 <%-- <spring:url value='/resources/js/lib/jquery-migrate-1.2.1.min.js' var='jquerymigrate' /> --%>
@@ -53,7 +52,6 @@
 <link media='screen' rel='stylesheet' href='${indexcss}?<%= sysDate %>' type='text/css' />
 <link media='screen' rel='stylesheet' href='${fontawesomemincss}?<%= sysDate %>' type='text/css' />
 <link media='screen' rel='stylesheet' href='${qqservicecss}?<%= sysDate %>' type='text/css' />
-<link media='screen' rel='stylesheet' href='${loadingcss}?<%= sysDate %>' type='text/css' />
 
 <script type='text/javascript' src='${jquery}?<%= sysDate %>'></script>
 <%-- <script type='text/javascript' src='${jquerymigrate}?<%= sysDate %>'></script> --%>

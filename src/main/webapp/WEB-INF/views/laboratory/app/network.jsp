@@ -7,13 +7,7 @@
 <%@include file="../../commonImport.jsp"%>
 </head>
 
-<body onselectstart="return true;" ondragstart="return false;" onload="isHasLoad()">
-  <div id="loadDiv">
-    <div class="loadDiv-fix">
-      <img class="loading" src="/resources/img/loading/loading.gif" />
-      <span>loading......</span>
-    </div>
-  </div>
+<body>
   <div id="header"><%@include file="../../header.jsp"%></div>
   <div id="leftAndContent">
     <div id="left"><%@include file="../../left.jsp"%></div>
