@@ -12,8 +12,7 @@
 <body onselectstart="return true;" ondragstart="return false;" onload="isHasLoad()">
   <div id="loadDiv">
     <div class="loadDiv-fix">
-      <img class="load" src="/resources/img/loading/load.png" />
-      <img class="loading" src="/resources/img/loading/loading.png" /> 加载中...
+      <img class="loading" src="/resources/img/loading/loading.gif" /> 加载中......
     </div>
   </div>
   <div id="header"><%@include file="../header.jsp"%></div>
