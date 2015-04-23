@@ -33,7 +33,7 @@ public class IpAddress {
             if (code.equals(0)) {
                 resout = obj2.get("country") + "  " + obj2.get("area") + "  " +
                          obj2.get("region") + "  " + obj2.get("city") + "  " +
-                         obj2.get("isp") + "  " + obj2.get("ip");
+                         obj2.get("isp");
             } else {
                 resout = "非法的 IP 地址";
             }

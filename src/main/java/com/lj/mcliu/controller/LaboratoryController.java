@@ -14,12 +14,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lj.mcliu.model.LoginUserInfo;
 import com.lj.mcliu.service.LoginService;
 import com.lj.mcliu.service.ValidateExerciseService;
 import com.lj.mcliu.util.CommonUtil;
+import com.lj.mcliu.util.address.IpAddress;
 
 @Controller
 @RequestMapping("laboratory")
@@ -114,14 +116,14 @@ public class LaboratoryController extends BaseController {
         return true;
     }
 
-    @RequestMapping(value = "userListInit", method = RequestMethod.GET)
-    public String userListInit(Model model) throws Exception {
-        logger.info("==== userListInit START ====");
+    @RequestMapping(value = "users", method = RequestMethod.GET)
+    public String users(Model model) throws Exception {
+        logger.info("==== users START ====");
 
         List<LoginUserInfo> loginUserInfoList = validateExerciseService.getLoginUserInfoList();
         model.addAttribute("loginUserInfoList", loginUserInfoList);
 
-        logger.info("==== userListInit END ====");
+        logger.info("==== users END ====");
         return "laboratory/users/userList";
     }
 
@@ -140,9 +142,25 @@ public class LaboratoryController extends BaseController {
     @RequestMapping(value = "network", method = RequestMethod.GET)
     public String network(Model model) throws Exception {
         logger.info("==== network START ====");
-        // TODO
+
+        String hostIp = IpAddress.getWebIp("http://www.ip138.com/ip2city.asp");
+        String hostAddress = IpAddress.GetAddressByIp(hostIp);
+        model.addAttribute("hostIp", hostIp);
+        model.addAttribute("hostAddress", hostAddress);
 
         logger.info("==== network END ====");
         return "laboratory/app/network";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "checkIp", method = RequestMethod.POST)
+    public String checkIp(Model model, @RequestParam String checkIp) {
+        logger.info("==== checkIp START ====");
+
+        String checkIpAddress = IpAddress.GetAddressByIp(checkIp);
+        model.addAttribute("checkIpAddress", checkIpAddress);
+
+        logger.info("==== checkIp END ====");
+        return JSON.encode(model);
     }
 }

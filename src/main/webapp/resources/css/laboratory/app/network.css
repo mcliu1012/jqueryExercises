@@ -1,0 +1,19 @@
+#pNetIpAddress {
+  min-width: 200px;
+  margin: auto;
+  font-weight: bold;
+}
+
+#pNetIpAddress .form-group .col-sm-3:nth-child(2) {
+  text-align: center;
+}
+
+#pNetIpAddress .form-group .col-sm-6 {
+  text-align: left;
+}
+
+.ip-address-result {
+  height: 70px;
+  background-color: #f5f5f5;
+  padding: 10px;
+}

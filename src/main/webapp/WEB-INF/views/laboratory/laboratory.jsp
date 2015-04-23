@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <a href="<c:url value="/laboratory/userListInit" />">显示所有用户信息</a>
+            <a href="<c:url value="/laboratory/users" />">显示所有用户信息</a>
           </div>
         </div>
         <%-- 应用 --%>
@@ -67,7 +67,7 @@
             <div class="statbox widget box box-shadow">
               <div class="widget-content">
                 <div class="visual blue">
-                  <i class="icon-cogs"></i>
+                  <i class="icon-signal"></i>
                 </div>
                 <div class="title">Network Tools</div>
                 <div class="value">网络工具</div>
