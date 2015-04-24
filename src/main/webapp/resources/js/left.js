@@ -4,7 +4,7 @@ $(function() {
 });
 
 function pLeftSetStatus() {
-    $(".active").removeClass("active");
+    $("pLeftOuterDiv .active").removeClass("active");
     if ($("#pIndexContentDiv")[0]) {
         $("#pLeftRH").addClass("active");
     } else if ($("#pLaboratoryDiv")[0] || $("#pULDiv")[0] || $("#pNetworkDiv")[0]) {
