@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import net.arnx.jsonic.JSON;
 
 import org.apache.commons.lang.StringUtils;
@@ -140,10 +142,10 @@ public class LaboratoryController extends BaseController {
     }
 
     @RequestMapping(value = "network", method = RequestMethod.GET)
-    public String network(Model model) throws Exception {
+    public String network(Model model, HttpServletRequest request) throws Exception {
         logger.info("==== network START ====");
 
-        String hostIp = IpAddress.getWebIp("http://www.ip138.com/ip2city.asp");
+        String hostIp = IpAddress.getClientIpAddr(request);
         String hostAddress = IpAddress.GetAddressByIp(hostIp);
         model.addAttribute("hostIp", hostIp);
         model.addAttribute("hostAddress", hostAddress);
