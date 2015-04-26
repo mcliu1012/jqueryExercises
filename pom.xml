@@ -190,6 +190,13 @@
 			<classifier>jdk15</classifier>
 		</dependency>
 
+		<!-- QR Code -->
+		<dependency>
+			<groupId>QRCode</groupId>
+			<artifactId>QRCode</artifactId>
+			<version>3.0</version>
+		</dependency>
+
 
 		<!-- seclitylog -->
 		<dependency>
