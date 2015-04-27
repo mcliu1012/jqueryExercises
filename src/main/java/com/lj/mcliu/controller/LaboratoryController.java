@@ -1,5 +1,6 @@
 package com.lj.mcliu.controller;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,7 @@ import com.lj.mcliu.model.LoginUserInfo;
 import com.lj.mcliu.service.LoginService;
 import com.lj.mcliu.service.ValidateExerciseService;
 import com.lj.mcliu.util.CommonUtil;
+import com.lj.mcliu.util.QRCode.QRUtil;
 import com.lj.mcliu.util.address.IpAddress;
 
 @Controller
@@ -35,6 +38,9 @@ public class LaboratoryController extends BaseController {
 
     @Autowired
     private LoginService loginService;
+
+    @Value("{qr.code.save.path}")
+    private String qrCodePath;
 
     /**
      * 画面初始化
@@ -141,6 +147,14 @@ public class LaboratoryController extends BaseController {
         return JSON.encode(model);
     }
 
+    /**
+     * 网络工具初始化
+     *
+     * @param model
+     * @param request
+     * @return
+     * @throws Exception
+     */
     @RequestMapping(value = "network", method = RequestMethod.GET)
     public String network(Model model, HttpServletRequest request) throws Exception {
         logger.info("==== network START ====");
@@ -163,6 +177,44 @@ public class LaboratoryController extends BaseController {
         model.addAttribute("checkIpAddress", checkIpAddress);
 
         logger.info("==== checkIp END ====");
+        return JSON.encode(model);
+    }
+
+    /**
+     * 二维码初始化
+     *
+     * @param model
+     * @param request
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "qrcode", method = RequestMethod.GET)
+    public String qrcode(Model model) throws Exception {
+        logger.info("==== qrcode START ====");
+
+        File file = new File(qrCodePath);
+        if (file.exists() && file.isFile()) {
+            file.delete();
+        }
+
+        logger.info("==== qrcode END ====");
+        return "laboratory/app/qrcode";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "qrcode_gnrt", method = RequestMethod.POST)
+    public String qrcodeGNRT(Model model, @RequestParam String content, @RequestParam int width, @RequestParam int height) {
+        logger.info("==== qrcodeGNRT START ====");
+
+        String qrPath = "";
+        if (width != 0 && height != 0) {
+            qrPath = QRUtil.encode(content, width, height, qrCodePath);
+        } else {
+            qrPath = QRUtil.encode(content, 300, 300, qrCodePath);
+        }
+        model.addAttribute("qrPath", qrPath);
+
+        logger.info("==== qrcodeGNRT END ====");
         return JSON.encode(model);
     }
 }

@@ -51,18 +51,6 @@
 <!--               </div> -->
 <!--             </div> -->
 <!--           </div> -->
-<!--           <div class="col-md-3"> -->
-<!--             <div class="statbox widget box box-shadow"> -->
-<!--               <div class="widget-content"> -->
-<!--                 <div class="visual blue"> -->
-<!--                   <i class="fa fa-qrcode"></i> -->
-<!--                 </div> -->
-<!--                 <div class="title">QR CODE</div> -->
-<!--                 <div class="value">生成二维码</div> -->
-<!--                 <a href="/app/qrcode/" class="more">打开<i class="pull-right icon-angle-right"></i></a> -->
-<!--               </div> -->
-<!--             </div> -->
-<!--           </div> -->
           <div class="col-md-3">
             <div class="statbox widget box box-shadow">
               <div class="widget-content">
@@ -72,6 +60,18 @@
                 <div class="title">Network Tools</div>
                 <div class="value">网络工具</div>
                 <a href="/laboratory/network/" class="more">打开<i class="pull-right icon-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="statbox widget box box-shadow">
+              <div class="widget-content">
+                <div class="visual blue">
+                  <i class="icon-qrcode"></i>
+                </div>
+                <div class="title">QR CODE</div>
+                <div class="value">生成二维码</div>
+                <a href="/laboratory/qrcode/" class="more">打开<i class="pull-right icon-angle-right"></i></a>
               </div>
             </div>
           </div>
