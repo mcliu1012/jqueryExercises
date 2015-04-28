@@ -23,7 +23,7 @@
           <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">二维码</li>
         </ul>
       </div>
-      <div id="pQRCodeDiv" class="padding-20 min-width-120">
+      <div id="pQRCodeDiv" class="padding-20">
         <%-- 查询IP地址 --%>
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -45,16 +45,17 @@
                 <div class="col-sm-2">
                   <input id="input-qr-width" class="form-control">
                 </div>
+                <label class="col-sm-3 control-label label-width-tip">宽度和高度介于100~500之间</label>
               </div>
               <div class="form-group">
                 <label class="col-sm-3 control-label">高度：</label>
                 <div class="col-sm-2">
-                  <input id="input-qr-height" class="form-control">
+                  <input id="input-qr-height" class="form-control" disabled>
                 </div>
               </div>
             </form>
             <div class="col-sm-12 textAlignCenter">
-              <div class="col-sm-6 div-qr-code">
+              <div class="col-sm-8 div-qr-code">
                 <div id="div-qrcode-show"></div>
               </div>
             </div>

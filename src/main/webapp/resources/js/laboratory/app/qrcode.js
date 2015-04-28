@@ -3,8 +3,24 @@ $(function() {
 });
 
 function pQRSetListener() {
+    // 焦点离开宽度输入框
+    setQRWidthInputBlurHandler();
     // 点击生成二维码按钮
     setQRCodeBtnClickHandler();
+}
+
+/**
+ * 焦点离开宽度输入框
+ */
+function setQRWidthInputBlurHandler() {
+    $("#input-qr-width").off("blur").on("blur", function() {
+        var qr_width = $("#input-qr-width").val();
+        if (isNum(qr_width) && (qr_width >= 100 && qr_width <= 500)) {
+            $("#input-qr-height").val(parseInt(qr_width, 10));
+        } else {
+            $("#input-qr-height").val("");
+        }
+    });
 }
 
 /**
@@ -12,6 +28,7 @@ function pQRSetListener() {
  */
 function setQRCodeBtnClickHandler() {
     $("#btn-qr-generate").off("click").on("click", function() {
+        $("#div-qrcode-show").text("");
         $("#input-qr-content").focus();
         if ($("#input-qr-content").val() === "") {
             return;
@@ -22,7 +39,7 @@ function setQRCodeBtnClickHandler() {
         var qr_width = $("#input-qr-width").val();
         var qr_height = $("#input-qr-height").val();
         var qrWidth = isNum(qr_width) && (qr_width >= 100 && qr_width <= 500) ? parseInt(qr_width, 10) : 100;
-        var qrHeight = isNum(qr_height) && (qr_height >= 100 && qr_height <= 500) ? parseInt(qr_height, 10) : 100;
+        var qrHeight = isNum(qr_height) ? parseInt(qr_height, 10) : 100;
 
         // 生成二维码
         $("#div-qrcode-show").css("width", qrWidth + "px");

@@ -1,4 +1,9 @@
+#pQRCodeDiv {
+	min-width: 900px;
+}
+
 .div-qr-code {
+  min-width: 500px;
   min-height: 100px;
   margin: auto;
   float: none;
@@ -7,4 +12,9 @@
 
 #div-qrcode-show {
   margin: auto;
+}
+
+.label-width-tip {
+	text-align: left !important;
+	color: #3071a9;
 }
