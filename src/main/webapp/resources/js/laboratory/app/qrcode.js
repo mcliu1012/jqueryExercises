@@ -1,11 +1,6 @@
 $(function() {
-    pQRInitStatus();
     pQRSetListener();
 });
-
-function pQRInitStatus() {
-    $("#img-qrcode").prop("src", "");
-}
 
 function pQRSetListener() {
     // 点击生成二维码按钮
@@ -26,26 +21,17 @@ function setQRCodeBtnClickHandler() {
         var qr_content = $("#input-qr-content").val();
         var qr_width = $("#input-qr-width").val();
         var qr_height = $("#input-qr-height").val();
-        $.ajax({
-            url: $.getBaseURL() + "/laboratory/qrcode_gnrt",
-            type: "POST",
-            cache: false,
-            dataType: "json",
-            data: {
-                "content" : qr_content,
-                "width" : isNum(qr_width) && (qr_width >= 100 && qr_width <= 500) ? parseInt(qr_width, 10) : 0,
-                "height" : isNum(qr_height) && (qr_height >= 100 && qr_height <= 500) ? parseInt(qr_height, 10) : 0,
-            },
-            success: function(data, textStatus) {
-                $("#img-qrcode").prop("src", data.qrPath);
-            },
-            error: function(request, status, error) {
+        var qrWidth = isNum(qr_width) && (qr_width >= 100 && qr_width <= 500) ? parseInt(qr_width, 10) : 100;
+        var qrHeight = isNum(qr_height) && (qr_height >= 100 && qr_height <= 500) ? parseInt(qr_height, 10) : 100;
 
-            },
-            complete: function(XMLHttpRequest, textStatus) {
-
-            }
+        // 生成二维码
+        $("#div-qrcode-show").css("width", qrWidth + "px");
+        $("#div-qrcode-show").css("height", qrHeight + "px");
+        var qrcode = new QRCode($("#div-qrcode-show")[0], {
+            width : qrWidth,//设置宽高
+            height : qrHeight
         });
+        qrcode.makeCode(qr_content);
     });
 }
 

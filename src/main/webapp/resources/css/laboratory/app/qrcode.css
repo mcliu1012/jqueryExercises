@@ -1,6 +1,10 @@
 .div-qr-code {
-  width: 50%;
   min-height: 100px;
   margin: auto;
+  float: none;
   border: 1px solid #ddd;
+}
+
+#div-qrcode-show {
+  margin: auto;
 }

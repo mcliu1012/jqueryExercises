@@ -54,8 +54,8 @@
               </div>
             </form>
             <div class="col-sm-12 textAlignCenter">
-              <div class="div-qr-code">
-                <img id="img-qrcode" />
+              <div class="col-sm-6 div-qr-code">
+                <div id="div-qrcode-show"></div>
               </div>
             </div>
           </div>

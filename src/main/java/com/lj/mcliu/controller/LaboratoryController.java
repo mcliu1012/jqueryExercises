@@ -1,6 +1,5 @@
 package com.lj.mcliu.controller;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +24,6 @@ import com.lj.mcliu.model.LoginUserInfo;
 import com.lj.mcliu.service.LoginService;
 import com.lj.mcliu.service.ValidateExerciseService;
 import com.lj.mcliu.util.CommonUtil;
-import com.lj.mcliu.util.QRCode.QRUtil;
 import com.lj.mcliu.util.address.IpAddress;
 
 @Controller
@@ -192,29 +190,7 @@ public class LaboratoryController extends BaseController {
     public String qrcode(Model model) throws Exception {
         logger.info("==== qrcode START ====");
 
-        File file = new File(qrCodePath);
-        if (file.exists() && file.isFile()) {
-            file.delete();
-        }
-
         logger.info("==== qrcode END ====");
         return "laboratory/app/qrcode";
-    }
-
-    @ResponseBody
-    @RequestMapping(value = "qrcode_gnrt", method = RequestMethod.POST)
-    public String qrcodeGNRT(Model model, @RequestParam String content, @RequestParam int width, @RequestParam int height) {
-        logger.info("==== qrcodeGNRT START ====");
-
-        String qrPath = "";
-        if (width != 0 && height != 0) {
-            qrPath = QRUtil.encode(content, width, height, qrCodePath);
-        } else {
-            qrPath = QRUtil.encode(content, 300, 300, qrCodePath);
-        }
-        model.addAttribute("qrPath", qrPath);
-
-        logger.info("==== qrcodeGNRT END ====");
-        return JSON.encode(model);
     }
 }
