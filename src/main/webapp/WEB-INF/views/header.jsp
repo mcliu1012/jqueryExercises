@@ -9,6 +9,6 @@
   <div id="pHeaderMsgDiv" class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">MCLIU’s Personal Website</div>
   <div class="pHeaderMsgDiv visible-xs-inline-block">liujiaweb</div>
   <div id="pHeaderLogoutDiv" class="inlineblock">
-    <a class="btn logoutA btn-primary" href="<c:url value='/logout' />"><span class="icon-signout"></span> 退出</a>
+    <a class="btn btn-primary" href="<c:url value='/logout' />"><span class="icon-signout"></span> 退出</a>
   </div>
 </div>
