@@ -17,7 +17,7 @@
       <h1>Login to MCLIU's website</h1>
       <div class="successMsg">${successMsg }</div>
       <div class="errorMsg">${error }</div>
-      <form id="pLogInForm" method="post" action="login">
+      <form id="pLogInForm" method="post" action="/">
         <p>
           <input type="text" id="loginNameInput" name="loginName" value="${loginName}" placeholder="Username or Email" autofocus>
         </p>

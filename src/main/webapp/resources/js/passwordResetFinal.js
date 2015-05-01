@@ -38,7 +38,7 @@ $(function() {
                 window.location.href = $.getBaseURL() + "/passwordResetSuccess";
             },
             error: function(request, status, error) {
-                window.location.href = $.getBaseURL() + "/login";
+                window.location.href = $.getBaseURL();
             },
             complete: function(XMLHttpRequest, textStatus) {
 

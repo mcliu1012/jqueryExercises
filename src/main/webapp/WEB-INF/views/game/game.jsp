@@ -16,7 +16,7 @@
     <div id="content">
       <div class="breadcrumbDiv">
         <ul class="breadcrumb">
-          <li class="homeLi"><a href="<c:url value="index" />"><span class="icon-home"></span>首页</a></li>
+          <li class="homeLi"><a href="<c:url value="/" />"><span class="icon-home"></span>首页</a></li>
           <li class="active visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">Game</li>
         </ul>
       </div>

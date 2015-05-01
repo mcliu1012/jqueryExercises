@@ -21,7 +21,7 @@ function pLeftSetListener() {
         var pLeftId = $(this).attr("id");
         switch (pLeftId) {
             case "pLeftRH":
-                window.location.href = $.getBaseURL() + "/index";
+                window.location.href = $.getBaseURL();
                 break;
             case "pLeftLaboratory":
                 window.location.href = $.getBaseURL() + "/laboratory";

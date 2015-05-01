@@ -47,7 +47,7 @@ public class LoginController extends BaseController {
      * @param request
      * @return
      */
-    @RequestMapping(value = {"", "login"}, method = RequestMethod.GET)
+    @RequestMapping(value = {""}, method = RequestMethod.GET)
     public String login(Model model, HttpServletRequest request) {
         logger.info("==== login start ====");
 
@@ -55,7 +55,7 @@ public class LoginController extends BaseController {
         HttpSession session = request.getSession();
         if (session.getAttribute("userInfo") != null) {
             // Already logged in
-            retPage = "redirect:/index";
+            retPage = "index";
         } else {
             // Never logged in
             retPage = "login";
@@ -66,7 +66,7 @@ public class LoginController extends BaseController {
         return retPage;
     }
 
-    @RequestMapping(value = "login", method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public String index(LoginUserInfo userInfo, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         logger.info("==== index START ====");
@@ -85,7 +85,7 @@ public class LoginController extends BaseController {
             session.setAttribute("userInfo", loginUserInfo);
 
             logger.info("==== index END ====");
-            return "redirect:/index";
+            return "index";
         } else {
             String errorMsg = messageSource.getMessage("error.login.loginName.password", null, null);
             model.addAttribute("error", errorMsg);

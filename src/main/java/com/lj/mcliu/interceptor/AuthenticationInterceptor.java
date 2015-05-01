@@ -13,9 +13,8 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
     Logger logger = LoggerFactory.getLogger(AuthenticationInterceptor.class);
 
     // 認証チェック以外のパス
-    public static String[] loginNotRequirePaths = new String[] {"logout", "login", "passwordForget",
-                                                                "passwordReset", "checkLink", "passwordResetSuccess",
-                                                                "laboratory/registUser", ""};
+    public static String[] loginNotRequirePaths = new String[] {"passwordForget", "passwordReset", "checkLink",
+                                                                "passwordResetSuccess", "laboratory/registUser", ""};
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -35,7 +34,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
             return true;
         } else {
             // チェックNG
-            String redirectPath = contextPath + "/login";
+            String redirectPath = contextPath + "/";
             response.sendRedirect(redirectPath);
             return false;
         }

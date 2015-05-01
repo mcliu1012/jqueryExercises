@@ -26,7 +26,7 @@
             aria-describedby="basic-addon1" name="loginName" autofocus>
         </div>
         <p class="submit" style="width: 100%;">
-          <a class="btn btn-default" href="login">返回</a>
+          <a class="btn btn-default" href="/">返回</a>
           <button type="submit" class="btn btn-primary">提交</button>
         </p>
       </form>

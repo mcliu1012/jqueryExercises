@@ -12,21 +12,6 @@ public class TopController {
     private static Logger logger = LoggerFactory.getLogger(TopController.class);
 
     /**
-     * index
-     *
-     * @return
-     */
-    @RequestMapping(value = "index")
-    public String index() {
-        logger.info("==== index START  ====");
-
-        String index = "index";
-
-        logger.info("==== index END  ====");
-        return index;
-    }
-
-    /**
      * logout
      *
      * @param request
@@ -40,6 +25,6 @@ public class TopController {
         request.getSession().invalidate();
 
         logger.info("==== logout END  ====");
-        return "redirect:/login";
+        return "redirect:/";
     }
 }

@@ -18,7 +18,7 @@ public class AppExceptionHandler {
      */
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public String handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException ex) {
-        return "redirect:/login";
+        return "redirect:/";
     }
 
     /**
