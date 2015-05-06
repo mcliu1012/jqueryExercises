@@ -39,18 +39,6 @@
               <h4>一些奇奇怪怪的应用</h4>
             </div>
           </div>
-<!--           <div class="col-md-3"> -->
-<!--             <div class="statbox widget box box-shadow"> -->
-<!--               <div class="widget-content"> -->
-<!--                 <div class="visual blue"> -->
-<!--                   <i>ROLL</i> -->
-<!--                 </div> -->
-<!--                 <div class="title">其他</div> -->
-<!--                 <div class="value">随机数</div> -->
-<!--                 <a href="/app/roll/" class="more">打开<i class="pull-right icon-angle-right"></i></a> -->
-<!--               </div> -->
-<!--             </div> -->
-<!--           </div> -->
           <div class="col-md-3">
             <div class="statbox widget box box-shadow">
               <div class="widget-content">
@@ -75,20 +63,27 @@
               </div>
             </div>
           </div>
-<!--           <div class="col-md-3"> -->
-<!--             <div class="statbox widget box box-shadow"> -->
-<!--               <div class="widget-content"> -->
-<!--                 <div class="visual blue"> -->
-<!--                   <i class="fa fa-usd"></i> -->
-<!--                 </div> -->
-<!--                 <div class="title">金融</div> -->
-<!--                 <div class="value">汇率换算</div> -->
-<!--                 <a href="#" target="_blank" class="more">打开<i class="pull-right icon-angle-right"></i></a> -->
-<!--               </div> -->
-<!--             </div> -->
-<!--           </div> -->
         </div>
-
+        <%-- 开发工具 --%>
+        <div class="row margin-top-30">
+          <div class="widget">
+            <div class="widget-header">
+              <h4>开发工具</h4>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="statbox widget box box-shadow">
+              <div class="widget-content">
+                <div class="visual blue">
+                  <i>DB</i>
+                </div>
+                <div class="title">MYSQL</div>
+                <div class="value">phpMyAdmin</div>
+                <a href="http://mysql.liujiaweb.com/" class="more" target="_black">打开<i class="pull-right icon-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
