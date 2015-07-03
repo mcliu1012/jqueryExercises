@@ -270,7 +270,7 @@
 			<properties>
 				<jdbc.mcliu.url>jdbc:log4jdbc:mysql://123.57.19.36:3306/mcliudb?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc.mcliu.url>
 				<jdbc.mcliu.username>root</jdbc.mcliu.username>
-				<jdbc.mcliu.password>ac2a577eb0</jdbc.mcliu.password>
+				<jdbc.mcliu.password>mcliu10124mysql</jdbc.mcliu.password>
 			</properties>
 		</profile>
 	</profiles>
